@@ -1,0 +1,423 @@
+\chapter[\textit{In situ} dataset analyzes using statistical methods adapted to time series]{\textit{In situ} dataset analyzes using statistical methods adapted to time series
+\chaptermark{Statistical methods for time series analysis}}
+\chaptermark{Statistical methods for time series analysis}
+
+\minitoc
+%\label{chap2}
+\newpage
+%\section{Introduction: time series analysis}
+%One major hypothesis for time series analysis is to assume the ergodicity theory. Ergodicity is defined as a long term behavior system, evolving in time, and time average of one sequence of events is the same as the ensemble average. As \textit{in situ} time series are real time-dependent, there is only one set of data supposed to be statistically representative of the system involving that ergodicity theory is assumed. This lack of increase difficulties for statistical methods. To reach informations from these datasets, several time series analyses methods have been developed as model-based approach (ARIMA, GAM...), or data-analysis methods in time domain or frequency domain.  \\
+\section{Article 2}
+\subsection{Foreword}
+
+Following the observation and description of two events of high bioluminescence intensity in March 2009 and March 2010, the use of appropriate statistical methods was needed for time series analysis. In signal processing, several methods exist and can be based on model approach (ARMA or ARIMA models for example), time-dependent methods (Markov chains, autocorrelation) or frequency-dependent methods (spectral analyzes, seasonality). In this work, a time-frequency analysis has been performed and developed on chronological data characterized as non-stationary and non-linear. A second objective of time series analysis from the ANTARES station  is to discriminate bioluminescence events related to the current speed and those related to water-mass modifications. The necessity to cross informations of this multivariate dataset implies the comparison and the use of two conjoint methods such as the wavelet and the Hilbert-Huang decomposition methods.\\
+
+%Suite à l'observation et à la description de deux évènements de forte activité de bioluminescence en Mars 2009 et 2010, l'analyse de ces données a nécessité l'utilisation de méthodes statistiques appropriées au traitement de séries temporelles. En analyse du signal, plusieurs méthodes existent et peuvent être basées sur une approche de modélisation (modèles ARMA, ARIMA), d'analyses dans le domaine temporel (chaines de Markov, autocorrélation) ou dans le domaine des fréquences (analyse spectrale, saisonnalité). Dans ce travail, une analyse en temps-fréquence a été développée sur les séries chronologiques caractérisées comme non-stationnaires et non-linéaires. Un second objectif de l'analyse des séries temporelles issues du site ANTARES était de discriminer les évènements d'activité de bioluminescence liées au courant, et ceux liés aux modifications de masses d'eau. La nécessité de croiser les informations de ce jeu de données multivarié a impliqué la comparaison et l'utilisation conjointe de deux méthodes: la décomposition en ondelettes et la décomposition d'Hilbert-Huang.\\
+
+\textit{This work has been initiated during my master 2 and finalized during my PhD work. I performed the statistical analyzes supervised by D. Nerini. C. Tamburini took part in the result interpretation within an ecological context.}\\
+ %\textit{Ce travail a été initié au cours de mon stage de master 2 et finalisé pendant mon doctorat. David Nerini et moi-même avons effectué l'ensemble des analyses statistiques. Christian Tamburini a apporté un avis critique sur l'interprétation écologique des résultats.}\\
+
+\newpage
+\subsection[Relation between deep bioluminescence and oceanographic variables: a statistical analysis using time-frequency decompositions.]{Relation between deep bioluminescence and oceanographic variables: a statistical analysis using time-frequency decompositions.
+\sectionmark{ARTICLE 2}}
+\sectionmark{ARTICLE 2}
+\label{manuscrit2}
+\begin{center}
+Séverine Martini$^{1,2,\ast}$, David Nerini$^{1,2}$, Christian Tamburini$^{1,2}$
+\end{center}
+\vspace{10mm}
+
+$^1$Aix-Marseille Universit\'{e},  Mediterranean Institute of Oceanography (MIO), 13288, Marseille, Cedex 09, France\\
+$^2$Universit\'{e} du Sud Toulon-Var (MIO), 83957, La Garde cedex, France ; CNRS/INSU, MIO  UMR 7294; IRD, MIO UMR 235\\
+\vspace{2mm}
+\begin{center}
+$\ast$ Corresponding author : \underline{severine.martini@univ-amu.fr}\\
+\end{center}
+\vspace{18mm}
+\textbf{Submitted to Progress in Oceanography, under revision}\\
+
+\newpage
+\textbf{Abstract}\\
+We consider the statistical analysis of a two-years high-frequency-sampled time series, between 2009 and 2010, recorded at the ANTARES observatory in the deep NW Mediterranean Sea (2,475 m depth). The objective is to analyze relationships between bioluminescence and environmental data (temperature, salinity and current speed). As this entire dataset is characterized by non-linearity and non-stationarity, two time-frequency-decomposition methods (wavelet and Hilbert-Huang) have been tested. These mathematical methods are dedicated to the analysis of oscillations within a signal at various time and frequency scales. Many applications of these methods dealing with only one variable may be found in the literature. The methodological contribution of this work is to propose some statistical tools dedicated to the study of relationships between two time series. Our study highlights three events of high bioluminescence activity in March 2009, December 2009 and March 2010. We show that the two events occurring in March 2009 and 2010 are correlated to the arrival of newly formed deep water masses at frequencies about $4.8 \times 10^{-7}$ (period of 24.1 days). In contrast, the event in December 2009 is only correlated with current speed at frequencies about $1.9 \times10^{-6}$ (period of 6.0 days). The jointed use of wavelet and Hilbert-Huang decompositions has proved to be successful for the analysis of multivariate time series. These methods are well-suited in a context of increasing number of long time series recorded in oceanography.\\
+
+\newpage
+\section*{Introduction}
+The sampling and understanding of complex environmental systems aim at the detection of potential disturbances as a shift from the intrinsic variability of these systems. Marine systems are variable at all time and space scales \citep{hewitt2007} and their variability is still poorly understood due to sampling strategy, instrumentation and spatio-temporal-heterogeneity challenges. In response to this lack of knowledge, there is an international effort to capitalize oceanographic data and costs of autonomous and for mobile infrastructures that enable the detection of long term environmental context as well as episodic events or perturbations \citep{favali2006}. As an example, OceanSITES, and more generally the Global Ocean Observing System (GOOS), are the major scientific teams integrating a global network of more than 60 \textit{in situ} observatories and acquiring long-term and high-frequency time series \citep{send2011} over the world.\\
+
+The ANTARES project (Astronomy with a Neutrino Telescope and Abyss environmental RESearch) developed one of those deep-sea-cabled observatory, in the North-Western Mediterranean Sea (Figure \ref{map}), since the end of 2007. This infrastructure is part of a global data network such as EMSO, KM3NeT, ESONET and EuroSITES for example. At first, the ANTARES observatory is dedicated to the search of high-energy particles such as neutrino \citep{amram2000, aguilar2007, ageron2011}. About 885 photomultiplier tubes (PMTs) are installed between 2,000 and 2,400 m depth for the purpose of particle Physics. All the 12 ANTARES mooring lines are connected, via an electro-optical cable to a shore station providing real-time acquisition. With the installation of a specific line, namely IL07 \citep{tamburini2013}, this deep observatory gives the opportunity to record simultaneously high frequency oceanographic data such as current speed, salinity and temperature (Figure \ref{TS}). The IL07 is also equipped with PMTs devoted to the recording of bioluminescence activity. These datasets provide an extraordinary way to study the dynamics of the deep ecosystem in real time and at high frequency \citep{craig2009}.\\
+
+Recently, \citet{tamburini2013} proposed an introductory and  descriptive analysis of ANTARES oceanographic time series gathering both physical and biological variables. This has been jointly performed with synchronous hydrological records from a surrounding station located in the Gulf of Lion. They highlighted a link between high bioluminescence activity and changes in the properties of deep waters (temperature and salinity as proxies). Such changes attributed to an open-sea-convection event have renewed the deep waters (so called newly formed deep water) by the fall of upper ocean layer through the water column \citep{tamburini2013, marshall1999, stabholz2013, bethoux2002}. Then, open-sea convections represent a major vector in fueling the deep-sea ecosystem and inducing bioluminescence blooms.\\
+
+The present study attempts to understand the mechanisms inducing deep-sea bioluminescence activity using temperature, salinity, current speed and bioluminescence time series on the same ANTARES dataset of \citet{tamburini2013}. The exploration of characteristic scales in time and frequency, in this high-frequency-sampled dataset, is achieved using statistical methods for signal processing. While most environmental data are non-stationary \citep{rao2008, cazelles2008, ghorbani2013} most methods used in time-series analyzes are based on stationarity assumptions, as the Fourier decomposition does \citep{frazier1999}. Firstly, we propose the use of two complementary mathematical methods (Wavelet and Hilbert-Huang decomposition) to deal with non-stationarity and to decompose each time series within time and frequency space. Secondly, we suggest original tools to quantify and illustrate links between bioluminescence time-frequency decomposition and other environmental variable time-frequency decompositions.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{Fig1_2.jpg}
+\caption[Map of the North-Western Mediterranean Sea and the ANTARES site (black dot) where the underwater neutrino telescope is immersed at 2,475 m depth. ]{Map of the North-Western Mediterranean Sea and the ANTARES site (black dot) where the underwater neutrino telescope is immersed at 2,475 m depth. High-frequency-sampled time series of bioluminescence, temperature, salinity and current speed have been sampled between 2009 and 2010 at this station.}
+\label{map}
+\end{figure} 
+
+\section*{Dataset for the deep bioluminescence study}
+\label{nonstat}
+The ANTARES site is located 40 km off the French Mediterranean coast (42\degres 48'N, 6\degres 10'E) at 2,475 m depth (see Figure \ref{map}). This work focuses on multivariate time series sampled from the beginning of 2009 until October 2010, for oceanographic variables such as salinity, potential temperature ($\degres C$) and current speed ($cm$ $s^{-1}$) (Figure \ref{TS}). Moreover, bioluminescence emission ($kHz$) has been recorded in 2009 and 2010, from the IL07 instrumented line of the ANTARES telescope. The unit of bioluminescence activity (kHz) refers to the photon-counting rate per second. We consider the bioluminescence time series as a variable response submitted to changes in environmental characteristics.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=14cm]{Fig2_2.jpeg}
+\caption[Time series recorded in the Mediterranean Sea, at the ANTARES station, between January 2009 and July 2010, for bioluminescence, current speed ($cm$ $s^{-1}$), salinity, and temperature ($\degres C$). ]{Time series recorded in the Mediterranean Sea, at the ANTARES station, between January 2009 and July 2010, for bioluminescence, current speed ($cm$ $s^{-1}$), salinity, and temperature ($\degres C$). Those high-frequency data, recorded each 1 to 15 minutes, are sampled at depth between 2,478 m and 2,169 m and transferred in real time to the database.}
+\label{TS}
+\end{figure} 
+
+In Figure \ref{TS}, each environmental variable is recorded with a high-frequency-sampling rate, involving the presence of a high level of noise. The base line of each signal is close to a constant background signal and does not show a clear trend, looking at low-frequency variations. However, some breaking sequences appear on each time series giving their non-linear and intermittent appearance. There is no clear time connection between those sequences from one time series to another. However, they are all characterized by a sudden increase in variability with two main events observed simultaneously occurring in April 2009 and from April to June 2010. If the connection between variables is relatively clear for the event in 2010, it is more tricky to conclude for the event in 2009 without adapted mathematical methods.\\
+
+As shown previously the time series are not stationary. A time series $X(t), t\in\mathbb{R}^+$ is said to be stationary if  $X(t)$ owns the same statistical properties (mean, variance,..) as the shifted time series $X_{t+h}$ for $h>0$. A Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test, from \cite{Kwiatkowski1992}, shows that all time series are non-stationary (Table \ref{statest}).\\% The non-stationarity is confirmed when displaying the distribution of the bioluminescence data. Indeed, the distribution is bimodal with a heavy tail for high values of bioluminescence (data not shown). Data are alternatively concentrated around two modes (4.36 and 5.34 referring to 78.2 and 208.5 kHz respectively) and, more rarely, it can appear some strong values in bioluminescence, referring to the extreme events above the value of $\log (7)$.\\
+
+\begin{table}
+\center
+\caption{KPSS-test for testing stationarity of each time series.}
+\begin{tabular}{cccc}
+\textbf{Variable} & \textbf{KPPS value} & \textbf{p-value} & \textbf{Interpretation}\\
+\hline
+Bioluminescence (kHz) & 8.24 & 0.01 & non-stationary\\
+Current speed (cm $s^{-1}$) & 5.63 & 0.01 & non-stationary\\
+Temperature (\degre C) & 8.50 & 0.01 & non-stationary\\
+Salinity & 2.29 & 0.01 & non-stationary\\
+\end{tabular}
+ \label{statest} 
+\end{table} 
+
+%\begin{figure}[!h]
+%\linespread{1} 
+%\centering
+%\includegraphics[width=10cm]{Fig3_2.pdf}
+%\caption[Density of sampled values for the bioluminescence intensity (into logarithmic scale) with superimposed highest density regions.]{Density of sampled values for the bioluminescence intensity (into logarithmic scale) with superimposed highest density regions. Green, red and blue bars represent quantile intervals centered around local maxima of the density that respectively contains 50\%, 95\% and 99\% of observed data. The Hyndman's density quantile algorithm is used for computation of the quantiles \citep{Hyndman1996}. The black line is a kernel density estimate. The bimodal distribution with a heavy tail on the highest bioluminescence intensity values show the non-stationarity of dataset.}
+%\label{hdr}
+%\end{figure} 
+
+\section*{Methods dealing with non-stationary time series}
+Most methods in time-series analysis consist in an expansion of the studied signal $X(t)$ into a linear combination of known basis functions. For the Fourier decomposition, the signal is expressed as a linear combination of trigonometric functions:
+\begin{eqnarray}
+X(t)\ =\  \sum_{j=0}^\infty a_j e^{i\omega_jt}. 
+\end{eqnarray} 
+This decomposition provides an analytical expression of the function $X(t)$ with amplitude coefficients $a_j$ giving weight to frequencies $\omega_j$. Both coefficients $a_j$ and  $\omega_j$ are independent of time providing a global decomposition of the signal in the space of frequencies.\\
+
+The Hilbert-Huang (HHG) decomposition proposes a generalization of the Fourier decomposition by expanding $X(t)$ such that:
+\begin{eqnarray}
+\label{fourier}
+X(t)\ =\ \sum_{j=1}^{n} a_j(t) e ^{i2\pi\int \omega_j (\tau)d\tau} + R_{n+1}(t) 
+\end{eqnarray} 
+where both amplitude coefficients $a_j(t)$ and frequency coefficients $\omega_j(t)$ are functions of time. As further developed, this decomposition relies on a preliminary step in order to decompose the time series into $n+1$ modes where $R_{n+1}(t)$ is the trend of the time series.\\
+
+Another decomposition with time-dependent parameters can be constructed using the continuous wavelet decomposition 
+\begin{eqnarray}
+X(t)\ =\ \frac{1}{W_\psi} \int_{-\infty}^{\infty} \int_{0}^{\infty} W_X(a,b) \psi_{a,b}(t) \frac{1}{a^2}da db
+\end{eqnarray}
+In that case, the shape of the basis function, $\psi_{a,b}(t)$, is controlled by a scale parameter $a$ which can be interpreted as a reciprocal of frequency and a shifting parameter $b$, both parameters varying continuously over $\mathbb R^+$ and $\mathbb R$ respectively. The analysis is conducted through the estimation of the coefficient $W_X(a,b)$, the wavelet transform, whose values are scale and time dependent and on the wavelet function $\psi_{a,b}(t)$. The constant $W_\psi$ is an admissible value depending on the chosen wavelet function.\\
+
+Once the basis expansion is achieved, each method gives the ability to analyze the distribution of energy over each frequency through the coefficient values of the decomposition. However, the Fourier analysis relies on a global expansion of the signal which can induce spurious harmonic components that cause energy spreading. This misinterpretation especially occurs when dealing with non-linear and non-stationary datasets as shown in Figure \ref{freq} B (see introduction of \citet{Huang1998} for more details) compared to stationary signal decomposed in Figure \ref{freq} A. Unlike Fourier decomposition, the continuous wavelet transforms and the HHG decomposition possesses the ability to construct a time-frequency representation as the coefficients of the decomposition are locally time dependent, which is well adapted to the analysis of non-stationary signals.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=12cm]{Fig4_2.pdf}
+\caption[Two examples of signal decomposition. On the left, the signal represented over time, on the right, the periodogram over frequencies A) non-stationary and B) stationary signal.]{Two examples of signal decomposition. On the left, the signal represented over time, on the right, the periodogram over frequencies A) non-stationary and B) stationary signal. The non-stationarity spreads energy over frequencies in the periodogram representation.}
+\label{freq}
+\end{figure} 
+
+\subsection*{Wavelet decomposition}
+
+\subsubsection*{Decomposition into wavelet basis}
+The continuous wavelet decomposition is a consecutive pass-band filter through time series \citep{Torrence1998,addison2010}. The decomposition acts as a linear filter which extracts special features inside the signal through a projection over a wavelet basis $\psi_{a,b}$ giving the coefficient
+\begin{eqnarray} 
+W_X (a,b) =\int_{-\infty}^{+\infty} X(t) \psi^{\ast} _{a,b} (t;a,b) dt
+\end{eqnarray}
+where $\psi^{\ast}_{a,b}$ denotes the complex conjugate of the basis wavelet. The peculiarity of that decomposition is the continuous dependency of the basis functions 
+\begin{eqnarray} 
+\psi _{a,b} (t)= \frac{1}{\sqrt{a}} \psi (\frac{t-b}{a})
+\end{eqnarray}
+regarding scale parameter $a$ and location parameter $b$. The scale parameter $a$ is inversely proportional to the frequency. The decomposition mainly relies on the choice of a mother-basis function. \cite{Torrence1998} define some elements to choose the mother wavelet: orthogonality, real or complex function, shape of the mother wavelet related to shape of analyzed time series. In this study, we choose the Morlet wavelet function, commonly used in wavelet analysis. However, other choices can be relevant as well \citep{ahuja2005,cazelles2008}. The Morlet wavelet is defined as:
+\begin{eqnarray}
+\psi (t)= \frac{1}{\pi ^{1/4}} e^{i2 \pi f_0 t} e^{-t^2/2}
+\end{eqnarray}
+With $\frac{1}{\pi ^{1/4}}$ a normalization factor, $e^{i2 \pi f_0 t}$ the complex sinusoidal (referring to $cos (2\pi f_0 t + i sin (2 \pi f_0 t)$) and $e^{-t^2/2}$ the Gaussian envelope. This periodic wavelet owns symmetrical properties ($ \int \psi(t) dt = 0$) and a unit norm ($ \int \vert \psi(t)\vert ^2 dt=1$). The decomposition of time series consists in coefficients for the real part of wavelet transform $W_X(a,b)$, at the position $b$. These coefficients are calculated by continuously moving the wavelet along the signal (modifying the position parameter $b$) related to a specific scale parameter $a$. Then, a bi-dimensional surface of $W_X(a,b)$ is constructed (Figure \ref{wlt}).\\
+
+\subsubsection*{Wavelet spectral representation}
+Using the wavelet decomposition, the time-frequency spectrum is plotted for bioluminescence time series in Figure \ref{wlt} A, current speed in Figure \ref{wlt} B, and salinity in Figure \ref{wlt} C. For the bioluminescence spectrum (Figure \ref{wlt} A), three distinct periods appear with high $W_X (a,b)$ coefficients (in red). The two main periods in April 2009 and April 2010, appear with low excited frequencies, between $4.8 \times 10^{-7} Hz$ (period of 24.1 days) and $3.8 \times 10^{-6} Hz$ (period of 3.0 days). A third one in December 2009 is observed at about $1.9 \times 10^{-6} Hz$ (period of 6.0 days). Moreover, frequencies at about $2.0 \times 10^{-5} Hz$ (period of 0.6 days or 14 h) are also excited with high amplitude coefficients.\\
+
+\begin{figure}[p]
+\linespread{1} 
+\centering
+\includegraphics[width=14cm]{Fig5_2.pdf}
+\caption[Time-frequency representation using the wavelet decomposition for A) bioluminescence B) current speed and C) salinity time series.]{Time-frequency representation using the wavelet decomposition for A) bioluminescence B) current speed and C) salinity time series. The color scale for $W_X(a,b)$ is from blue (low coefficient) to red (high coefficient). For the bioluminescence decomposition, three periods with high coefficients are distinct close to the dates 04.2009, 12.2009 and 04.2010. Black-contour lines represent the 5\% significant level. The shaded part represents the cone of influence where edge effects appear.}
+\label{wlt}
+\end{figure} 
+
+For the current speed spectrum (Figure \ref{wlt} B), lower frequencies at about $4.8 \times 10^{-7} Hz$ (period of 24.1 days) appear with high coefficients for the whole period. Moreover, a very distinct frequency band is highlighted at $2.0 \times 10^{-5} Hz$ (period of 0.6 days or 14 h). This last range of excited frequencies is known to be linked to the "internal waves" \citep{huthnance1995}. These periodic oscillations generated from the surface and transmitted to the deep sea have already been observed at periods about 17.6 h at the ANTARES station \citep{vanharen2011}. The spectrum shows that if these waves are present during the whole sampled period, their frequency and amplitude coefficients vary over time. As an example, there are higher coefficients in January 2010 than in September 2009.\\
+
+For salinity (Figure \ref{wlt} C), two main events are distinct in April 2009 and April 2010 with very high coefficients, and excited frequencies at about $9.5 \times 10^{-7}$ (period of 12.2 days) and $4.8 \times 10^{-7}$ (period of 24.1 days), respectively.\\
+
+\subsection*{Hilbert-Huang decomposition}
+
+\citet{Huang1998} proposed a second method for non-stationary and non-linear signal analysis \citep{Huang1998,Huang2008,Huang2009}. The Hilbert-Huang decomposition (HHG) is based on the assumption that a signal $X(t)$ is multi-component meaning that it can be expanded into a sum of $n$ signals such that  
+\begin{eqnarray}
+X(t)=\sum_{j=1}^{n}C_j(t)+R_{n+1}(t),
+\end{eqnarray} 
+where the $C_j$ are called intrinsic mode functions (IMFs) and $R_{n+1}$ is the trend of $X(t)$. Each IMF is supposed to be almost mono-component \textit{i.e.} composed with only one instantaneous frequency, evolving with time, in a bounded range. The HHG decomposition is then realized in two main steps : the extraction of IMFs and their decomposition into instantaneous frequencies.\\
+ 
+\subsubsection*{Empirical mode decomposition}
+\label{HHGmeth}
+To constitute mono-component signals, the $n$ IMFs must fulfill two conditions: \\$ (i) $ the number of times passing through the origin is identical to the number of extreme or differs by one for the most \\$ (ii) $ in any time, the mean between the local maximum and the local minimum is zero.\\
+
+Following these conditions, the decomposition of $X(t)$ into IMFs is based on the following steps : \\ 
+\textbf {Step 1} - Identification of the extremes (minimum and maximum) of the signal $X(t)$. \\
+ \textbf {Step 2} - Connection of these extremes by natural cubic spline interpolation for the construction of the maximal envelope $ e_ {max} (t) $. Same process used for the lower envelope $ e_ {min} (t ) $. \\
+ \textbf {Step 3} - Computation of the average of the two envelopes: $ m (t) = [e_ {min} (t) + e_ {max} (t)] /2 $, as shown in Figure \ref{consIMF}. \\
+ \textbf {Step 4} - Computation of the locally centered time series with $ d (t) = X (t)-m (t) $. \\
+ \textbf {Step 5} - Steps 1-4 are repeated on $d(t)$ until convergence towards a time series with zero mean $m(t)$ is sufficient. The convergence is controlled by a sifting criterion. \\
+ \textbf {Step 6} - If $ d (t) $ is zero mean then properties (i) and (ii) are checked and the function constitutes an IMF: $ C(t) $. \\
+ \textbf {Step 7} - Construction of a new $X(t)$ by  subtracting $C(t)$ to previous $X(t)$. Repeat steps 1 to step 6. Extracting IMFs is proceeded until rule $(i)$ is broken.\\ 
+ \textbf {Step 8} - The last remainder constitutes  the trend $R_{n+1}(t)$ which is, by construction, a monotonic or a constant function.\\
+ 
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{Fig6_2.pdf}
+\caption[Schematic representation of the signal decomposition using the Hilbert-Huang method.]{Schematic representation of the signal decomposition using the Hilbert-Huang method. The upper, and lower envelopes are represented by solid lines enclosing the signal. The mean is the centered line and the empty circles represent the extremes.}
+\label{consIMF}
+\end{figure} 
+
+Decomposing the data into IMFs, an important question is to compare the signal decomposition with a white-noise decomposition. This would differentiate the decomposition using the Hilbert-Huang method from an artefactual decomposition due to random noise. The interpretation of physical processes embedded in the data will then be reinforced. Figure \ref{signifjak} represents the Hilbert-Huang decomposition of a hundred simulated white-noise data (filled circles) and a partial set of data from the bioluminescence time series decomposition (empty circles). The log  of energy (or squared amplitude coefficients) is represented  over the log of mean frequency for each IMF. The empty circles outside the dark gray zones show that IMF decomposition is different from Gaussian noise.\\ 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=14cm]{Fig7_2.pdf}
+\caption[Example of significance for the IMFs decomposition from a partial set of data.]{Example of significance for the IMFs decomposition from a partial set of data. The gray zones, from dark to light gray, represent high density regions containing respectively 0.01, 0.25, 0.75, 0.99 $\%$ of the data centered around local maximum. Empty circles, out of the area are the IMFs, significantly different from Gaussian noise. E is the energy into IMFs and mean frequency is the average frequency of each IMF band. This graph shows that HHG method removes the interpretation of IMF from a randomly artefactual decomposition.}
+\label{signifjak}
+\end{figure} 
+
+\subsubsection*{IMFs on ANTARES time series}
+All oceanographic variables recorded at the ANTARES site have been decomposed into IMFs using the HHG method. The empirical mode decomposition (EMD) extracts 10 IMFs and a trend for each time series. Figure \ref{imfbiolu} represents the IMFs for the bioluminescence time series with associated variability intervals. Variability intervals are calculated by generating one hundred decompositions of each time series varying the sifting criterion, more or less 10\%, to stop the process.\\
+
+\begin{figure}[p]
+\linespread{1} 
+\centering
+\includegraphics[width=15cm]{Fig8_2.pdf}
+\caption[Hilbert-Huang decomposition for the bioluminescence signal into 10 intrinsic mode functions, from C1 to C10.]{Hilbert-Huang decomposition for the bioluminescence signal into 10 intrinsic mode functions, from C1 to C10. These intrinsic mode functions are stationary for the first order. In gray, the variability intervals are plotted by moving the threshold defined to stop the sifting process. The trend of the data is not plotted.}
+\label{imfbiolu}
+\end{figure}
+
+For the first IMFs (C1 to C5), the variability intervals are very low and can not be differentiated from the main IMF. They become more important for the last IMFs with, however, similar oscillations over time. By construction, the IMFs are first order stationary. The first extracted IMFs are high-pass filter and last IMFs are low-pass filter. The two bioluminescence events in 2009 and 2010 appeared on functions of higher frequencies (Figure \ref{imfbiolu} from C1 to C7). Once the linear decomposition achieved, the next step of the Hilbert-Huang method is to extract time-dependent frequencies (instantaneous frequencies) from each IMF.\\
+
+\subsubsection*{Instantaneous frequency using the Hilbert transform}
+The original signal $X(t)$ is now expressed as a linear combination of IMFs which are supposed to be mono component. Considering an IMF $C(t)$, the function
+\begin{eqnarray}
+Z(t) = C(t)+iY(t),
+\end{eqnarray}
+is constructed, where $Y(t)$ is the Hilbert transform of the IMF $C(t)$ with:
+\begin{eqnarray}
+Y(t)=\frac{1}{\pi}P\int_{-\infty}^{\infty} \frac{C(t')}{t-t'}dt',
+\end{eqnarray}
+with $P$ the Cauchy principal value \citep{paget1972}. The construction of $Z(t)$ makes the decomposition of the IMF possible such that:
+\begin{eqnarray}
+Z(t) = a(t) e ^{i \theta(t)},
+\end{eqnarray}
+where $a(t)$ is the  instantaneous amplitude and $\theta(t)$ the instantaneous phase. The parameter $a(t)$ reflects how the energy of the signal varies with time and is given with:\begin{eqnarray}
+a(t)=[C(t)^2+Y(t)^2]^{1/2}.
+\end{eqnarray}
+The instantaneous phase $\theta(t)$ computed with: 
+\begin{eqnarray} 
+\theta(t) = \arctan \left( \frac{Y(t)}{C(t)} \right)
+\end{eqnarray}
+yields the instantaneous frequency $w(t)$ such that:
+\begin{eqnarray}
+w (t) = \frac{1}{2\pi}  \frac{d\theta(t)}{dt}. \end{eqnarray}
+
+Applying the instantaneous frequency decomposition for each IMF $C_j$ forms the HHG decomposition of the signal $X(t)$. It can be expressed as a linear combination of trigonometric functions with amplitude coefficients $a_j(t)$ and frequency coefficients $w_j(t)$ depending on time:
+\begin{eqnarray}
+ X(t)\ =\ \sum_{j=1}^{n} a_j(t) e ^{i2\pi\int \omega_j (\tau)d\tau} + R_{n+1}(t) 
+\end{eqnarray}
+
+\subsubsection*{Dyadic frequency decomposition}
+In the literature, \citet{Huang2009} give an empirical maximal number of IMFs between 6 and 12, depending on the complexity of time series. The IMF decomposition acts as a pass-band filter by separating frequency bands \citep{Flandrin2003}. A way to understand how the empirical decomposition takes place for the HHG method is to study the frequency narrow band for each extracted IMF. A linear relationship (using least-square method) between the logarithms of the IMF average frequencies and over the number of IMF, is defined empirically following an exponential law such as
+\begin{eqnarray}\label{eq:dyadic}
+log(\omega _m (n)) \approx -n\ log(\alpha)
+\end{eqnarray}
+
+with $w_m(n)$ the mean frequency for the IMF $n$ \citep{huang2009river}. On this log-representation, the relation is linear with a slope coefficient $\alpha$ and the $R^2$ coefficient determined to characterized the quality of the fit.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=14cm]{Fig9_2.pdf}
+\caption[Representation of the empirical dyadic decomposition of the HHG method.]{Representation of the empirical dyadic decomposition of the HHG method. The linear relation is fitted for the logarithm of the mean frequency of each intrinsic mode function, for each variable. Error bars are added for each intrinsic mode function. The slope coefficient close to 2 define a dyadic decomposition for all time series.}
+\label{dyadic}
+\end{figure}
+
+Figure \ref{dyadic} represents the mean frequency and the standard deviation for the instantaneous frequencies calculated for each IMF from the time series of salinity, bioluminescence, temperature and current speed. The $\alpha$ coefficients from equation (\ref{eq:dyadic}) estimated for each of the variables are between 2.27 and 2.30 except for the current speed for which the coefficient is lower (1.92). These relations define a dyadic decomposition. Each mean frequency from an IMF is about a half of the one extracted before. This is observed empirically in our case as well as in the literature \citep{Flandrin2003,Huang2008}, but no mathematical assumptions have been done at the beginning of the decomposition method \citep{Huang2009,Massei2012}. This observation differs from the wavelet decomposition for which a dyadic assumption is done using the set of scales $b$ selected as a functional power of 2:
+\begin{eqnarray}
+b_i = b_0 \times 2^{i \delta},  i=0,...,M
+\end{eqnarray}
+
+with $ M = \frac{1}{\delta} log_2 \frac{(N \Delta t)}{b_0}$, N the number of values in the time series, $\Delta t$ the time sampling and $\delta$ a scale factor (small values for $\delta$ will give a finer definition). $b_0$ is the initial parameter $b$ and $b_i$ the parameter at time $i$.\\
+
+\subsubsection*{Thin-plate spline smoothing}
+The evolution of instantaneous frequencies and amplitude over time can be represented as a time-frequency-amplitude plot. However, a HHG spectrum is discrete and cannot be cross-correlated between two variables. Indeed, the IMFs do not form a common basis where time-series could be expanded. The number of extracted IMFs is different from one time series to another, depending on the properties of the time series themselves. One way to cross time-frequency decompositions can be achieved by smoothing spectra over both time and frequency in order to obtain a continuous representation. This is done with thin plate regression splines \citep{bookstein1989,mardia1996,wood2003}.\\
+
+We dispose of  $n$ observations $\left( y_{i},\mathbf{x}_{i}\right) $ where $\mathbf{x}_{i}=\left( \omega_i,t_i\right) \in \mathbb{R}^{2}$ is a position in the time-frequency space and $y_i$, the computed value of the discrete Hilbert spectrum from the IMFs decomposition. We want to estimate the regression surface $H\left( \mathbf{x}\right)$ as a continuous spectrum such that:
+\begin{eqnarray}y_{i}=H\left( \mathbf{x}_{i}\right) +\varepsilon _{i},\end{eqnarray}
+where $\varepsilon _{i}$ is a random error term. Thin plate splines can be used to estimate $H$ by finding the function $g$ minimizing
+\begin{eqnarray}\left\Vert \mathbf{y-g}\right\Vert ^{2}+\lambda J\left( g\right),\end{eqnarray}
+where $\mathbf{y}$ is the vector of data with entries $y_{i}$, $\mathbf{g=}\left( g\left( \mathbf{x}_{1}\right) ,...,g\left( \mathbf{x}_{n}\right)\right) ^{\prime }$, $J\left( g\right) $ is a penalty function 
+\begin{eqnarray}J\left( g\right) = \iint\nolimits_{\mathbb{R}^{2}}\left( \frac{\partial ^{2}g}{\partial \omega^{2}}\right)^2 +2\left( \frac{\partial ^{2}g}{\partial\omega\partial t}\right)^2+\left(\frac{\partial ^{2}g}{\partial t^2}\right)^2d\omega dt,\end{eqnarray}
+giving a measure of roughness for $g$ and $\lambda $, a parameter which controls the trade-off between the fit to data and the smoothness of $g$.\\
+
+The value of $\lambda$ is determined by cross-validation. The solution of the spline regression problem provides a continuous Hilbert spectrum $H$ for a given variable. The Hilbert spectrum gives a measure of amplitude contributing to each frequency and one can calculate the associated marginal spectrum $h (\omega)$ such that:
+\begin{eqnarray}h (\omega)= \int_{0}^{T} H(\omega ,t) dt
+\end{eqnarray}
+
+\subsubsection*{HHG spectral representation} 
+Figures \ref{spectres} (from A to C) are the continuous spectral representations after smoothing the HHG spectra using thin plate splines for the bioluminescence (Figure \ref{spectres} A), the current speed (Figure \ref{spectres} B), and the salinity (Figure \ref{spectres} C). \\
+
+For bioluminescence, in Figure \ref{spectres} A, three events are distinct. The two main occur from April to May 2009, and from March to June 2010 with high amplitude coefficients and at frequencies between $4.8 \times 10^{-7}$ (period of 24.1 days) and $1.0 \times 10^{-5} Hz$ (period of 1.2 days). The third one in December 2009  is defined with lower amplitude coefficients and at $1.9 \times 10^{-6} Hz$ (period of 6.0 days). Frequency of $2.0 \times 10^{-5} Hz$ (period of 0.6 days or 14 h) is not excited contrary to the Figure \ref{wlt} A.\\
+ 
+For current speed, in Figure \ref{spectres} B, a large band of frequencies is excited between $4.8 \times 10^{-7}$ (period of 24.1 days) and $1.0 \times 10^{-5} Hz$ (period of 1.2 days). Another band of excited frequencies is defined at  $2.0 \times 10^{-5} Hz$ (period of 0.6 days or 14 h) (dotted box). These frequencies are linked to internal waves previously observed and described in Figure \ref{wlt} B. The internal waves are mainly embedded in the two first IMF (Figure \ref{dyadic}). \\
+
+For salinity, in Figure \ref{spectres} C, the two main events clearly appear in April 2009 and April 2010 at about $9.5 \times 10^{-7}$ (period of 12.2 days) and at about $3.8 \times 10^{-6}$ (period of 3.0 days).  \\
+
+These spectra are similar to those obtained using the wavelet decomposition Figure \ref{wlt}. Both wavelet and Hilbert-Huang decomposition methods result in a tri-dimensional continuous representation in the time-frequency domain. To quantify links in multivariate time series, the following step is to cross these spectra in pairs.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=11cm]{Fig10_2.pdf}
+\caption[Spectral representation using HHG decomposition and thin-plate spline smoothing for A) bioluminescence, B) current speed and C) salinity from January 2009 to July 2010.]{Spectral representation using HHG decomposition and thin-plate spline smoothing for A) bioluminescence, B) current speed and C) salinity from January 2009 to July 2010. The x-axis is the time, the y-axis the frequency (Hz) and the z-colored-scale is the amplitude coefficient value. In B) the dotted box highlights frequencies excited by internal waves.} 
+\label{spectres}
+\end{figure}
+
+\section*{Bivariate time-frequency cross-analysis}
+\subsection*{Wavelet coherence}
+
+One of the key issue for the analysis of the ANTARES time series is to compare decomposition spectra between variables. This point is well developed for the wavelet method using the cross-wavelet representation including both coherence-coefficient values and phase delays \citep{Torrence1998,addison2010}. We consider two time series X(t) and Y(t) and their wavelet transforms $ W_X(a,b)$ and $W_Y(a,b)$, respectively. The coherence is a measure of the squared correlation between wavelet functions of time series for time and frequency instantaneously. This value allows to distinguish the higher coefficients for both crossed variables, $W_X(a,b)$ and $W_Y(a,b)$ \citep{grinsted2004,torrence1999}. The coherency corresponds to the square of the crossed and normalized spectra:
+
+\begin{eqnarray}
+C^2(a,b)=\frac {S (W_{XY}(a,b))}{S(\mid W_X (a,b) \mid ^2)  S(\mid W_Y (a,b)) \mid ^2}, \forall 0 \leq C^2(a,b) \leq 1.
+\end{eqnarray}
+S is a smoothing operator on both time and scale of the wavelets, and $W_{XY}(a,b)$ the cross-wavelet defined from :
+\begin{eqnarray}
+W_{XY}(a,b) = W_X(a,b) W^*_Y(a,b).
+\end{eqnarray}
+
+\subsection*{HHG cross analysis}
+In order to cross two continuous spectrograms using HHG, only few solutions have been proposed compared to the wavelet method \citep{chen2010}. Considering smoothed time-frequency spectrum $H_X(\mathbf{x})$ and $H_Y(\mathbf{x})$ for variables $X$ and $Y$ (Figure \ref{spectres}), one way to analyze the links between variables is to summarize the dependence of the time-frequency spectrum across the only frequency argument. The computation of the correlation between both images is carried out by transformation of each time-frequency spectrum in a collection of curves.\\
+
+Let $\left\lbrace t_1,...,t_n \right\rbrace $ be an arbitrary regular fine grid over time such that $t_1<t_2<...<t_n$. The construction of a collection of pairwise curves $\left\lbrace (X_k(f),Y_k(g)),k=1,...,n\right\rbrace$ with $X_k(f)=X(t_k,f)$ and $Y_k(g)=Y(t_k,g)$ is done taking slices of time-frequency spectra for fixed times with $f$ and $g$ specific frequencies. Starting with these pairs of functions considered as a sample, the marginal spectra is defined :\begin{eqnarray}
+\overline{X}(f)=\frac{1}{n}\sum_{k=1}^{n}X_k(f) \end{eqnarray}
+and \begin{eqnarray}
+\overline{Y}(g)=\frac{1}{n}\sum_{k=1}^{n}Y_k(g) \end{eqnarray}
+and associated variance functions are \begin{eqnarray}V_X(f)=\frac{1}{n}\sum_{k=1}^{n}\left(X_k(f)-\overline{X}(f)\right)^2 \end{eqnarray} and \begin{eqnarray} V_Y(g)=\frac{1}{n}\sum_{k=1}^{n}\left(Y_k(g)-\overline{Y}(g)\right)^2 \end{eqnarray}\\
+The cross-correlation between $X_k(t)$ and $Y_k(t)$ is given by:
+\begin{eqnarray}
+C_{XY}(f,g)=\frac{1}{n}\sum_{k=1}^{n}\frac{(X_k(f)-\overline{X}(f))}{\sqrt{V_X(f)}}\frac{(Y_k(g)-\overline{Y}(g))}{\sqrt{V_Y(g)}}\end{eqnarray}\\
+This bivariate function has the property that: $-1 \leq C_{XY}(f,g) \leq 1, \forall f,g \in [0,f_{max}]$. It gives a measure of links between variables $X$ and $Y$ in the space of frequency. This cross-correlation on frequencies gives clues on major frequencies in a different way than the wavelet-coherence spectrogram.\\
+
+\section*{Discussion}
+\subsection*{Bioluminescence mechanically stimulated by current speed}
+
+The effects of current speed on bioluminescence activity have been well investigated in the literature \citep{cussatlegras2007,cussatlegras2005,Fritz1990}. This mechanical stimulation triggers more bioluminescent response enhancing cell membrane excitation in fluid motions \citep{cussatlegras2007,Blaser2002}. Based on ANTARES time series, \citet{tamburini2013} and \citet{vanharen2011} show that generally bioluminescence activity increases with current speed. This is thought to be due to either impacts of small-sized bioluminescent organisms and particles on the PMTs or the reaction of such organisms to enhance turbulent motion in the wakes of the PMTs.\\
+
+In Figure \ref{coherence} A, when crossing the bioluminescence and current speed spectra, from the wavelet decomposition method, coherence coefficients are between 0.6 and 0.95, most of the time, over a wide range of frequencies. Moreover, there is a high cross coherence coefficient of about 0.85 at frequency about $2.0 \times 10^{-5} Hz$ (period of 0.6 days or 14 h), referring to the internal wave frequencies \citep{huthnance1995,vanharen2011}. These observations reinforce the well-understood link between current speed and bioluminescence already known as a mechanical stimulation of bioluminescent organisms by current speed. Since no phase delay is noticed (represented by the right direction of arrows in Figure \ref{coherence} A) the light emission appears instantaneously after mechanical stimulation.\\
+
+\subsection*{Links between bioluminescence and new water masses}
+
+\cite{tamburini2013} interpret salinity and temperature time series as proxies of newly formed deep water, spreading at the ANTARES site. The authors propose the use of a salinity threshold value to highlight links between water masses and bioluminescence activity. As shown by these authors, from an ecological point of view, deep-water formations impact bioluminescent organisms in two different ways. On the one hand, these water inputs carry significant amount of bioluminescent planktonic organisms down from the surface. On the other hand, dissolved organic matter exports as well as re-suspension of particulate organic matter from sediment to the water column fuel deep-sea bioluminescent activity \citep{tamburini2013}. In the present work, we explore the ANTARES time series using statistical analyzes taking into account non-stationarity and non-linearity properties of this multivariate dataset.\\
+
+Figure \ref{coherence} B displays results from the wavelet decomposition, crossing bioluminescence and salinity time series. Similar results are obtained crossing bioluminescence and temperature (Figure not shown). Both salinity and temperature variables represent proxies of newly formed deep water. Figure \ref{coherence} B shows two spots of high-coherence values ranging from 0.8 to 0.9, from March to May 2009 and March to June 2010. In 2009, high-coherence coefficients are highlighted for frequencies of $4.8 \times 10^{-7} Hz$ (period of 24.1 days). In 2010, high correlations are observed for frequencies between $2.4$ and $9.5 \times 10 ^{-7} Hz$ (periods of 48.2 and 12.2 days). This cross-spectra emphasized a similar range of excited frequencies at $4.8 \times 10 ^{-7} Hz$ in both 2009 and 2010 with, in addition, a very high correlation between water-mass proxies and bioluminescence activity, for both time. Nevertheless, no hypothesis for the low frequency of $4.8 \times 10 ^{-7} Hz$ can be validated.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=12cm]{Fig11_2.pdf}
+\caption[Cross spectrogram between bioluminescence and A) current speed and B) salinity, using the wavelet decomposition and coherence measurement.]{Cross spectrogram between bioluminescence and A) current speed and B) salinity, using the wavelet decomposition and coherence measurement. Black arrows represent the phase delay (right arrows mean no phase delay). Black line represents the edge effect for no significant results. The color-scale is the value for the coherence coefficient from 0 to 1 (blue to red).}
+\label{coherence}
+\end{figure}
+
+Interestingly, a third bioluminescence event, occurring in December 2009, is observed on time series (Figure \ref{TS}) and on spectrogram (Figure \ref{wlt} A) at frequencies between $9.5$ and $1.9 \times 10^{-6} Hz$ (period of 6.1 days). While this event is correlated with current speed in Figure \ref{coherence} A (coherence coefficient between 0.7 and 0.8), there is no changes in water masses (Figure \ref{coherence} B, coherence values below 0.2).  Consequently, in December 2009, current speed generates a mechanical stimulation of bioluminescent organisms and, by its only effect, increases the bioluminescence activity. The Figure \ref{coherence} A and B clearly helps to discriminate the events of high bioluminescence intensity affected by newly formed deep water and current speed (April 2009 and 2010) and the events only affected by current speed (December 2009).\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=10cm]{Fig12_2.pdf}
+\caption[Cross spectrogram between bioluminescence and oceanographic variables. ]{Cross spectrogram between bioluminescence and oceanographic variables. The cross-correlation coefficients (represented between -0.2 and 0.8) are plotted as isolines and color scale for bioluminescence with A) current speed and B) salinity. x and y axes represent frequencies for each variable. The dotted lines represent the range of frequencies of the most correlated intrinsic mode functions. These intrinsic mode functions are shown in Figure \ref{crossIMF}. }
+\label{tenso}
+\end{figure}
+
+Figure \ref{tenso} A and B, resulting from the HHG decomposition, illustrates cross-correlations between frequency spectrum of bioluminescence and those of environmental variables (current speed and salinity). This representation is an original way to measure cross variations between two HHG spectra but induces a loss in time dependency. The correlation coefficients vary from -0.2 to 0.79 with higher coefficients on the diagonal (black line on Figure \ref{tenso} for both A and B panels). This 1:1 relation shows that highest excited frequencies are the same for both variables (see Figure \ref{dyadic}). Nevertheless, in Figure \ref{tenso} B, crossing bioluminescence and salinity, some patterns of high cross coefficients occur out of the 1:1 line. It shows that salinity (consequently newly formed deep water) and bioluminescence may be correlated at different frequencies. Then, in order to get back to a time-dependent representation, we isolate the IMFs referring to the higher correlation coefficients (black dotted lines in Figure \ref{tenso}). In Figure \ref{tenso} A, the 3$^{rd}$ IMF for both current speed and bioluminescence are isolated and plotted simultaneously in Figure \ref{crossIMF} A. The mean frequency of IMF 3 for bioluminescence is about $6.1 \times 10^{-6}$ (period of 1.9 days) and for current speed $5.7 \times 10^{-6}$ (period of 2.0 days). In Figure \ref{tenso} B, the 5$^{th}$ IMF for salinity and the 2$^{nd}$ one for bioluminescence are represented together in Figure \ref{crossIMF} B. This Figure shows that the high-correlation coefficient is mainly due to the two events of high bioluminescence activity with simultaneous oscillations induces. The mean frequency of IMF 5 for salinity is  $1.9 \times 10^{-6}$ (period of 6.1 days) and for IMF 2 for bioluminescence is $1.1 \times 10^{-5}$ (period of 1.1 days). These results from the HHG decomposition are not easily detected in Figure \ref{coherence}.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{Fig13_2.pdf}
+\caption[Representation of the most correlated intrinsic mode function for A) bioluminescence and current speed, B) bioluminescence and salinity.]{Representation of the most correlated intrinsic mode function for A) bioluminescence and current speed, B) bioluminescence and salinity. In A), mean frequency for bioluminescence IMF 3 is $6.1 \times 10^{-6}$ (period of 1.9 days) and for current speed IMF 3 is  $5.7 \times 10^{-6}$ (period of 2.0 days). In B), mean frequency for bioluminescence IMF 2 is $1.1 \times 10^{-5}$ (period of 1.1 days) and for salinity IMF 5 is  $1.9 \times 10^{-6}$ (period of 6.1 days).  }
+\label{crossIMF}
+\end{figure}
+
+\subsection*{Two different mathematical methods}
+
+From a technical point of view, HHG and the wavelet decomposition provide complementary results. The HHG method is based on empirical decomposition which provides a basis expansion composed with IMFs. This decomposition only relies on the data itself without any assumption on time series shape. This is not the case for wavelet decomposition which relies on an arbitrary choice of the mother wavelet to decompose the signal. However, the bivariate analysis is more efficient using wavelet decomposition. Indeed, due to the different number of IMFs between variables, time-frequency cross spectra cannot be defined using HHG method. We propose in this study, a bivariate cross analysis which allowed to get the cross information between variables in only the frequency space.\\
+
+\section*{Conclusion}
+There is a clear interest in recording long time series to understand intrinsic variations in an ecosystem. High frequency samplings help to detect characteristic scales within a signal. Few time-frequency-decomposition methods are adapted to the analysis of non-stationary and non-linear signals and consequently, to the detection of frequencies excited during unusual events. Using Huang-Hilbert and wavelet decomposition, we show that current speed involves mechanical stimulation of bioluminescent organisms and increases light emission. The use of time and frequency-decomposition methods demonstrates that current speed stimulates bioluminescence at almost all frequencies and without delay. Their undeniable advantage is the possibility to highlight correlation between bioluminescence and the arrival of newly-formed deep waters at specific time (beginning in March 2009 and March 2010) for frequencies at about $4.8 \times 10^{-7} Hz$ (period of 24.1 days). This excited frequency has no clear interpretation yet. Moreover, these statistical methods discriminate events due to newly-formed-deep-water spreading and events only due to variations in current speed. Finally, the use of those two methods applied to signal processing in oceanography for coherent dataset is definitely a way to better interpret variability, special events and links between variables.\\
+
+\noindent \textbf{Acknowledgements}\\
+SM was granted a MERNT fellowship (Ministry of Education, Research and Technology, France). The authors thank the Collaboration of the ANTARES deep-sea observatory for providing time series data. Authors especially thank S. Escoffier, M. Garel and C. Curtil for their comments and their inputs to this work. Cross wavelet and wavelet coherence software were provided by A. Grinsted.\\
+\newpage
+
+\section{Complementary data}
+%\subsection{Example with tsunami dataset}
+Preliminary tests have been performed for Fourier, wavelets and Hilbert-Huang decomposition using well-defined time series. Dataset is the sea level record during a tsunami arrival in 2004 at the Jackson Bay, in New zealand (data from NOAA \underline{http ://wcatwc.arh.noaa.gov/}). The signal is divided into two processes. The first one is the tidal periodic oscillation at low frequency and the second one is the tsunami arrival at higher frequencies. The second signal is starting at day 362 and with a modification of its amplitude over time (Figure \ref{tsun1} A).\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=12cm]{tsun1.pdf}
+\caption[Fourier decomposition of the sea level dataset during a tsunami event.]{Fourier decomposition of the sea level dataset during a tsunami event. A) tidal periodic signal (grey line) extracted using Fourier decomposition, B) Periodogram with tidal frequency highlighted and C) Residuals from the signal.}
+\label{tsun1}
+\end{figure} 
+
+In Figure \ref{tsun1} the Fourier decomposition is performed with 7 coefficients (see \ref{fourier}). This method easily define the periodic tidal wave in Figure \ref{tsun1} B, however, it does not permit to access to the tsunami arrival signal represented by residuals in Figure \ref{tsun1} C. This is mainly due to the non-stationarity problem highlighted in \ref{nonstat}.\\ 
+
+The decomposition of the dataset using the Hilbert-Huang method well-describe the two processes in Figure \ref{tsun2}. A high frequency function and a low frequency one are extracted as the sum of Intrinsic Mode functions (IMFs). The time frequency spectra represented from this decomposition is shown with instantaneous frequency and amplitude coefficient evolving over time in Figure \ref{tsun3} a. Thin plate splines are applied on this dataset and represented after smoothing in Figure \ref{tsun3} b. \\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=9cm]{tsun2.pdf}
+\caption[Time series decomposition within pass-band filter using the Hilbert-Huang decomposition method (see \citep{Huang1998} and \ref{HHGmeth}).]{Time series decomposition within pass-band filter using the Hilbert-Huang decomposition method (see \citep{Huang1998} and \ref{HHGmeth}). On top time series of sea level during tsunami arrival is represented. The second plot represents the first extracted functions at high frequencies representing the tsunami arrival. The third plot represents the last functions extracted from data with low frequency and can be interpreted as the tidal periodic signal.}
+\label{tsun2}
+\end{figure} 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=14cm]{hhg_tsun.pdf}
+\caption[Time-frequency spectra using the Hilbert-Huang decomposition method (see \citep{Huang1998} and \ref{HHGmeth}).]{Time-frequency spectra representation using the Hilbert-Huang decomposition. a) Discrete representation before smoothing B) after thin plate spline smoothing method. }
+\label{tsun3}
+\end{figure} 
+
+Similar pass-band filter should be represented using the wavelet decomposition method. Time series and time-frequency spectra are represented in Figure \ref{tsun3} A and B respectively.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=11cm]{tsun3.pdf}
+\caption[A) Tsunami arrival time series and B) time-frequency spectra (frequency is $\frac{1}{Period}$).]{A) Tsunami arrival time series and B) time-frequency spectra (frequency is $\frac{1}{Period}$). This graphical representation clearly define both signals with a low frequency periodic over the whole time considered (dark red band) and the tsunami event occurring at day 362 (blue patterns at high frequencies). }
+\label{tsun3}
+\end{figure} 
+
+This well-defined and already described example clearly illustrate problems of non-stationarity and advantages of time-frequency decomposition methods.\\
+
+
+

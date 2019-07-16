@@ -1,0 +1,206 @@
+\documentclass[a4paper,12pt,twoside,openright]{book}
+%\documentclass[chap,11pt]{thesis}
+%\documentclass[twoside,12pt]{Classes/aesm_edspia}
+\usepackage[a4paper,top=4.5cm,bottom=3.5cm,left=3cm,right=2cm]{geometry}
+\usepackage[Sonny]{fncychap}
+%\geometry{left=3.6cm,right=3.6cm,top=3cm} 
+%\usepackage[utf8x]{inputenc}
+\usepackage[latin1]{inputenc}% accents dans le source
+%\usepackage{varioref}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{lipsum} %Pour faire des essais
+% Choix de la langue
+\usepackage[francais]{babel}
+\usepackage{natbib}
+%% Pour une thse en franais et en anglais
+%\usepackage{titlesec}
+% Lmodern et substitution des petites capitales grasses manquantes
+\usepackage{lmodern}
+\rmfamily
+\DeclareFontShape{T1}{lmr}{b}{sc}{<->ssub*cmr/bx/sc}{}
+\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
+% Diffrents paquets pour les maths
+\usepackage{amssymb,amsmath,amsthm,amscd}
+\usepackage{mathrsfs}
+
+\usepackage{float}
+% Pour les figures
+\usepackage{subfig}
+%Pour la page de garde
+\usepackage{tabularx} % Permet d'utiliser l'environnement tabularx
+\usepackage{calc} % Pour pouvoir donner des formules dans les dfinitions de longueur
+\usepackage{graphicx} % Pour inclure des graphiques 
+% Attention : pour inclure des .jpg comme dans l'exemple (ou des .png ou .pdf)
+% il faut compiler directement en pdf (commande pdflatex).
+% Pour inclure des .eps, il faut compiler avec latex + dvips + ps2pdf.
+\usepackage[francais]{minitoc}
+
+\usepackage{xcolor,colortbl}
+\usepackage{color}
+\definecolor{newblue}{rgb}{0,0,0.52}
+\definecolor{newred}{rgb}{0.5,0,0}
+\definecolor{cream}{rgb}{0.9,0.9,0.9}
+% Pour avoir des liens hypertexte dans le document compil
+\usepackage[citecolor=newblue, colorlinks=true, urlcolor=blue, linkcolor=newred,pagebackref =TRUE]{hyperref}
+%\usepackage{nohyperref} %  utiliser pour pouvoir compiler sans gnrer des liens
+\renewcommand*{\backref}[1]{(cite page #1)}
+%%de starr
+%\usepackage[hypertexnames = false, % keeps bookmarks in correct order 
+%when counter is reset within document
+             %colorlinks=true, urlcolor=black, linkcolor=black, 
+%citecolor=black,
+ %            colorlinks=true, urlcolor=black, linkcolor=newblue2, 
+%citecolor=newblue,
+ %            plainpages=false,
+ %            pdftex,
+ %            pdftitle={Metabolic programming of zebrafish uncovered},
+ %            pdfauthor={Starrlight Augustine},
+ %            pdfsubject={zebrafish},
+ %            pdfkeywords={Dynamic Energy Budget Theory}]{hyperref}
+
+
+% Pour mettre la bibliographie dans la table des matires avec le bon numro de page (voir plus loin)
+\usepackage[nottoc]{tocbibind}
+
+% Pour l'index des notations
+\usepackage{makeidx}
+\captionsetup{format=plain,labelformat=parens,labelsep=quad,font=footnotesize, margin=20pt
+}
+\makeindex
+
+
+% =========================== Commandes diverses ===============================
+
+% Macros-commandes : appel  des fichiers extrieurs
+%\input{macros} % macros diverses personnelles 
+% (en-ttes et pieds de page, environnements de thormes) - voir macros.tex
+%\input{macrosmath} % macros mathmatiques - voir le fichier macrosmath.tex
+
+\usepackage[section]{placeins}
+\usepackage{setspace}
+\onehalfspacing
+%\onehalfspacing %interligne 1.5
+\usepackage[figuresright]{rotating}
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{
+\put(0,0){
+\parbox[b][\paperheight]{paperwidth}{
+\vfill
+\centering
+\includegraphic[width=\paperwidth,height=\paperheight,keepaspectratio]{couverture.pdf}
+\vfill
+}}}
+\usepackage{wallpaper}
+\begin{document}
+\dominitoc
+
+\printindex % pour afficher l'index
+
+% Pour basculer la numrotation des pages en chiffres romains, jusqu' la
+% table des matires. Dconseill par le ministre !
+
+% Page de garde
+\frontmatter
+%\include{couverture}
+\include{page1}
+% Dedicace et epigraphe
+\include{couverture}
+\include{page_garde}
+% Remerciements
+\include{remerciements}
+
+\include{abrev}
+\printindex % pour afficher l'index
+
+% Rsum
+
+% Table des matires
+\setcounter{tocdepth}{3} % pour rgler sa profondeur - par dfaut : 2
+\pdfbookmark[0]{Table des matières}{tablematieres} % pour ajouter la table des matires dans l'``index'' du fichier compil
+% Remerciements
+%\include{remerciements}
+\tableofcontents  % pour afficher la table des matires
+
+\mainmatter
+% On bascule la numrotation des pages en chiffres arabes jusqu' la fin du
+% document - la numrotation reprend  1 (toujours dconseill par le ministre)
+\baselineskip=20pt 
+
+
+% Introduction
+\include{introduction}
+%\include{intro_eng}
+
+% Chapitre 1 Introduction
+\include{chapitre1}
+% Chapitre 2
+\include{chapitre2}
+% Chapitre 3
+\include{chapitre3}
+% Chapitre 4
+\include{chapitre4}
+% Conclusions
+\include{discussion_conclusion}
+
+%\include{complementary_data}
+
+%\include{annexes}
+% Notations
+
+
+% ================================== BIBLIOGRAPHIE =============================
+\baselineskip=12pt 
+
+%% Choix du style 
+%% En franais
+\bibliographystyle{elsarticle-harv}
+\bibliography{martinietal}
+%\bibliographystyle{apalike-fr}
+%\bibliographystyle{astron}
+%\bibliographystyle{elsart-harv}
+%\bibliographystyle{alpha-fr} % style alphabtique en franais
+%% En anglais
+%\bibliographystyle{alpha} % style alphabtique en anglais
+%\bibliographystyle{unsrt} % style numrot en anglais
+%% Il y a plein d'autres possibilits
+%% Fabrication de la biblio
+ 
+% pour afficher la biblio
+% utilise le fichier bibliothese.bib
+
+% Remarque : l'ajout de la biblio  la table des matires se fait par le
+% paquet tocbibind (car la commande addcontentsline ne fabrique pas le bon
+% numro de page)
+%\include{page_b}
+%\include{abstract}
+
+% =============================== INDEX DES NOTATIONS ==========================
+
+\listoffigures
+\listoftables
+% numro de page)
+\backmatter
+\input{abstract}
+% =============================== INDEX DES NOTATIONS ==========================
+%\input{abstract}
+ 
+
+% numro de page)
+
+% =============================== INDEX DES NOTATIONS ==========================
+
+ % pour afficher l'index
+% pour afficher la biblio
+% utilise le fichier bibliothese.bib
+
+% Remarque : l'ajout de la biblio  la table des matires se fait par le
+% paquet tocbibind (car la commande addcontentsline ne fabrique pas le bon
+% numro de page)
+
+% =============================== INDEX DES NOTATIONS ==========================
+
+%\printindex % pour afficher l'index
+
+
+\end{document}

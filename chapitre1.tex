@@ -1,0 +1,689 @@
+\chapter[\textit{In situ} bioluminescence in the deep Mediterranean Sea \\
+(ANTARES site)]{\textit{In situ} bioluminescence in the deep Mediterranean Sea \\
+(ANTARES site)
+\chaptermark{\textit{In situ} bioluminescence}}
+\chaptermark{\textit{In situ} bioluminescence}
+\minitoc
+%\label{chap1}
+%\begin{center}
+%\textit{If you are faced with a mountain, you have several options.You can climb it and cross to the other side. You can go around it. You can dig under it. You can fly over it. You can blow it up. You can ignore it and pretend it's not there. You can turn around and go back the way you came. Or you can stay on the mountain and make it your home. }\end{center}
+%\begin{}
+%\textit{Vera Nazarian}
+%\end{flushright}\\
+%\newpage
+%\vspace{400mm}
+%\begin{flushright}
+%\textit{"L'homme qui déplace une montagne\\ commence par déplacer\\ les petites pierres"}\\
+%\vspace{10mm}
+%Confucius
+%\end{flushright}
+%\newpage
+
+\newpage
+\section[Introduction\string: interest of recording long time series in environmental science]{Introduction\string: interest of recording long time series in environmental science
+\sectionmark{Introduction to time series records}}
+\sectionmark{Introduction to time series records}
+Time series are set of data obtained by consecutive measurements with time dependence. Historically, astronomers were first scientists to study such chronological data. However, in the XVIII$^{th}$ century, even if predictions were considered as competing with God, Halley was the first scientist to predict the next comet event, based on its periodicity. Nowadays, one admits that time series analysis is essential to understand, forecast, monitor or control systems.\\
+
+\cite{edwards2010} described, over the last 100 years, some of the longest international environmental and biological time series recorded in oceanography (Figure \ref{TSbiblio}). Records of such time series are useful to detect episodic events in real time. They can be used to coordinate and provide a long term context for shorter duration scientific expeditions. At a different time-scale, long-term survey often lead to scientific strategies for marine-ecosystem management in order to face anthropogenic changes. These various objectives have led to the development of autonomous and remote instrumentation, as well as new sensors (biological, physical or chemical). Moreover, these infrastructures are often dedicated to multidisciplinary research in order to reduce costs and efforts. The increasing maturity of autonomous or mobile platforms enables adaptive observing systems and increases the access to  more extreme environments such as open and deep sea.\\
+
+The ANTARES observatory (Astronomy with a Neutrino Telescope and Abyss environmental RESearch) is a european project belonging to several observatory programs such as the European Seas Observatory NETwork (ESONET), EUROSITES (FP7, UE) or the international Global Ocean Observing System (GOOS). The ANTARES collaboration is composed of about 150 engineers, technicians and physicists and mainly financially supported by 6 countries (France, Netherlands, Spain, Italy, United Kingdom, Russia). The first aim of this program is the detection of high-energy particles with the immersion of a neutrino telescope in the deep Mediterranean Sea. Indeed, neutrinos are transformed, with the emission of a single photon, into muon particles when crossing the Earth crust. This light emission is more easily detected in the sea due to water-transparency properties, using photons detectors, named photomultipliers. Astrophysicists are able to detect the trajectory of these single-photon emissions across the detector on a global volume of about 0.1 km$^3$. The use of the ANTARES telescope has been extended to a multidisciplinary objective by including oceanographers to the project. An instrumented line has been added to the observatory in order to record oceanographic long time series at this station.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.5]{TS_biblio.pdf}
+\caption[Representation of some of the international open-ocean biological records and time-series since 1900. From \cite{edwards2010}]{Representation of some of the international open-ocean biological records and time series since 1900. Station P (North Pacific), RYOFU line (west Pacific transect), VICM (Vancouver Island Continental
+Margin time series), NMFS (National Marine Fisheries Service collection), BATS (Bermuda Atlantic Time series Study), HOT (Hawaii Ocean Time series program), BD Zoo (North Coast of Spain), SO CPR survey (Southern Ocean CPR survey), AMT (Atlantic Meridional Transect), and AZMP (Atlantic Zone Monitoring Program). From \cite{edwards2010}.}
+\label{TSbiblio}
+\end{figure}
+
+\section[Instrumentation and mathematical concepts for the observation of oceanographic variables]{Instrumentation and mathematical concepts for the observation of oceanographic variables
+\sectionmark{Instrumentation and methods}}
+\sectionmark{Instrumentation and methods}
+\subsection{ANTARES site and environmental context}
+
+The ANTARES site is located in the North-Western Mediterranean Sea, 40 km off the french Provencal coast (42 \degres 48'N,6 \degres 10'E), at 2,475 m depth, down to the steep continental slope. The position and depth for the ANTARES station were optimized for various reasons (technical, geophysical...). The observatory had to be immersed at depth greater than the euphotic zone for light interference and below 1,000 m depth for space and volume reasons. The vicinity to the shore was also of major importance to connect the site to the coast. Moreover, the site location was optimized for the optical and transparency properties of the water as well as the low current speed to avoid sedimentation and biofilms on the structure \citep{amram1999,amram2002} and \citep{aguilar2004}.\\ 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.5]{representation.pdf}
+\caption[A) Artistic representation of the ANTARES neutrino telescope in the deep Mediterranean Sea. B) Schematic representation of the IL07 instrumented line immersed close to the ANTARES telescope.]{A) Artistic representation of the ANTARES neutrino telescope in the deep Mediterranean Sea. Each of the spherical globe protects a  photomultiplier (PMT). All those 885 PMTs detect photon emission crossing the telescope and coming from various sources such as neutrino decomposition into muons, $^{40}$K decay of the water and from bioluminescent organisms. Image provided by the ANTARES collaboration. B) Schematic representation of the IL07 instrumented line immersed close to the ANTARES telescope. The mooring line is anchored to the seafloor by a dead weight and maintained vertically using a floating buoy, the line is connected to the junction box by a cable (not shown).}
+\label{representationANT}
+\end{figure}
+
+Twelve mooring lines dedicated to photon detection are immersed at the ANTARES site (see Figure \ref{representationANT} A) close to an instrumented line, namely IL07 line, mainly dedicated to the sampling of oceanographic and environmental data (Figure \ref{representationANT} B). The IL07 is composed of 2 optical modules (containing photomultipliers tubes), 2 Acoustic Doppler Current Profilers (ADCP), 2 video cameras, 1 Conductivity Temperature Depth probe (CTD) and 1 Aanderaa$^{\mbox{\scriptsize{\textregistered}}}$ optode oxygen sensor. The telescope mooring lines are linked to the shore by a cable providing mechanical strength, electrical contact and optic-fiber readout. This cable is stored to the seabed by a dead-weight anchor and kept vertical by a buoy at the top of each mooring lines. This infrastructure allows the access to real-time data from the deep sea. The ANTARES telescope has been immersed, in its last configuration, in December 2007, with a break in the data acquisition from July to September 2008 due to maintenance operations. In October 2010, the instrumented line IL07 has been disconnected and taken off involving a stop in the survey until its re-immersion in March 2013.\\
+
+\subsection{Description of the IL07 instrumented line}
+
+\subsubsection*{Photomultiplier tubes}
+The ANTARES telescope is a net of 12 lines of 450 m length and horizontally separated by 70 m. These lines are vertically divided into 25 storeys of optical detectors separated by about 14.5 m and starting 100 m above the seabed. The lines are linked to an optical cable connected to a junction box \citep{ageron2009}. Each storey is composed of three optical modules oriented downward, 45° from the vertical with a total number of about 885 optical modules (see Figure \ref{pmt}) over the telescope. This orientation prevents the particulate deposit \citep{amram2002}. The optical-module position is controlled using a compass and a tilt meter. The optical modules are spherical glass pressure vessels of 17 cm of diameter, 15 mm of thickness and containing a photomultiplier tube (PMT) 10'' Hamamatsu PMT R7081-20. PMTs are sensitive to light emission ranging from 446 to 500 nm. The photon-counting rates of PMTs, expressed in Hertz (number of photons per second), are integrated over 13 ms for the IL07 instrumented line. The signal recorded by PMTs is a combination of several sources of photon emission. Firstly, the neutrino transformation into muon in the water emits a single photon. Then, a baseline with very low variations, between 40 and 50 kHz, is attributed to the $^{40}$K decay in the seawater. Finally, the main part of the signal is due to light emission from marine bioluminescent organisms. Hence, the photon-counting rate, higher than 50 kHz, will be associated to bioluminescence activity in the rest of this work.\\ 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.3]{pmt.jpg}
+\caption[Optical module from the ANTARES neutrino telescope.]{Optical module from the ANTARES neutrino telescope. One photomultiplier is protected from high hydrostatic pressure inside the thick glass sphere. }
+\label{pmt}
+\end{figure}
+
+\subsubsection*{Video cameras}
+Two video cameras have been integrated into the IL07 between December 2007 and October 2010. The first objectives were to use simple, and easily available, video cameras as a primary step to record bioluminescent organisms crossing the ANTARES telescope. The detection of bioluminescent organisms, flowing through the telescope over several years, would permit to access to the ecological information, in order to understand and describe bioluminescent populations and communities. When such organisms cross the video-camera-detection area, they automatically trigger the camera and then, the data are transferred in real time through the cable connected from the telescope to the shore. The camera AXIS221 (Figure \ref{camera} A) used on the IL07 line is optimized for light levels lower than $10^{-5}$ lux. This camera has a large detection angle (90 \degres) covering several cubic meters around. Time exposure is defined at 0.1 s. Cameras are located into spherical glass pressure vessels similar to the ones containing the photomultipliers. There are several differences between the two cameras. One camera is located on floor 1 at 2,400 m depth, 80 m above the seafloor and the second one is located on floor 5 at 2,210 m depth, 270 m above the seafloor (see Figure \ref{camera} B). The floor-1 camera has a detection field half the one of the camera on floor 5. The cameras are looking down to the deep-sea floor with a 90° angle for the camera on floor 1 and 45° for floor-5 camera. Moreover, it has been observed that floor-5 camera possibly detects cosmic-ray-photon emissions that are not detected by floor-1 camera due to their orientation differences.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.35]{camera.pdf}
+\caption[A) The AXIS 221 camera used on the instrumented line IL07. B) Floor 5 on the instrumented line IL07 of the ANTARES neutrino telescope.]{A) The AXIS 221 camera used on the instrumented line IL07. Two of those are placed on floor 1 (2,400 m depth) and on floor 5 (2,210 m depth). B) Floor 5 on the instrumented line IL07 of the ANTARES neutrino telescope. The video camera is located into the upper optical module. An ADCP looking downward (in yellow) and an optical module with photomultiplier (PMT) are	also located on the same floor.}
+\label{camera}
+\end{figure}
+
+\subsubsection*{Acoustic Doppler Current Profiler}
+Two Acoustic Doppler Current Profiler (ADCP), 300 kHz RDInstruments are located on the IL07 line. The first ADCP is located, on floor 1, at 2,397 m depth, and is looking upward. The second one is located, on floor 5, at 2,207 m depth, and is looking downward. The ADCP detects particle sizes above 3$\times 10^{-3}$ m. For each of those instruments, 125 m of the water column are sampled into 50 cells of 2.5 m length each. The detection of the two ADCP overlaps causing cross sampling on about 63 m of the water column. Turbidity values are determined by 4 beams of the ADCP and are averaged to smooth extreme or artifactual values. From the ADCP measurements, turbidity (dB), vertical and horizontal current speed (cm s$^{-1}$) and current direction (\degres) are sampled. The vertical direction for current speed is not taken into account in this work due to the low signal-noise ratio of the dataset.\\
+
+\subsubsection*{Conductivity-Temperature-Depth sensors}
+The conductivity, temperature and depth are recorded using a Conductivity-Temperature Depth Microcat 37 SMP Sea-Bird$^{\mbox{\scriptsize{\textregistered}}}$. Salinity has been computed based on conductivity values and EPS78 formula from \cite{fofonoff1983}. Potential temperature is used and will be named "temperature" in further dataset and representations.\\
+
+\subsection{Data description\string: the regression trees approach}
+
+\subsubsection*{Threshold detection using regression trees}
+
+As first representation of the oceanographic time series recorded between January 2009 and July 2010, regression and prediction trees have been performed to describe variability of the data over time. Regression trees are statistical models concerned with the prediction of a real response variable $Y$ given a set of explanatory variables $\mathbf{X}$. Starting from a set of n $i.i.d.$ observations $\left\{ \left(Y,\mathbf{X}\right),\, i=1,\cdots,n\right\} $ of $(Y,\mathbf{X})\in\mathbb{R}\times\Theta$, they are constructed by partitioning the $\mathbf{X}$ space into a set of hypercubes and fitting a simple model (a constant) for $Y$ in each of these regions.The model can be displayed in the form of a binary tree containing $q$ terminal nodes (the regions) where a predicted value of $Y$ is given.\\
+
+The construction of a tree-based model, the way to select the splits and the measure of the accuracy are achieved using the following criterion called deviance defined for each node $r$ of the tree as: \[R\left(r\right)=\sum_{\mathbf{x}_{i}\in r}\left(y_{i}-\bar{y}_{r}\right)^{2}\]where $\bar{y}_{r}$ is the average of the observations of $Y$ belonging to the region $r$. These models have been widely studied in machine learning and applied statistics and present many advantages like their representation in a form of a binary tree, working in high dimension and variable ranking. Moreover, it can be interesting to construct a regression tree when the predictor variable $X$ is univariate or when observations are not $i.i.d$. In that case, the tree structure provides a nonlinear fitting of the time-series $Y\left(X\right)$ by finding thresholds on the variable $X$ and giving constant predicted values of $Y$ in regions identified by these thresholds. The model can then be displayed as a piece wise constant function and allows to identify particular regions of the time series where values of $Y$ change significantly.
+
+\section[Multivariate survey at high frequency and real-time sampling ]{Multivariate survey at high frequency and real-time sampling
+\sectionmark{Multivariate oceanographic dataset}} 
+\sectionmark{Multivariate oceanographic dataset}
+
+In the following paragraphs (\ref{currento} to \ref{images}), descriptive analyzes of bioluminescence activity linked to other oceanographic variables will be presented. More detailed description and analysis of all time series will be done in article 1 (\ref{manuscrit1}) and article 2 (\ref{manuscrit2}) for all variables independently and linked to bioluminescence activity.\\
+
+\subsection{Water masses proxies}
+
+Time series recorded at the ANTARES station are represented for bioluminescence, salinity, temperature and horizontal current speed from December 2007 to October 2010 (Figure \ref{TScomp}).\\
+
+\begin{sidewaysfigure}[p]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.7]{TS2.pdf}
+\caption[Time series dataset sampled at the ANTARES station from December 2007 to July 2010. ]{Time series dataset sampled at the ANTARES station from December 2007 to July 2010. A break appears in July 2008 due to the maintenance of the instrumented line. A) The median rates of photon-counting rate (assimilated to bioluminescence in kHz), B) salinity C) temperature (\degres C) D) current speed (cm s$^{-1}$) E) oxygen ($\mu$mol kg$^{-1}$).}
+\label{TScomp}
+\end{sidewaysfigure}
+
+The scientific questions of this work focus on bioluminescence activity in the deep sea as an input to understanding the deep-ecosystem dynamics. Looking at the bioluminescence activity in Figure \ref{TScomp} A, a wide range of values, not expected in this deep environment (see \ref{introbiolu}), is observed over the considered time-period ranging from 40 to about 8,000 kHz. If this photon emission can not be described as high intensity, in absolute term, these values are altogether referring to unexpected level of bioluminescence in the deep sea and to intense variability. The bioluminescence activity shows an intermittent pattern with peaks above a baseline at about 40 kHz, known as the $^{40}$K decay in seawater. Two periods of very intense bioluminescence activity are distinct between March and July in 2009 and 2010. Moreover, in Figure \ref{TScomp} B and C, temperature and salinity have similar variations. In Figure \ref{TScomp} D, current speed  shows moderate variations over time without clear distinct period of high intensity. In Figure \ref{TScomp} E, oxygen shows a clear linear decreasing trend with an important variation in March 2009, conjointly to salinity and bioluminescence time series.\\ 
+
+\subsection{Currentology}
+\label{currento}
+Figure \ref{courant} represents the horizontal current speed at the deep ANTARES station with direction, intensity and frequency information. Looking at the annual scale, in 2008, 2009 and 2010, a global East-West axis is dominant. Moreover, the current direction is more frequently, and with higher intensity coming from the West than from the East (current speeds up to 20 cm s$^{-1}$ for Western currents and up to 10 cm s$^{-1}$ for Eastern currents). Faster current speeds are observed in 2009 from the Western direction and in 2010 from the South-eastern direction (values above 20 cm s$^{-1}$). No high current-speed values are observed in 2008.\\
+
+Similar representation are drawn with a focus on March 2009 and March 2010 (Figure \ref{courantevents}) referring to intense bioluminescence-activity events already described in Figure \ref{TScomp} A. Those two periods show similar current-direction pattern than the observation on annual scale (Figure \ref{courant}), dominated by East-western direction. However, during those two periods, South-eastern currents are more frequent than during the whole year. March 2009 and 2010 are also periods of more intense current speed compared to the whole year (more than 15\% above 20 cm s$^{-1}$). In March 2009, the highest current-speed intensities are essentially coming from the western direction whereas,
+in 2010, this direction is mainly South-East.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.42]{courant08-10.pdf}
+\caption[Current speed horizontal intensity, incoming direction and frequency representations for 2008, 2009 and 2010. ]{Current speed horizontal intensity, incoming direction and frequency representations for 2008, 2009 and 2010. Due to the stop of the instrumented line IL07 between July and September 2008, no data have been taken into account for that period in 2008. The total circle is subdivided into 10° angular sections. Color scale (from dark blue to dark red) represents the current speed (cm s$^{-1}$) and dotted circles represent the frequency (\% of occurrence).}
+\label{courant}
+\end{figure} 
+
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.43]{courant_events.pdf}
+\caption[Current speed horizontal intensity, direction and frequency representations focused on March 2009 and 2010.]{Current speed, horizontal intensity, direction and frequency representations focused on March 2009 and 2010. The total circle is subdivided into 10° angular sections. Color scale (from dark blue to dark red) represents the current speed (cm s$^{-1}$) and dotted circles represent the frequency (\% of occurrence). }
+\label{courantevents}
+\end{figure} 
+
+\subsection{Bioluminescence interaction with current}
+
+Such representation can be easily adapted in order to illustrate links between bioluminescence activity and current direction. In Figure \ref{bio}, the median rate of bioluminescence (kHz) and frequency (\% of occurrence) are plotted over current direction (\degres) recorded at the same time. An East-western axis is predominant with similar pattern as current speed in Figure \ref{courant}. In 2008, 2009 and 2010, most of the bioluminescence activity is lower than 500 kHz. However, higher bioluminescence values occurring in 2009 and 2010 (above 1,500 kHz), are mainly related to South-eastern currents.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.52]{biol08-10.pdf}
+\caption[Bioluminescence representation over the years 2008, 2009 and 2010 depending on direction of current speed, intensity and frequency. ]{Bioluminescence representation over the years 2008, 2009 and 2010 depending on direction of current speed, intensity and frequency. Due to the stop of the instrumented line IL07 between July and September 2008, no data have been taken into account for that period in 2008. The total circle is subdivided each 10\degres . Color scale (from dark blue to dark red) represents the bioluminescence intensity (kHz) and dotted circles represent the frequency (\% of occurrence).}
+\label{bio}
+\end{figure} 
+
+ A focus in March 2009 and March 2010 is represented (Figure \ref{bioluevents}). If March 2009 shows moderated bioluminescence activity, in March 2010, very high bioluminescence intensity (from 2,000 to 8,000 kHz) is recorded conjointly to a South-eastern current direction. Those two graphs (Figure \ref{bio} and \ref{bioluevents}) show similar pattern to current speed, frequency and direction (Figure \ref{courant} and Figure \ref{courantevents}). The similarity between those representations highlights close links between current speed, current direction and bioluminescence activity. However, no discrimination can be made between the independent effect of the current speed and that of the current direction on bioluminescence activity.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.4]{biolu_events.pdf}
+\caption[Bioluminescence representation in March 2009 and 2010 depending on direction of current speed, intensity and frequency .]{Bioluminescence representation in March 2009 and 2010 depending on direction of current speed, intensity and frequency. The total circle is subdivided each 10\degres . Color scale (from dark blue to dark red) represents the bioluminescence intensity (kHz) and dotted circles represent the frequency (\% of occurrence).}
+\label{bioluevents}
+\end{figure} 
+
+\subsection{Univariate and multivariate approaches using regression-tree method}
+
+For each variable independently, regression trees have been performed on dataset recorded  between January 2009 and December 2010. This representation defines changes in intensity, taking into account time dependence. In Figure \ref{trees}, on the left, the regression trees show time series partition into classes with mean value defined for the final leaves. On the right, the previously defined classes, performed by the regression trees, are represented on time series.\\
+
+For bioluminescence (Figure \ref{trees} A), 5 classes are described, whereas for salinity (Figure \ref{trees} B) and temperature (Figure \ref{trees} C), 4 classes are discriminated over time.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.6]{trees.pdf}
+\caption[Regression trees for A) bioluminescence, B) salinity, C) temperature and D) current speed. Time series with the class mean values (black lines) defined by the leaves of regression trees. ]{On the left, regression trees for A) bioluminescence, B) salinity, C) temperature and D) current speed. On the right, time series with the class mean values (black lines) defined by the leaves of regression trees. The regression trees give an overview of the occurrence of events inside the dataset by dividing the data into classes. The time series representation of these classes shows the variability over time.}
+\label{trees}
+\end{figure}
+
+Interestingly, the same period of time, between the 18$^{th}$ and 31$^{st}$ of March 2010 (the two first nodes), is highlighted for bioluminescence and salinity (Figures \ref{trees} A and B). These changes in variability over time are clearly observed with long branches and high-mean values (1,901 kHz for bioluminescence and 38.480 for salinity). The threshold corresponding to the 18$^{th}$ March 2010 also appears for temperature (last node in Figure \ref{trees} C) but not for current speed. This first observation highlights potentially common dynamics between bioluminescence activity, salinity and temperature on a global time scale.\\
+
+From these results, a prevision tree, based on data acquisition from December 2007 to July 2010, has been performed (Figure \ref{S4}). This prediction tree computes information from temperature, salinity, current speed in order to predict bioluminescence values.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{S4.pdf}
+\caption[Regression tree for the prediction of bioluminescence activity using oceanographic variables (salinity, temperature and current speed) from December 2007 to July 2010. Modified from \cite{tamburini2013}, supplementary data.]{Regression tree for the prediction of bioluminescence activity using oceanographic variables (salinity, temperature and current speed) from December 2007 to July 2010. The top and bottom of each box-plot represent 75\% (upper quartile) and 25\% (lower quartile) of all values, respectively. The horizontal line is the median. The ends of the whiskers represent the 10$^{th}$ and 90$^{th}$ percentiles. Outliers are represented by empty dots. Modified from \cite{tamburini2013}, supplementary data.}
+\label{S4}
+\end{figure} 
+
+The tree defines 4 nodes and 5 classes with an average bioluminescence intensity for each. Class 1 (mean 121.1 kHz), 2 (mean 435.0 kHz) and 3 (mean 552.4 kHz) gather low bioluminescence intensity mainly due to low sea-current speed (below 19.0 cm s$^{-1}$). The branch length shows the strong dependence of bioluminescence to the current-speed threshold of 19.0 cm s$^{-1}$. Indeed, class 3 and 4 are firstly described by high current-speed intensity (>19.0 cm s$^{-1}$) but, as a second environmental condition, the temperature threshold of 12.92\degres C divides these two classes between high (class mean of 1,393.0 kHz) and highest (class mean of 5,108.0 kHz) bioluminescence values. Moreover, the boxplot representation of data within each class (Figure \ref{S4}) revels a straight range of values within the class of strongest bioluminescence activity (1$^{st}$ and 3$^{rd}$ quantiles between 4,500 and 5,200 kHz).\\
+
+Similar variations are observed for bioluminescence activity and salinity (period between the 18$^{th}$ and the 31$^{st}$ of March 2010, in Figure \ref{trees} A and B). Time dependence seems to be of major importance for highlighting links between bioluminescence activity and environmental variables. Moreover, a current speed above 19.0 cm s$^{-1}$ strongly discriminates the bioluminescence activity. However, intense bioluminescence activity also relies on temperature (threshold of 12.92\degres C in Figure \ref{S4}).\\
+
+This classification method is dependent on the variability threshold and on the final number of classes, both defined by the user. If some clues and hypotheses can be proposed using both time series observation and regression trees, more robust statistical-analysis methods have to confirm, or not, this first investigation. Such improvement will be proposed in article 1 (\ref{manuscrit1}) and article 2 (\ref{manuscrit2}).\\
+
+%\subsection{Turbidity}
+
+%\begin{figure}[]
+%\linespread{1} 
+%\centering
+%\includegraphics[scale=0.35]{2008_echo_F1.jpg}
+%\caption{}
+%\label{2008turb}
+%\end{figure} 
+
+%\begin{figure}[]
+%\linespread{1} 
+%\centering
+%\includegraphics[scale=0.35]{2009_echo_F1.jpg}
+%\caption{}
+%\label{2009turb}
+%\end{figure} 
+
+\subsection{Analysis of \textit{in situ} images from bioluminescent organisms}
+\label{images}
+
+%During the first immersion of the IL07 instrumented line on the ANTARES site, video-camera systems have been . 
+
+\subsubsection*{Qualitative interpretations}
+
+The use of video camera for automatic detection is nowadays under development, with numerous recent studies. Such developments are done in various fields as for example the zooplankton detection \citep{stemmann2008}, or other \textit{in situ} organisms detection  (Eye-in-the-sea, MARS observatory, USA or NEPTUNE, Canada, \citealp{aguzzi2011,aguzzi2009}). To determine bioluminescent organisms crossing the ANTARES observatory, the ANTARES collaboration decided to immerse video cameras. In a first attempt, easily available and simple to use AXIS video-monitoring cameras were chosen to test the feasibility (1) to connect them to the ANTARES telescope, (2) to trigger them in the presence of luminescent organisms detected by the ANTARES PMTs, (3) to real-time visualize and monitor the instrumentation, (4) to automatically transfer and stock images in the ANTARES data base and (5) to visualize luminescent organisms using only infrared light.\\
+
+%The immersion of two video-camera on the ANTARES IL07 line was dedicated to the determination of bioluminescent organisms crossing the ANTARES observatory. The implementation of camera validate the ability of such technology to be used on the IL07 instrumented line and to detect bioluminescent organisms in the deep Mediterranean Sea (see Figure \ref{imagevid}). 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=8cm]{bioluimage.jpg}
+%\caption[Example of images recorded by video-camera at the ANTARES site, on floor 5. ]{Example of images recorded by video-camera at the ANTARES site, on floor 5. The second line correspond to successive images from one shot video.}
+\caption[Example of images recorded by video-camera at the ANTARES site. ]{Example of colored images recording bioluminescent organism crossing the video-camera detection area, at the ANTARES site, on 10$^{th}$ December 2007.}
+\label{imagevid}
+\end{figure}
+
+While the first objectives were successfully achieved, the image quality obtained, using the 2 AXIS cameras placed on the IL07, does not permit an identification of bioluminescent objects (Figure \ref{imagevid}). So, only the events detected by automatic triggers have been investigated in a quantitative approach and can be interpreted for now.\\
+
+\subsubsection*{Quantitative analysis\string: number of events}
+
+Between December 2007 and July 2010, a total number of 874 events has been recorded by the two video cameras on the IL07 line. Bioluminescence time series recorded by PMTs from the IL07 (Figure \ref{tsvideo} A) and the number of detected events by the video cameras for both floor 1 and 5 (Figure \ref{tsvideo} B) are represented. During July and August 2008, the video cameras were canceled due to the IL07 maintenance involving a gap into the dataset. A peak in the number of events is recorded from March to June 2010, with a maximum value occurring in March 2010 with 27 and 201 events detected on floor 1 and 5, respectively.\\ 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.58]{c.pdf}
+\caption[Bioluminescence emission and video records. A) The bioluminescence emission recorded from the ANTARES-IL07 photomultipliers. B) Bioluminescence events recorded from the two video-cameras using automatic detection on the ANTARES-IL07.]{Bioluminescence emission and video records. A) The bioluminescence emission recorded from the ANTARES-IL07 photomultipliers. B) Bioluminescence events recorded from the two video-cameras using automatic detection on the ANTARES-IL07.}
+\label{tsvideo}
+\end{figure}
+
+Video cameras detect less events at floor 1 than floor 5 (281 and 593 total events with median values of 7.0 and 9.0, respectively, see Figure \ref{boxplot}). However, there is no significant difference between these two boxplot distributions corresponding to floor 1 and floor 5.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.35]{boxplot.jpeg}
+\caption[Representation of the video-event distribution between floor 1 and floor 5. ]{Representation of the video-event distribution between floor 1 and floor 5. The video camera at floor 1 is close to the seafloor and the one at floor 5 is assumed to be in the water column. Data recorded in March 2010, with 201 events detected, is not shown in this graph, since this data was considered as an extreme value out of the boxplot distribution. Total number of events are 281 and 593 for floor 1 and floor 5, respectively.}
+\label{boxplot}
+\end{figure}
+
+In order to quantify the bioluminescence activity detected by video cameras, the light emission recorded by the PMTs in Figure \ref{tsvideo} A, was monthly integrated from January 2009 to July 2010. Correlation between the number of events and bioluminescence rate per month is represented (Figure \ref{correl}). These results show a correlation (correlation coefficient of about 0.7) between the number of events detected and the bioluminescence rate recorded. On a monthly scale, the number of bioluminescent events from video cameras reflects the variations in bioluminescence activity recorded at the ANTARES station. Exceptions occur in April 2009, and March 2010 (red crosses in Figure \ref{correl}) that are outside the 95\% confidence intervals. In April 2009, bioluminescence rate per month is high with a number of events detected by the video camera relatively low referring to the regression. However, in March 2010, a high number of events is recorded compared to the monthly bioluminescence rate also referring to the regression. This correlation is based on 19 months, with  about 76\% of the data in the lower part of the regression line (number of events lower than 35 and monthly bioluminescence lower than 1$\times 10^6$ kHz, red dotted lines in Figure \ref{correl}). According to this remark, the few events of high bioluminescence activity support heavy weight to determine the regression slope.\\
+
+\begin{figure}[]
+\centering
+\linespread{1} 
+\includegraphics[width=12cm]{correlationb2.pdf}
+\caption[Correlation between the bioluminescence emission monthly integrated and the number of events recorded by video cameras at the same time scale. ]{Correlation between the bioluminescence emission monthly integrated and the number of events recorded by video cameras at the same time scale. The data are studied from January 2009 to July 2010.  The dotted lines represent the 95 and 75\% of confidence intervals. In red, the data referring to April 2009 and March 2010 are considered as extreme couples of data. Red dotted lines represent 76\% of the data.\\}
+\label{correl}
+\end{figure}
+
+%\begin{figure}[!h]
+%\linespread{1} 
+%\centering
+%\includegraphics[width=13cm]{video_courant_intensity.pdf}
+%\caption[Current speed time series (black line) and cumulative sum of events detected from video-camera (red line). ]{Current speed time series (black line) and cumulative sum of events detected from video-camera (red line). The occurrence of data detected is also represented over time (red crosses).}
+%\label{event_cour}
+%\end{figure}
+
+Organisms detected by the video-cameras can be mechanically stimulated by current speed, by turbulence or emit light when crashing to the optical module. Consequently, the bioluminescence activity is linked to the number of events detected by the video cameras. However, at some specific dates this relation is not confirmed (April 2009 and March 2010 in Figure \ref{correl}). Other organisms, such as bacteria, are probably poorly detected in free living or when attached to particles and can probably modify the video-camera triggering.\\
+
+\section[Article 1]{Article 1
+\sectionmark{ARTICLE 1}}
+\sectionmark{ARTICLE 1}
+\label{manuscrit1}
+
+\subsection{Foreword}
+
+Time series records at the ANTARES station lead to the observation of high variability in bioluminescence activity, especially in March 2009 and March 2010, that were unexpected in the deep sea.
+In the following article, these variations are described and explained at the regional scale of oceanographic processes observed in the Gulf of Lion (NW Mediterranean Sea). Indeed, the conjoint study of complementary time series, from monitored stations in the Gulf of Lion gave the opportunity to highlight the formation of new-water masses at the surface that are then exported to the deep sea. Such events explain changes observed on the ANTARES time series involving modifications of water-masses characteristics (temperature, salinity) but also of possible population changes in this deep ecosystem. These populations can be modified either by the input of organisms among them being bioluminescent (coming from the surface layers), or by the enrichment in carbon and energy of the deep sea due to the incoming of newly-formed water masses. This carbon, oxygen and nutrients input to the deep sea might involve an increase in the deep-sea biological activity and so higher bioluminescence activity.\\
+
+%L'enregistrement des séries temporelles enregistrées sur le site ANTARES a permis d'observer des variations d'activité de bioluminescence inattendues en milieu profond, principalement en mars 2009 et mars 2010. Dans le manuscrit ci-après, ces variations de bioluminescence sont décrites et expliquées à l'échelle de processus océanographiques observés dans le Golfe du Lion (Méditerranée NW). En effet, la mise en commun de séries temporelles complémentaires, provenant de sites instrumentés dans le Golfe du Lion, ont permis de mettre en avant des phénomènes de masses d'eau nouvelles créées en surface et exportées vers le milieu profond. Ces évènements expliquent les changements observés sur les séries temporelles d'ANTARES entrainant des modifications des caractéristiques des masses d'eau (température, salinité) mais également de probables changements de populations dans cet écosystème profond. Ces populations peuvent être modifiées soit par l'apport d'organismes, potentiellement bioluminescents, provenant des couches supérieures de l'océan, soit, par l'enrichissement du milieu profond avec l'arrivée de ces masses d'eau nouvellement formées. Cet apport de carbone, d'oxygène ou de nutriments vers le milieu profond induirait une augmentation de biomasse et par conséquent une hausse de l'activité de bioluminescence.\\
+
+\textit{The ANTARES collaboration developed the underwater telescope and as members of the ANTARES collaboration, we have access to the data. C. Tamburini and S. Escoffier are the main authors for this publication. M. Canals, X. Durieu de Madron, L. Houpert, F. D'Ortenzio gave clues and interpretation for oceanographic data as well as data from the Gulf of Lion. D. Lefevre and A. Robert calibrated temperature and salinity data, thanks to the MOOSE monthly sea campains, as well as the supplementary data in Figure {S3}. I contributed to the time series representation, the statistical analyzes and the article understanding and writing.}
+
+
+%\textit{La collaboration ANTARES a mis en place le télescope et permis l'accès aux données, C. Tamburini et S. Escoffier sont les auteurs principaux de cet article,  M. Canals, X. Durieu de Madron, L. Houpert, F. D'Ortenzio ont permis le traitement et la compréhension des données d'océanographie physique ainsi que l'accès aux données du site d'échantillonnage du Golfe du Lion. D. Lefevre at A. Robert ont permis la calibration des données de température et de salinité par les sorties mensuelles des campagnes MOOSE, ainsi que la réalisation des données supplémentaires et de la Figure \ref{S3}. J'ai contribué à la représentation des séries temporelles, aux analyses statistiques présentées ainsi qu'à la réfléxion et l'écriture de ce manuscrit.}\\
+
+\newpage
+\subsection[Deep-sea bioluminescence blooms after dense water formation at the ocean surface]{Deep-sea bioluminescence blooms after dense water formation at the ocean surface
+\sectionmark{ARTICLE 1}}
+\sectionmark{ARTICLE 1}
+\label{manuscrit1}
+
+\begin{center}
+Christian Tamburini$^{1,2,\ast}$, Stéphanie Escoffier$^{3,\ast}$, Miquel Canals$^3$, Xavier Durrieu de Madron$^4$, Loic Houpert$^4$,
+Dominique Lefèvre$^{1,2}$, Séverine Martini$^{1,2}$, Fabrizio D'Ortenzio$^5$, Anne Robert$^{1,2}$, Pierre Testor$^6$,  and the ANTARES collaboration $^{\ast \ast}$\\
+\end{center}
+\vspace{1mm}
+
+$^1$ Aix Marseille Université , CNRS/INSU, IRD, Mediterranean Institute of Oceanography (MIO), UM 110, Marseille, France \\
+$^2$ Université de Toulon, CNRS/INSU, IRD,
+Mediterranean Institute of Oceanography (MIO), UM 110, La Garde, France\\
+$^3$ CPPM-Aix-Marseille Université , CNRS/IN2P3, Marseille, France\\
+$^4$ GRC Geociències Marines, Departament d'Estratigrafia, Paleontologia i Geociències Marines,
+Facultat de Geologia, Universitat de Barcelona, Campus de Pedralbes, Barcelona, Spain\\
+$^5$ Université de Perpignan, CNRS-INSU, CEFREM UMR5110, Perpignan, France\\
+$^6$ Université Pierre et Marie Curie, CNRS-INSU, LOV UMR7093, Villefranche-sur-mer, France\\
+$^7$ Université Pierre et Marie Curie, CNRS-INSU, Institut Pierre Simon Laplace, LOCEAN UMR 7159, Paris, France\\
+
+\vspace{1mm}
+$\ast$ Corresponding authors\string: \underline{christian.tamburini@univ-amu.fr}; \underline{escoffier@cppm.in2p3.fr}\\
+\noindent $\ast \ast$ For easier reading, the complete list of authors belonging to the ANTARES collaboration has not been developed in this article. For a complete list, please refer to the PLoS ONE published version.\\
+
+\noindent \textbf{Tamburini C, Canals M, Durrieu de Madron X, Houpert L, Lefèvre D, et al. (2013) Deep-Sea Bioluminescence Blooms after Dense Water Formation at the Ocean Surface. PLoS ONE 8(7)\string: e67523. doi\string: 10.1371/journal.pone.0067523}\\
+
+\newpage
+\textbf{Abstract}\\
+The deep ocean is the largest and least known ecosystem on Earth. It hosts numerous pelagic organisms, most of which are
+able to emit light. Here we present a unique data set consisting of a 2.5-year long record of light emission by deep-sea
+pelagic organisms, measured from December 2007 to June 2010 at the ANTARES underwater neutrino telescope in the
+deep NW Mediterranean Sea, jointly with synchronous hydrological records. This is the longest continuous time-series of
+deep-sea bioluminescence ever recorded. Our record reveals several weeks long, seasonal bioluminescence blooms with
+light intensity up to two orders of magnitude higher than background values, which correlate to changes in the properties
+of deep waters. Such changes are triggered by the winter cooling and evaporation experienced by the upper ocean layer in
+the Gulf of Lion that leads to the formation and subsequent sinking of dense water through a process known as 'open-sea
+convection'. It episodically renews the deep water of the study area and conveys fresh organic matter that fuels the deep
+ecosystems. Luminous bacteria most likely are the main contributors to the observed deep-sea bioluminescence blooms.
+Our observations demonstrate a consistent and rapid connection between deep open-sea convection and bathypelagic
+biological activity, as expressed by bioluminescence. In a setting where dense water formation events are likely to decline
+under global warming scenarios enhancing ocean stratification, \textit{in situ} observatories become essential as environmental
+sentinels for the monitoring and understanding of deep-sea ecosystem shifts.\\
+
+\newpage
+\textbf{Introduction}\\
+The deep-sea ecosystem is unique because of its permanent
+darkness, coldness, high pressure and scarcity of carbon and
+energy to sustain life. Most of its biological activity relies on the
+arrival of carbon in the form of organic matter from surface
+waters. Ninety percent of the numerous pelagic organisms that
+inhabit the deep ocean are capable of emitting light \citep{robison2004} through the chemical process of bioluminescence, which appears to be the most common form of communication in this remote realm \citep{robison2004,herring1987,Haddock2010}. Deep-sea bioluminescence is also viewed as an expression
+of abundance and adaptation of organisms to their environment
+\citep{widder2010}. Marine bioluminescent organisms include a variety of distinct taxa \citep{widder2010}. When stimulated mechanically or electrically, eukaryotic bioluminescent organisms emit erratic luminous flashes, and also spontaneous flashes to attract prey and mates for recognition of congeners or for defence purposes \citep{robison2004,Haddock2010,widder2010}. In contrast, luminescent bacteria are unaffected by mechanical stimulation and can glow continuously for many days under specific growth conditions \citep{nealson1979,miller2005}. Bioluminescent bacteria occur in marine waters as free-living forms, symbionts in luminous organs of fishes and crustaceans and attached to marine snow aggregates sinking through the water column \citep{nealson1979,andrews1984}. During micro-algae blooms, strong bioluminescence produced by colonies of bacteria could even lead to spectacular marine phenomena such as 'milky seas' in surface waters \citep{miller2005}.\\
+
+Bioluminescence sources have been observed and quantified over the last three decades using a variety of observational platforms and instruments such as manned submersibles \citep{robison2004}and autonomous underwater vehicles \citep{shulman2005}, \textit{in situ} high sensitivity cameras \citep{widder1989}, \citep{priede2006}, underwater photometers \citep{andrews1984}, \citep{swift1985}, \citep{geistdoerfer1999}, and remote satellite imagery \citep{miller2005}. In most cases, deep-sea bioluminescence is triggered and observed after external mechanical stimulation using, for instance, pumped flows through turbulence-generating grids \citep{widder1999} or downward moving grids that collide with the organisms \citep{priede2006}. While these procedures provide crucial information on the nature and distribution of deep-sea bioluminescent organisms in the water column \citep{Haddock2010} and references therein, they are not suited to investigate the temporal variability of naturally occurring light production (i.e. non artificially triggered) at specific sites over long periods of time, which requires sustained high frequency \textit{in situ} measurements.\\
+
+An unanticipated application of underwater neutrino telescopes
+is to provide direct measurements of bioluminescence in the deep sea \citep {bradner1987,aoki1986,amram2000}. A neutrino telescope aims at detecting the faint Cherenkov light emission radiated by elementary charged particles
+called muons that are produced by neutrino interactions.
+Darkness, transparency and water shielding against cosmic ray
+muons make the deep sea an ideal setting for a neutrino telescope.
+Here we make use of both the high frequency bioluminescence
+and hydrological time-series of the cabled ANTARES neutrino
+telescope \citep{ageron2011} located 40 km off the French coast (42'489N, 6'109E) at 2,475 m in the NW Mediterranean Sea (Fig. \ref{F1} a).\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{Fig1.png}
+\caption[Map of the NW Mediterranean Sea showing the location of the ANTARES, LION and Lacaze-Duthiers Canyon (LDC) sites (a) as well as the extension of open-sea convection area in the Gulf of Lion and beyond from 2008 to 2010 (b-d).]{Map of the NW Mediterranean Sea showing the location of the ANTARES, LION and Lacaze-Duthiers Canyon (LDC) sites (a) as well as the extension of open-sea convection area in the Gulf of Lion and beyond from 2008 to 2010 (b-d). The boundaries of the convection area in winter 2008 (red in b), 2009 (blue in c) and 2010 (green in d) are derived from MODIS-Aqua satellite-based surface Chlorophyll-a concentration images. The limits of the convection area for each of the three successive winters correspond to their maximum extents during periods of deep water formation measured at the LION site (see Text S1 and Fig. \ref{S5}). Black arrows indicate the direction of the two main continental winds leading to the cooling and subsequent sinking of surface waters\string: Mistral (M) and Tramontane (T). The grey arrow indicates the path of the cyclonic surface mesoscale Northern Current bordering the open-sea convection region.}
+\label{F1}
+\end{figure} 
+
+The NW Mediterranean Sea is one of the few regions in the
+world's ocean where both dense shelf water cascading and open-sea
+convection take place \citep{mertens1998,marshall1999,canals2006,stabholz2013} (Fig. \ref{F1} a). This results in
+the formation of deep water owing to the combination of
+atmospheric forcing and regional circulation that lead the water
+column to overturn \citep{marshall1999,canals2006,bethoux2002}. Dense deep water formation occurs during late winter and early spring due to cold, strong and
+persistent northern winds (Mistral and Tramontane) causing
+surface cooling of the Modified Atlantic Water (MAW) both on
+the shelf and over the deep basin. When the cooled shallow waters
+on the shelf become denser than the ambient waters, they start
+sinking, overflow the shelf edge, and cascade downslope until they
+reach their density equilibrium depth, which may vary from
+150 m to more than 2,000 m \citep{canals2006,palanques2012}. At the same time,
+convection in the adjacent deep basin involves a progressive
+deepening of the upper ocean mixed layer, which first reaches the
+warmer and saltier underlying Levantine Intermediate Water
+(LIW) and eventually extends all the way down to the basin floor,
+should the atmospheric forcing be intense enough \citep{marshall1999}. Both
+processes and the subsequent renewal of the Western Mediterranean
+Deep Water (WMDW) show a high interannual variability
+because of their sensitivity to atmospheric conditions \citep{mertens1998,durrieu2013}. The
+newly-formed deep water (nWMDW) resulting from both dense
+shelf water cascading and open-sea convection has been observed
+to spread over the deep basin floor within months \citep{bethoux2002,durrieu2013,schroder2006,testor2006}.
+Studies about the response of deep ecosystems to such processes
+are scarce and focus on the impact of dense shelf water cascading
+on benthic and epi-benthic organisms \citep{pusceddu2013,company2008}. Other recent works
+highlight how deep water formation triggers the resuspension of
+deep sea sediments, including organic matter \citep{stabholz2013}, and the development and spreading of a thick bottom layer loaded with
+resuspended particulate matter across the NW Mediterranean
+Basin as a result of dense shelf water cascading \citep{puig2013}.\\
+
+\begin{figure}[p]
+\linespread{1} 
+\centering
+\includegraphics[width=10cm]{Fig2.png}
+\caption[Time series measured at the ANTARES IL07 mooring line. ]{Time series measured at the ANTARES IL07 mooring line. (a) Median PMT counting rates (log scale), salinity, potential temperature and current speed from December 2007 to June 2010. Shading indicates periods (b) from January to June 2009 and (c) from January to June 2010, in which bioluminescence blooms were recorded. The lack of data from June 24 to September 6, 2008 is due to a cable technical failure.}
+\label{F2}
+\end{figure} 
+
+Here we present compelling evidence of the quick response of
+the deep-sea pelagic ecosystem to seasonal atmospheric forcing
+leading to dense water formation and sinking, expressed by
+particularly intense bioluminescence events captured by neutrino
+telescope photomultiplier tubes. Observations on bioluminescence
+are supported by a two and a half years long unique and consistent
+record of hydrological and hydrodynamical variables obtained at
+the ANTARES deep-sea neutrino telescope itself but also at two
+independent mooring arrays equally located in the deep NW
+Mediterranean Sea.\\
+
+\textbf{Results and Discussion}\\
+\textbf{Bioluminescence blooms at the ANTARES site}\\
+
+We report time-series measurements of light intensity expressed
+in median counting rates on photomultiplier tubes as well as
+temperature, salinity and current speed from December 2007 to
+June 2010 (Fig. \ref{F2} a), collected between 2,190 and 2,375 m depth in
+the ANTARES IL07 mooring line (see Methods and Fig. \ref{S1}).
+While the light intensity background rate is predominantly
+between 40 and 100 kHz, which mainly includes the $^{40}$K rate
+(see Methods and Fig. \ref{S2}), two remarkable bioluminescence
+events reaching up to 9,000 kHz were recorded between March and
+July in 2009 and 2010 (Fig. \ref{F2}). Because of their high intensity and
+duration we call these events "bioluminescence blooms", defined
+here as periods with PMT median rates higher than 600 kHz, i.e.
+higher than the 96$^{th}$ percentile of the entire PMTs record.\\
+
+Our records show that bioluminescence primarily increases with
+current speed, which is due to mechanical stimulation either by
+impacts of small-sized organisms and particles on the PMTs
+\citep{amram2000,priede2008} or by the reaction of organisms to enhanced turbulent
+motion in the wakes of the PMTs \citep{bradner1987,aoki1986,amram2000}. However, current
+speed alone fails to explain the complete record of bioluminescent
+activity since, for moderate current speeds, differences in the
+median rates of up to one order of magnitude are observed in 2009
+(Fig. \ref{F2} b) and 2010 (Fig. \ref{F2} c). For instance, on March 8, March 11
+and April 8-12, 2010, bioluminescence peaks at 800 to 1300 kHz while
+current speeds are rather low, from 10 to 15 cm s$^{-1}$ (Fig. \ref{F2} c) a
+speed range usually associated to median rates of around 100 kHz.
+These bioluminescence bursts clearly correspond to significant
+increases in both potential temperature ($\Delta \theta = 0.03-0.05\degres C$) and salinity ($\Delta S = 0.005-0.015$). As the deep water mass at the ANTARES site is the WMDW, characterized in 2008 by a narrow range of temperature and salinity ($\theta = 12.89-12.92\degres C, S = 38.474-38.479$), the increases above the normal range of variation observed in 2009 and 2010 are indicative of the intrusion of a distinct water mass (Fig. \ref{F2}, see Text S1 and Fig. \ref{S3}). It is noteworthy that neither deep-water thermohaline modification nor bioluminescence blooms were recorded in 2008 (Fig. \ref{F2} a).\\
+
+\begin{figure}[]
+\linespread{1} 
+\centering
+\includegraphics[width=11cm]{Fig3.png}
+\caption[Links between bioluminescence, current speed and the modification of the properties of the Western Mediterranean
+Deep Water (WMDW). ]{Links between bioluminescence, current speed and the modification of the properties of the Western Mediterranean
+Deep Water (WMDW). Box-and-whisker plot of median PMT counting rates (log scale) versus current speed classes for salinities higher (red) or lower (grey) than 38.479 for data recorded in (a) 2008, (b) 2009 and (c) between January and June 2010. The salinity threshold of 38.479 is used as a marker of the intrusion of newly formed deep water at the ANTARES site. While bioluminescence increases with current speed, it is also enhanced by the modification of WMDW (red box-plots). The top and bottom of each box-plot represent 75\% (upper quartile) and 25\% (lower quartile) of all
+values, respectively. The horizontal line is the median. The ends of the whiskers represent the 10th and 90th percentiles. Outliers are not represented. The statistical comparison between the two box-plots (red and grey) in each current class is given by the Kruskal-Wallis test\string: the observed difference between the two samples is significant beyond the 0.05 (*), the 0.01 (**) and the 0.001 (***) levels. The absence of an asterisk in some current classes indicates that the difference between the two box-plots is not significant. The number of measurements for salinity lower or higher than 38.479 is given in black or in red, respectively. Note the different scales of figures a, b and c.}
+\label{F3}
+\end{figure} 
+
+To illustrate the link between the intrusion of newly formed
+deep water and high bioluminescence, we use a salinity threshold
+of 38.479 as marker of such intrusions at the ANTARES site. This
+value has been defined using a statistical decision tree (Fig. \ref{S4}) and
+also corresponds to the 96$^{th}$ percentile of the entire salinity record. Bioluminescence data, divided into two groups above and below this salinity threshold, are presented as box-and-whisker plots
+versus current speed classes (Fig. \ref{F3}). Close examination of Figure \ref{F3}
+shows that bioluminescent activity is enhanced by both increasing
+current speed and the renewal of the deep water. Indeed, on the
+one hand, the bioluminescence rates increase with current speed
+for each of the two bioluminescence data groups (grey and red box-and-whisker plots) and on the other hand, bioluminescence
+rates are always higher for new deep water (red boxes, S>38.479)
+than for pre-existing deep water (grey boxes, S<38.479). The
+Kruskal-Wallis test performed on the box-and-whisker plots attests
+that the red and grey boxes are significantly different (p<0.001) for
+current speeds up to 18 and 24 cm s$^{-1}$ in 2009 and 2010,
+respectively (Fig. \ref{F3} b-\ref{F3} c), which means that bioluminescence rates
+are dependent on water mass properties too. This is illustrated, for
+instance, by the 2010 record (Fig. \ref{F3}c), which shows that the
+median bioluminescence rate for the 0-3 cm s$^{-1}$ current range is
+about 60 kHz for the existing deep water (grey box-plots), while it
+reaches 400 kHz within the new deep water (red box-plots).
+Bioluminescent bacteria, which are not affected by mechanical
+stimulation \citep{nealson1979,bradner1987} and are able to glow continuously under specific conditions \citep{nealson1979,miller2005}, are excellent candidates as main contributors to these bioluminescence blooms.\\
+
+\textbf{Deep-water convection in the NW Mediterranean Sea}\\
+
+To determine the origin of the newly formed deep water
+observed at the ANTARES site in 2009 and 2010, we investigated
+whether dense shelf water cascading and/or open-sea convection
+occurred in winter months.\\
+
+Instrumented mooring lines located at the center of the deep
+convection region (LION site at 42'029N, 04'419E; Fig. \ref{F1}a) and in
+Lacaze-Duthiers Canyon (LDC site at 42'269N, 03'339E; Fig. \ref{F1} a)
+provided temperature, salinity and current speed time-series from
+different water depths (Fig. \ref{F4}) synchronous to the ANTARES
+record. While no deep (>1,000 m) dense shelf water cascading
+took place during the study period (Fig. \ref {F4} a), bottom-reaching
+open-sea convection was observed in the basin down to 2,300 m
+depth during wintertime in 2009 and 2010, which led to the
+homogenization of the water column (Fig. \ref{F4} b). Increases in deep water temperature (Fig. \ref{F4} b) and salinity (Fig. \ref{F4} c) are due to the
+mixture of sinking cold surface water with warmer and saltier
+LIW. In winter 2008, open-sea convection only affected the upper
+1,000 m of the water column and did not alter the deep water
+mass. Current measurements showed the strong barotropic
+character of horizontal velocities (Fig. \ref{F4} d) and high vertical
+velocities (Fig. \ref{F4} e) during intense mixing periods. Once the surface
+forcing abates, convection ceases and intense sub-mesoscale eddies
+carry discrete volumes of the newly formed deep water away from
+the convection area \citep{testor2006}. The delay between the appearance of
+the thermohaline anomalies at the LION site in late winter and
+their arrival at the ANTARES site in spring is compatible with the
+spreading of the newly-formed deep water in the Gulf of Lion and
+subsequent mixing with pre-existing deep water \citep{bethoux2002,durrieu2013,schroder2006,testor2006}.
+Further mixing could take place at the ANTARES site due to
+enhancement of vertical motion by the interaction of instabilities
+in the surface cyclonic Northern Current with the topography of
+the continental slope \citep{vanharen2011}. The area of open-sea convection, as obtained from satellite imagery (see Fig. \ref{S5}), was much smaller
+during winter 2008 than in 2009 and 2010 when it covered most
+of the deep Gulf of Lion (Figs. \ref{F1} b-d). Furthermore, it was larger
+and closer to the ANTARES site in 2010 than in 2009 (Fig. \ref{F1} c-d),
+which may explain why the signature of new deep-water recorded
+at the ANTARES site is stronger in 2010 than in 2009 (Fig. \ref{F2}).\\
+
+\begin{figure}[]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{Fig4.png}
+\caption[Time series of oceanographic parameters measured at the Lacaze-Duthiers Canyon (LDC) and the open-sea convection
+region in the Gulf of Lion (LION) from January 2008 to June 2010.]{Time series of oceanographic parameters measured at the Lacaze-Duthiers Canyon (LDC) and the open-sea convection
+region in the Gulf of Lion (LION) from January 2008 to June 2010. (a) Potential temperature at 500 and 1,000 m depth at the LDC mooring site and (b) from various water depths at the LION site, jointly with (c) salinity at 2,300 m depth, (d) horizontal current speed and (e) vertical current speed from various water depths at the LION site. The four levels of temperature measurements at LION presented here are a sub-set of measurement depths (see Fig. \ref{S1}). Essentially stable temperatures in the deepest layers in 2008 show that open-sea convection reached only 700 m and did not modify the deep water in the study area. In contrast, strong convection events, reaching 2,300 m depth, occurred during February-March 2009 and 2010 with an abrupt cooling of the upper water column and an increase in temperature and salinity in the deep layers. A concurrent
+increase in current speed was also noticed in winter 2009 and 2010. The 5-month long data gap in 2009 is due to a damaging of the mooring line during the April 2009 recovery, which induced a postponement of its redeployment to September 2009.}
+\label{F4}
+\end{figure} 
+
+\textbf{Link between bioluminescence blooms and deep-water
+convection}\\
+
+All evidence points to deep-water formation by open-sea
+convection in the Gulf of Lion as the cause of the renewal of
+deep water at the ANTARES site that triggered the bioluminescence
+blooms observed in 2009 and 2010.\\
+
+During and in the aftermath of the convection period large
+amounts of organic matter, both in particulate (POC) and
+dissolved (DOC) form, are exported from the productive upper ocean layer down to the deep \citep{stabholz2013,martin2010,santinelli2010}. The resuspension of soft sediments covering the deep seafloor by bottom currents during the reported period could also inject organic matter into the deep-water mass \citep{stabholz2013,martin2010}. Changes in DOC concentration at the
+ANTARES site are shown by discrete measurements carried out at
+2,000 m depth during oceanographic cruises from December 2009
+to July 2010 (Fig. \ref{S6}). DOC concentration significantly increased
+from $42 \pm 1$ mM in December 2009, prior to the convection period, to $63 \pm 1$ mM in March and May 2010 when the new deep water mass occupied the ANTARES site, concurrently with higher
+oxygen contents in bottom waters between March and mid-June
+2010. Subsequently, DOC concentration decreased to 45 in mid-
+June and mid-July 2010 (Fig. \ref{S6}). Such an injection of organic
+matter into the deep water mass has the potential to fuel the deep-sea
+biological activity, thus stimulating bioluminescence activity.
+The increase in DOC concentration matches with observations
+reported by \citep{santinelli2010} for different regions of the
+Mediterranean Sea where deep convection occurs. These authors
+showed a high mineralization rate of DOC in recently ventilated
+deep waters, which is mainly attributed to bacteria. Bioluminescent
+bacteria were isolated at the ANTARES site during a
+previous period of high bioluminescent activity in 2005 \citep{alali2010}.
+Amongst them, we identified a piezophilic strain, \textit{Photobacterium phosphoreum} ANT-2200 \citep{alali2010,martini2013}, \textit{P. phosphoreum} being the dominant bioluminescent species in the Mediterranean Sea \citep{gentile2009}. These luminous bacteria likely represent the main organisms responsible for the higher level of bioluminescence detected at the ANTARES
+site. Such contribution is especially noticed when the current speed
+is low within the convection season (Fig. \ref{F3} b-\ref{F3} c). Finally, the flow
+associated with deep convection events might likely carries
+significant amounts of bioluminescent organisms too, which can
+also contribute to the bioluminescence blooms observed in 2009
+and 2010 due to their collision with PMTs and/or their
+stimulation by turbulent motion in the wakes of PMTs when
+current speed is high.\\
+
+\textbf{Conclusions}\\
+
+We present evidence for seasonal episodes of dense water
+formation driven by atmospheric forcing being a major vector in
+fuelling the deep-sea pelagic ecosystem and inducing bioluminescence blooms after a fast transfer of the ocean surface signal. Since dense water formation occurs in other ocean regions worldwide \citep{marshall1999}, we anticipate that an enhancement of the deep pelagic ecosystem activity similar to that observed in the NW Mediterranean Sea occurs there too, challenging our understanding of the carbon dynamics in the ocean. Dense water formation is likely to be altered by the on-going global warming. Recent models \citep{somot2006,herrmann2008} based on the A2 IPCC scenario indicate a strong reduction in the convection intensity in the Mediterranean Sea for the end of the 21$^{st}$ century, which will induce a massive reduction in organic matter supply and ventilation of the deep basin. Hence changes in the deep
+Mediterranean ecosystem more intense than those already
+observed in both the Eastern \citep{roether1996,weikert2001} and the Western Mediterranean \citep{pusceddu2013} basins are forecasted for the near future, a situation that could also occur but remain unnoticed in other sensitive areas
+of the world ocean. Our results illustrate the potentially far reaching
+multidisciplinary scientific and societal benefits of the
+installation of cabled deep-sea observatories in critical ocean areas.\\
+
+\textbf{Methods}\\
+
+The ANTARES neutrino telescope comprises a three-dimensional
+array of 885 Hamamatsu R7081-20 photomultiplier tubes
+(PMTs) distributed on 12 mooring lines \citep{ageron2011,aguilar2005}. These PMTs are
+sensitive to the wavelength range of 400-700 nm, which matches
+the main bioluminescence emission spectrum (440-540 nm) as
+reported in \cite{widder2010}. An extra mooring line (named IL07)
+equipped with RDI 300 kHz acoustic Doppler current profilers, a
+conductivity-temperature-depth (SBE 37 SMP CTD) probe and
+PMTs was added to monitor environmental variables (Fig. \ref{S1}). All
+moorings are connected to a shore-station via an electro-optical
+cable that provides real-time data transmission \citep{aguilar2007}. A dedicated
+program of bioluminescence monitoring was implemented to
+measure the total number of single photons detected every 13 ms
+for each PMT. To consistently compare PMT counting rates
+(bioluminescence) with oceanographic data (temperature, salinity,
+current speeds) considering the acquisition interval of the later
+(15 minutes), we calculated the median rates as a mathematical
+estimator of PMT counting rates. The median was selected instead
+of the arithmetic mean because of its higher robustness and least
+disturbance by extreme values. Median rates were expressed in
+thousands of photons per second or kHz (see Text S1 and
+Fig. \ref{S2} a). The main light contributions recorded by PMTs result
+from dark noise, from Cherenkov radiation induced by the beta
+decay of $^{40}$K in seawater and from bioluminescence. The dark
+noise is about $3 \pm 1$ kHz and remains constant with time \citep{aguilar2005}. The Cherenkov radiation induced by the beta decay of $^{40}$K in seawater produces a background of about $37 \pm 3$ kHz \citep{amram2002}, found to be constant within the statistical errors over a period of a few years \citep{aguilar2006,aguilar2010}. Therefore, all light increases over this constant background ($40 \pm 3$ kHz) can only be due to bioluminescence. The records of light intensity at IL07 are representative of those collected by the whole array of ANTARES PMTs (see Text S1
+and Fig. \ref{S2} b).\\
+
+Potential temperature, salinity, horizontal and vertical current
+speeds (Fig. \ref{S1}) at the LION mooring line were measured with
+SBE 37 SMP CTD probes and Nortek Aquadopp Doppler
+current-meters regularly spaced between the subsurface (150 m)
+and the seabed (2,350 m). Potential temperatures and vertical
+velocities were corrected for the current-induced tilting and
+deepening of the line. Hourly potential temperatures at the LDC
+mooring line were measured with the temperature sensor of
+Nortek Aquadopp Doppler current meters at 500 and 1,000 m
+depth.\\
+
+Proper calibrations of the CTD probes were performed using
+the pre- and post-deployment calibrations made by the manufacturer.
+The inter-comparison of instruments complied with quality control
+procedures.\\
+
+\textbf{Acknowledgments}
+The authors thank the captains and crews of R.V. Tethys II and L'Europe for cruise assistance. Technical support by Ifremer, Assistance Ingénierie Management (AIM) and Foselev Marine during sea operation and CCN$_2$P$3$ for providing computing facilities is greatly appreciated.\\
+
+\textbf{Funding}\string:\\
+This work was partially funded by the ANR-POTES program (ANR-05-BLAN-0161-01), ANTARES-Bioluminescence project (INSU-IN2P3), AAMIS project (Univ. Méditerranée), EC2CO Biolux project (CNRS INSU), Excellence Research Groups (2009-SGR-1305, Generalitat de Catalunya), EuroSITES (FP7-ENV-2007-1-202955), MARINERA-REDECO (CTM2008-04973-E/MAR), HERMIONE (FP7-ENV-2008-1-226354), KM3NeT-PP (212525), ESONET NoE (FP6- GOCE-036851), DOS MARES (CTM2010-21810-C03-01) and CONSOLIDER-INGENIO GRACCIE (CSD2007-00067) projects. SM was granted a MERNT fellowship (Ministry of Education, Research and Technology, France). LH acknowledges the support of the Direction Générale de l'Armement (supervisor\string: Elisabeth Gibert-Brunet). The authors also acknowledge the financial support of the funding agencies\string: CNRS, CEA, ANR, FEDER fund and Marie Curie Program, Régions Alsace and Provence-Alpes-Côte d'Azur, Département du Var and Ville de La Seyne-sur-Mer, France; BMBF, Germany; INFN, Italy; FOM and NWO, the Netherlands; Council of the President of the Russian Federation for young scientists and leading scientific schools supporting grants, Russia; ANCS, Romania; MICINN (FPA2009-13983-C02-01), PROMETEO (2009/026) and MultiDark (CSD2009-00064). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the article.\\
+
+\begin{sidewaysfigure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=16cm]{S1.jpg}
+\caption[Configuration of the mooring lines from which the data presented in this study were obtained.]{Supporting information. Configuration of the mooring lines from which the data presented in this study were obtained. They include the cabled IL07 ANTARES as well as the autonomous LION and Lacaze-Duthiers Canyon (LDC) mooring lines. Location is shown in Fig. \ref{F1}.}
+\label{S1}
+\end{sidewaysfigure} 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{S2.jpeg}
+\caption[(a) Raw counting rates from one photomultiplier (PMT) on the IL07 line (ANTARES site). (b) Median rates from the IL07 PMT (red) and mean of all median rates of the 885 ANTARES PMTs (blue) from January to April 2009.]{Supporting information. (a) Raw counting rates from one photomultiplier (PMT) on the IL07 line (ANTARES site). Counts are expressed in thousands of photons per second (kHz). The median rate is computed for each 15-minute data sample (red horizontal line). The dataset shown in the figure was recorded on March 28$^{th}$, 2010 with a median rate of 68 kHz and a current speed of 13 cm s$^{-1}$. (b) Median rates from the IL07 PMT (red) and mean of all median rates of the 885 ANTARES PMTs (blue) from January to April 2009.}
+\label{S2}
+\end{figure} 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=10cm]{S3.jpeg}
+\caption[Potential temperature versus salinity diagram of near-bottom CTD time-series at the ANTARES site from the IL07 line (red dots) and CTD profiles (lines) collected close to the ANTARES site.]{Supporting information. Potential temperature versus salinity diagram of near-bottom CTD time-series at the ANTARES site from the IL07 line (red dots) and CTD profiles (lines) collected close to the ANTARES site. (a) May 2007 to January 2009; (b) January to December 2009; and (c) December 2009 to January 2011. The data shown are from depths in excess of 1,000 m. Dotted lines correspond to potential density anomaly isolines in kg m$^{-3}$.}
+\label{S3}
+\end{figure} 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=13cm]{S5.jpeg}
+\caption[Illustrative ocean colour satellite images used to outline the limits of winter open-sea convection areas in the Gulf of Lion.]{Supporting information. Illustrative ocean colour satellite images used to outline the limits of winter open-sea convection areas in the Gulf of Lion. (a) Images plotted with a classical, full range, linear palette. (b) Images plotted with a simplified four level palette. The images shown correspond to days 1, 2, 7 and 18 February 2010, which are also transferred into Fig. \ref{F1} b-d. White pixels are indicative of lack of data due to cloud coverage.}
+\label{S5}
+\end{figure} 
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=14cm]{S6.jpg}
+\caption[Dissolved organic carbon and oxygen concentrations at the ANTARES site in 2010. ]{Supporting information. Dissolved organic carbon and oxygen concentrations at the ANTARES site in 2010. Dissolved Organic Carbon (DOC) was measured by high temperature combustion on a Shimadzu TOC 5000 analyzer \citep{sohrin2005}. A four point-calibration curve was performed daily with standards prepared by diluting a stock solution of potassium hydrogen phthalate in Milli-Q water. Procedural blanks run with acidified and sparged Milli-Q water ranged from 1 to 2$\mu$M C and were subtracted from the values presented here. Deep seawater reference samples (provided by D. Hansell; Univ. Miami) were run daily (43.5$\mu$M C, n = 4) to check the accuracy of the DOC analysis. Oxygen concentration time-series was obtained using an oxygen optode Anderaa fitted on the IL07}
+\label{S6}
+\end{figure}  
+
+\section{Conclusions}
+Through this chapter, the first analysis of multivariate time series at the ANTARES site, leads to the detection of several observations, despite a descriptive approach. The deep ANTARES site is characterized by current direction East-West with speed generally lower than 20 cm s$^{-1}$. This current direction is unexpectedly following the general path of the cyclonic surface mesoscale Northern Current (NC) \citep{millot2005,millot1999}. However, phenomena such as deep circulation, topography, and mesoscale eddies could possibly locally modify the expected current direction at this deep station \citep{testor2006}. To successfully explain such result, a detailed study is needed explaining the respective weight of local (NC instability forced by topographic effects) vs. regional circulations (downward propagating mesoscale variability of the NC, interactions with the spreading Western Mediterranean Deep Water...). The bioluminescence recorded on the instrumented line IL07 is representative of the whole telescope and generally lower than 1,500 kHz. Moreover, we found that the bioluminescence intensity is correlated with the event detection using cameras placed on the instrumented line.\\
+
+However, high bioluminescence-activity events have been distinguished in March 2009 and March 2010. During these events, bioluminescence intensity is linked to current-speed values above a threshold of 19 cm s$^{-1}$, and determined using regression trees. Moreover, in 2009, the highest current-speed intensity is essentially coming from the western direction. On the contrary, in 2010, this direction is mainly South-East. Furthermore, a high bioluminescence activity is linked to similar current directions, West in 2009 and South-East in 2010. These similar informations do not permit to discriminate if the high bioluminescence activity observed is mainly due to current direction or current speed. Regression trees permit to detect changes in variability over time that occurred at the same time for bioluminescence, salinity and temperature. Noticeably, a threshold defined for the second event detected has been highlighted in March 18$^{th}$ 2010. These changes in variability have not been noticed for current speed. The highest values for bioluminescence are dependent on both current speed above 19 cm s$^{-1}$ and temperature above 12.92\degres C (see regression trees Figure \ref{S4}) or with a salinity above à 38.479 (see \citealp{tamburini2013}), depending on mathematical methods used. During these strong events, the study of video-camera images recorded using automatic detection demonstrates that the number of detected events is not anymore correlated to the bioluminescence activity.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[width=12cm]{illustration.jpg}
+\caption[Artistic representation of newly-formed water masses in the Gulf of Lion and their impact on biological activity (bioluminescence) at the ANTARES station.]{Artistic representation of newly-formed water mass in the Gulf of Lion and their impact on biological activity (bioluminescence) at the ANTARES station. Graphical design\string: \underline{www.mathildedestelle.com}.}
+\label{illus}
+\end{figure} 
+
+The analysis of surrounding oceanographic data, at a regional scale, gave clues to explain such sudden changes in bioluminescence activity by new water-mass formation at the surface inducing a deep-sea convection (Figure \ref{illus}). This phenomenon reaches the ANTARES observatory in March 2009 and 2010, modifying both the activity and the presence of potentially bioluminescent populations. Possible links between (1) new water-mass input, enrichment of the environment, (2) duration of the emission of  bioluminescence, (3) increase of the signal baseline as well as (4) photomultiplier ability to detect bioluminescent bacteria, led this work to focus on the characterization of bacterial bioluminescence. These first investigations highlighted the interest of developing methods for time series analysis, in order to detect such high bioluminescence-intensity events as well as discriminating possible links between environmental variables over time.\\

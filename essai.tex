@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt,twoside,openright]{book}
+\usepackage[a4paper,top=4.5cm,bottom=4.5cm,left=3cm,right=2cm]{geometry}
+\usepackage[Sonny]{fncychap}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{lipsum} 
+\usepackage[francais]{babel}
+\usepackage{rotating}
+\usepackage{natbib}
+
+\usepackage{lmodern}
+\rmfamily
+\DeclareFontShape{T1}{lmr}{b}{sc}{<->ssub*cmr/bx/sc}{}
+\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
+\usepackage{amssymb,amsmath,amsthm,amscd}
+\usepackage{mathrsfs}
+
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{tabularx} 
+\usepackage{calc}
+\usepackage{graphicx} 
+\usepackage[francais]{minitoc}
+
+\usepackage{xcolor,colortbl}
+\usepackage{color}
+\definecolor{newblue}{rgb}{0,0,0.52}
+\definecolor{newred}{rgb}{0.5,0,0}
+\definecolor{cream}{rgb}{0.9,0.9,0.9}
+
+\usepackage[citecolor=newblue, colorlinks=true, urlcolor=blue, linkcolor=newred,pagebackref =TRUE]{hyperref}
+\renewcommand*{\backref}[1]{(cite page #1)}
+\usepackage[nottoc]{tocbibind}
+\usepackage{makeidx}
+\captionsetup{format=plain,labelformat=parens,labelsep=quad,font=footnotesize, margin=20pt}
+\makeindex
+\usepackage[section]{placeins}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{rotating}
+
+\begin{document}
+\dominitoc
+\printindex
+\setcounter{tocdepth}{3} 
+\pdfbookmark[0]{Table des matières}{tablematieres} 
+
+\tableofcontents  
+
+\mainmatter
+
+% Remerciements
+\include{remerciements}
+% Introduction
+\include{introduction}
+% Chapitre 1 Introduction
+%\include{chapitre1}
+% Chapitre 2
+%\include{chapitre2}
+% Chapitre 3
+%\include{chapitre3}
+% Chapitre 4
+\include{chapitre4}
+% Conclusions
+\include{discussion_conclusion}
+
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{martinietal}
+\cleardoublepage 
+\renewcommand{\indexname}{Index des notations} 
+\printindex 
+
+\end{document}

@@ -1,0 +1,470 @@
+\chapter[In the laboratory, effects of forcing variables using a bioluminescent bacterial strain as a model.]{In the laboratory, effects of forcing variables using a bioluminescent bacterial strain as a model.
+\chaptermark{Effects of forcing variables}}
+\chaptermark{Effects of forcing variables}
+
+\minitoc
+%\label{chap3}
+\newpage
+\section[Introduction: working with controlled variables and models.]{Introduction: working with controlled variables and models.
+\sectionmark{Introduction: laboratory experiments}}
+\sectionmark{Introduction: laboratory experiments}
+In previous chapters, high bioluminescence events, observed in March 2009 and 2010, have been explained to be linked to newly-formed-water masses sinking to the deep ocean. Bioluminescent organisms might be involved in this hydrological phenomenon into two different ways. First, bioluminescent organisms could be brought from the surface by physical transport and spread to the deep sea before reaching the ANTARES site. Secondly, newly-formed-deep-water inputs into the deep sea involve modifications in dissolved oxygen or carbon availability. Small variations, such as those observed in temperature and salinity, can not rationally influence growth and physiology of organisms or involve modifications in their bioluminescence activity. However, pressure effect on sinking organisms or carbon content are more foreseeable to affect growth, physiology and then bioluminescence activity.\\  
+
+Amongst the diversity of bioluminescent organisms, and due to a global lack of knowledge on \textit{in situ} bacterial bioluminescence, we investigated bioluminescent bacteria as a part of the light signal. To validate or not this assumption, an intermediate step is to evaluate the potential bioluminescence activity of such bacteria under various environmental conditions. The bacterial strain \textit{Photobacterium phosphoreum} ANT-2200 has been isolated in 2005, at the ANTARES station during a high bioluminescence event \citep{alali2010}. Moreover, \textit{Photobacterium phosphoreum} has been described as the main bioluminescent bacterial species in the deep Mediterranean Sea \citep{gentile2009}. For those two major reasons, this strain is used as model for experiments in the laboratory. In this Chapter, we will apprehend the effects of high pressure, temperature, and carbon availability on both growth and bioluminescence activity. The results from these experiments will permit to criticized our hypotheses under controlled conditions and extrapolate such results at \textit{in situ} scale. To reach such an aim, we divide laboratory experiments into two intermediate steps.\\
+
+\begin{itemize}
+\item In \ref{part1}, \textit{Photobacterium phosphoreum} ANT-2200 is cultivated into a carbon rich growth medium (Sea Water Complete medium) under various temperature and pressure conditions to determine optimal growth conditions for this strain and potential effects on bioluminescence activity. Moreover, logistic-growth model has been applied to those experiments.\\
+  
+\item Finally, in \ref{part3}, \textit{Photobacterium phosphoreum} ANT-2200 is cultivated into a growth medium closer to environmental composition (ONR7a) and as close as possible to \textit{in situ} conditions under high pressure (22 MPa) and \textit{in situ} temperature (13\degres C). The instrumentation has been developed in the laboratory and these experiments are validating the ability to measure both bioluminescence and oxygen consumption over time.\\
+\end{itemize}
+ 
+Part \ref{part1} has been investigated and major results published into an article \citep{martini2013}. Then, \ref{part3} validates the instrumentation, methods and the ability to record bioluminescence and bacterial growth as well as physiological parameters close to environmental conditions. The part \ref{part3} is preliminary and still need to be improved and replicated in order to robustly interpret the results. However, these experiments are presented given the originality of the methods and the ability to record the data at high frequency and in an automatic way.\\
+ 
+\section{Description of \textit{Photobacterium phosphoreum} ANT-2200 strain}
+The bioluminescent bacterial strain \textit{Photobacterium phosphoreum} ANT-2200 has been isolated in the laboratory in 2005. At sea, 500 mL of water have been sampled at 2,200 m depth, at the ANTARES station and filtered. After cultivation on a solid medium, one luminous UFC (Unit Forming Colony) has been isolated. A 16S-rRNA-gene sequence defines the strain close to \textit{Photobacterium phosphoreum} (100\%) strain IFO 13896. Based on phylogeny, the isolate has been named \textit{Photobacterium phosphoreum} ANT-2200 (Figure \ref{ant2200}). For more details, see \cite{alali2010}.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.4]{photobact.pdf}
+\caption[\textit{Photobacterium phosphoreum} ANT-2200 strain emitting bioluminescence in liquid growth medium and solid medium.]{\textit{Photobacterium phosphoreum} ANT-2200 strain emitting bioluminescence in liquid growth medium and solid medium. Bioluminescent bacteria emit light at wavelength about 490 nm (blue-green emission).}
+\label{ant2200}
+\end{figure}
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.6]{phyloANT.pdf}
+\caption[Neighbor-joining tree showing the phylogenetic position of \textit{Photobacterium phosphoreum} ANT-2200 strain.]{Neighbor-joining tree showing the phylogenetic position of \textit{Photobacterium phosphoreum} ANT-2200 strain and related taxa based on 16S rDNA sequences. Numbers at nodes are levels of bootstrap support (\%) based on neighbor-joining analyzes of 1,000 re-sampled datasets. Only values above 70\% are given. Bar 0.01 substitutions per nucleotide position. From \cite{alali2010}.}
+\label{phyloant2200}
+\end{figure}
+
+\newpage
+\section{Article 3}
+\label{part1}
+\subsection{Foreword}
+In this article, the effects of environmental variables (hydrostatic pressure and temperature) on the activity of \textit{Photobacterium phosphoreum} ANT-2200 strain have been studied. This bacterial strain, isolated at the ANTARES site, has been used as a model. This work has been started during B. Al Ali PhD (2010) with a part of the data acquisition for growth and bioluminescence, and has been finalized during my PhD work.\\
+
+%Dans ce manuscrit, les effets de variables environnementales (pression hydrostatique et température) sur l'activité de la souche (croissance et  bioluminescence) ont été étudiés. \textit{Photobacterium phosphoreum} ANT-2200, isolée sur le site ANTARES, a été utilisée comme modèle. Ce travail, débuté au cours de la thèse de Badr Al Ali (2010) avec l'acquisition d'une partie des données de croissance et de bioluminescence, a été finalisé dans le cadre de mon travail de thèse.\\
+
+%\subsection{Description du système hyperbare de bioluminescence}
+
+%Le système hyperbare de bioluminescence sous pression a été réalisé en collaboration avec Metro-mesures (Menecy, France). Ce systeme est constitué d'un reservoir hyperbare ainsi que d'une chambre de culture. Adapté des bouteilles haute pression (High Pressure Bottles HPBs, Figure \ref{HP} A), le reservoir est défini pour maintenir une pression hydrostatique maximale de 40 MPa. \\
+
+%\begin{figure}[!h]
+%\begin{small}
+%\begin{center}
+%\includegraphics[scale=0.1]{HP.jpg}
+%\caption{A) High pressure bottle. On the left, the high pressure tank in stainless steel is opened, on the right, the top end cap with manometer for high pressure control. B) Hyperbaric bioluminescence tank.}
+%\label{HP}
+%\end{center}
+%\end{small}
+%\end{figure} 
+
+%Il est constitué d'un cylindre principal en acier APX4 (215-mm OD, 150-mm ID et 200-mm de longueur totale), ainsi qu'un conteneur cylindrique pourvu d'un couvercle d'extremité en acier APX4 (205-mm OD, 69.7-mm de hauteur) ainsi que d'une couronne en bronze permettant de sceller le système (160-mm OD, 98-mm de hauteur). Le conteneur dispose de deux ports de remplissage, une valve de sécurité (920.86.00 H, Top Industrie S.A., France) ainsi qu'un manomètre. A l'intérieur du conteneur rempli d'eau MilliQ stérile, la chambre de culture principale est constituée d'un tube cylindrique en PEEK (polyetheretherketones) 1/8''. La chambre de culture en ertalyte (matériau chimiquement et biologiquement inerte, de couleur blanche reflétant la lumière) est constituée d'un cylindre (80-mm ID, 100-mm de hauteur) ainsi que d'un piston flotant surmonté d'un anneau. Afin de mesurer la bioluminescence dans la chambre de culture, un cone de plexiglass (13.3-mm de diamètre inférieur,8.8-mm de diametre supérieu, 21.4-mm de hauteur) est positionné à l'intérieur d'un support en acier APX4 inséré à l'intérieur de la chambre de culture en ertalyte. L'ensemble du système est autoclavable afin de préserver les conditions de stérilité de la culture. Le cone de plexiglas transmet les photons emis par les bactéries bioluminescentes à l'intérieur de la chambre de culture par le biais d'une fibre optique connéctée à un photomultiplicateur (H7155, Hammamatsu) relié à un boitier de comptage (C8855). Le comptage des photons est effectué sur une intégration au cours du temps d'échantillonnage. Le bruit de fond est estimé avant chaque expérimentation et contrôlé comme inférieur à 10 photons sec$^{-1}$. Le volume maximal de la chambre de culture est de 500 mL. La température est régulée à l'aide d'un tube flexible enroulé autour du système hyperbare et régulé par un dispositif de refroidissement exerne. La pression hydrostatique est transmise au moyen d'un générateur de pression piloté, représenté en Figure \ref{GPP}, vers la chambre de culture par le piston flottant. \\
+
+%\begin{figure}[!h]
+%\begin{small}
+%\begin{center}
+%\includegraphics[scale=0.1]{GPP.jpg}
+%\caption{Generator for Piloted Pressure dedicated to the high hydrostatic pressure }
+%\label{GPP}
+%\end{center}
+%\end{small}
+%\end{figure} 
+
+\textit{This work granted by EC2CO-BIOLUX. C. Tamburini is the PI for the project. B. Al Ali, M. Garel, C. Tamburini and me performed the experimental part on the high pressure platform. I joined the bioreactor platform with S. Davidson, Y. Combet-Blanc, and R. Auria, for an experimental part using bioreactors (see Perspective part \ref{bioreactor}). L. Casalot, S. Isart and me worked using the pure culture of the bacterial strain. I did the modelisation part supervised by D. Nerini and M. Garel also join us for data analysis. V. Grossi, P. Cuny and M. Pacton have performed the physiological analyzes. M. Garel and C. Tamburini developed the hyperbaric system as well as the bioluminescence and oxygen measurement systems under high pressure.}
+
+%\textit{Ce travail, financé par le projet EC2CO-BIOLUX, est le résultat d'une collaboration au sein du laboratoire MIO. Christian Tamburini est porteur du projet. Badr Al Ali, Marc Garel, Christian Tamburini et moi-même avons réalisé les expérimentations sur la plateforme haute pression. J'ai intégré l'équipe de la plateforme fermenteur avec Sylvain Davidson, Yannick Combet-Blanc, et Richard Auria, pour les expérimentations en fermenteur. Laurie Casalot, Stéphie Isart (stagiaire école d'ingénieur) et moi-même avons travaillé sur la culture pure de la souche. La modélisation des données a été effectuée par David Nérini et moi-même, Marc Garel est également intervenu dans le traitement des résultats. Vincent Grossi, Philippe Cuny et Muriel Pacton ont réalisé les analyses physiologiques complémentaires. Marc Garel et Christian Tamburini ont développé l'instrumentation hyperbare, ainsi que les mesures de bioluminescence et d'oxygène sous haute pression hydrostatique.}\\
+
+\newpage
+\subsection[Effects of hydrostatic pressure on growth and luminescence of a moderately-piezophilic luminous bacteria \textit{Photobacterium phosphoreum} ANT-2200]{Effects of hydrostatic pressure on growth and luminescence of a moderately-piezophilic luminous bacteria \textit{Photobacterium phosphoreum} ANT-2200
+\sectionmark{ARTICLE 3}}
+\sectionmark{ARTICLE 3}
+
+\begin{center}
+Martini S.$^{1,2}$, Al Ali B.$^{1,2,\diamondsuit}$, Garel M.$^{1,2}$, Nerini D.$^{1,2}$, Grossi V.$^3$, Pacton M.$^3$, Casalot L.$^{1,2}$, Cuny P.$^{1,2}$ and Tamburini C.$^{1,2,\ast}$\\
+\end{center}
+\vspace*{10mm}
+
+$^1$ Aix-Marseille Universit\'{e},  Mediterranean Institute of Oceanography (MIO), 13288, Marseille, Cedex 09, France ; \\
+$^3$ Universit\'{e} du sud Toulon-Var (MIO), 83957, La Garde cedex, France ; CNRS/INSU, MIO  UMR 7294; IRD, MIO UMR 235.\\
+$^4$ Universit\'{e} Lyon1, CNRS, Laboratoire de G\'{e}ologie de Lyon, UMR5276 Villeurbanne, France\\
+$^5$ ETH Zurich, Geological Institute, CH-8092 Zurich, Switzerland\\
+
+$^\diamondsuit $Present address: Tishreen University, High Institute of Marine Research, P.O. Box 2242, Ministry of Higher Education, Syrian Arab Republic\\
+
+\begin{center}
+$\ast$ Corresponding author : \underline{christian.tamburini@univ-amu.fr}\\
+\end{center}
+\vspace{10mm}
+\textbf{Martini S, Al Ali B, Garel M, Nerini D, Grossi V, et al. (2013) Effects of Hydrostatic Pressure on Growth and Luminescence of a Moderately-Piezophilic
+Luminous Bacteria Photobacterium phosphoreum ANT-2200. PLoS ONE 8(6): e66580. doi:10.1371/journal.pone.0066580}\\
+
+\newpage
+\textbf{Abstract}\\
+Bacterial bioluminescence is commonly found in the deep sea and depends on environmental conditions. \textit{Photobacterium phosphoreum} ANT-2200 has been isolated from the NW Mediterranean Sea at 2200-m depth (\textit{in situ} temperature of 13\degres C) close to the ANTARES neutrino telescope. The effects of hydrostatic pressure on its growth and luminescence have been investigated under controlled laboratory conditions, using a specifically developed high-pressure bioluminescence system. The growth rate and the maximum population density of the strain were determined at different temperatures (from 4 to 37\degres C) and pressures (from 0.1 to 40 MPa), using the logistic model to define these two growth parameters. Indeed, using the growth rate only, no optimal temperature and pressure could be determined. However, when both growth rate and maximum population density were jointly taken into account, a cross coefficient was calculated. By this way, the optimum growth conditions for \textit{P. phosphoreum} ANT-2200 were found to be 30\degres C and, 10 MPa defining this strain as mesophile and moderately piezophile. Moreover, the ratio of unsaturated vs. saturated cellular fatty acids was found higher at 22 MPa, in agreement with previously described piezophile strains. \textit{P. phosphoreum} ANT-2200 also appeared to respond to high pressure by forming cell aggregates. Its maximum population density was 1.2 times higher, with a similar growth rate, than at 0.1 MPa. Strain ANT-2200 grown at 22 MPa produced 3 times more bioluminescence. The proposed approach, mimicking, as close as possible, the \textit{in situ} conditions, could help studying deep-sea bacterial bioluminescence and validating hypotheses concerning its role into the carbon cycle in the deep ocean.\\
+
+\newpage
+\subsection*{Introduction}
+
+The deep sea, under 1,000 m depth, is characterized by a high hydrostatic pressure ($\geq$ 10 MPa), with, generally, a low temperature and a low organic-matter concentration. Laboratory experiments using pure cultures of piezophilic Bacteria have highlighted microbial adaptations to high hydrostatic pressure. The adaptive traits include those related to growth \citep{zobell1949,abe1999}, membrane \citep{yayanos1995}, and storage lipids \citep{grossi2010}, membrane and soluble proteins \citep{bartlett1989,kato2008}, the respiratory-chain complexes \citep{abe1999,yamada2000}, replication, transcription and translation \citep{bartlett1995,lauro2008}. Most isolated piezophilic Bacteria belong to the genera: \textit{Carnobacterium, Desulfovibrio, Marinitoga, Shewanella, Photobacterium, Colwellia, Moritella,} and \textit{Psychromonas} within the Gammaproteobacteria subclass reviewed by \cite{bartlett2007}.\\
+
+Darkness is another major characteristic of this deep-sea environment that can be disturbed by a biological phenomenon named bioluminescence. Bioluminescence is the process by which living micro- or macro-organisms emit light. Among the bioluminescent organisms, marine luminous bacteria are ecologically versatile and can be found as free-living forms, epiphytes, saprophytes, parasites, symbionts in the light organs of fishes and squids, and commensals in the gut of various marine organisms \citep{ruby1980,hastings1983,herring1987}. Metagenomic analysis from deep eastern-Mediterranean water samples shows a surprising high number of \textit{lux} genes directly involved in bioluminescence \citep{martin2007}. As far as we know, all-known marine bioluminescent bacteria are phylogenetically affiliated to the \textit{Vibrio}, \textit{Photobacterium} and \textit{Shewanella} genera within the Gammaproteobacteria subclass \citep{kita2006}. Among them, \textit{Photobacterium phosphoreum} is the predominant species found in the Mediterranean Sea \citep{gentile2009}.\\
+
+Those of the most studied micro-organisms are, for piezophily, \textit{Photobacterium profundum} SS9 (e.g. \citealp{vezzi2005}), not known as luminous, and for bioluminescence, \textit{P. phosphoreum} (e.g. \citealp{dunlap2006}). Up to date, little information is available concerning potential physiological-adaptation mechanisms of luminous bacteria to hydrostatic pressure, especially for both piezophily and bioluminescence. In this study, we used a bioluminescent strain isolated from Mediterranean deep-sea waters (sampled at 2,200-m depth) and identified as \textit{Photobacterium phosphoreum} ANT-2200 \citep{alali2010}. At this depth, the \textit{in situ} conditions of pressure and temperature are about 22 MPa and 13\degres C, respectively. The purpose of this study is (1) to define temperature and pressure optima for growth and (2) to study pressure effect (0.1 versus 22 MPa, 13\degres C) on growth and bioluminescence activities of \textit{P. phosphoreum} ANT-2200 using a new laboratory controlled hyperbaric system dedicated to high-pressure and bioluminescence studies.\\
+
+\subsection*{Material and methods}
+
+\subsubsection*{Growth parameters of \textit{P. phosphoreum} ANT-2200 under various temperature and hydrostatic-pressure conditions}
+\textit{P. phosphoreum} ANT-2200 (GenBank accession number EU881910) was isolated from sea water collected in the Northwestern Mediterranean Sea at the ANTARES neutrino-telescope site (42\degres 54'N, 06\degres 06'E) at 2200-m depth (13\degres C) (see \citealp{alali2010} for details). Phenotypic and enzymatic characterizations are available in Supporting Information (Table S1). Procedures for pre-culturing were performed as described by \cite{alali2010}. For the determination of growth rate and maximum population density as a function of pressure and temperature, mid-log cultures were inoculated 1\string:10 into 5 mL sterilized syringes supplied with 3/4 of seawater complete medium (SCW medium) and with 1/4 oxygen-saturated Fluorinert$^{TM}$ FC-72 (3M$^{TM}$). The impoverished SCW liquid medium contained per liter (pH 7.5): 3 mg  of yeast extract, 5 mg of bio-peptone, 3 mL of glycerol, 250 mL of distilled water, and 750 mL of old sea water \citep{nealson1978}. Fluorinert$^{TM}$ FC-72 was used as oxygen supplier to ensure the growth and the luminescence of the bacterial strain in closed conditions \citep{kato1994,kato1995,yanagibayashi1999}.\\
+
+Triplicates cultures were incubated at pressures of 0.1, 10, 22, 30 and 40 MPa and for temperatures of 4, 13, 20, 30 and 37\degres C. Syringes were placed into high-pressure bottles (HPBs). In order to avoid decompression-recompression of the samples, each HPB corresponded to one incubation time. Bacterial growth was estimated by measuring the optical density (OD$_{600nm}$) using a spectrophotometer (Perkin Elmer, Lamda EZ201 UV/Vis spectrophotometer).\\
+
+Direct counting was also performed using epifluorescence microscopy with DAPI-staining procedure, according to \citep{porter1980}. This counting method was used to define the link between total-cell counts (DAPI counts) and optical density (OD$_{600nm}$) according to the equation (1). For DAPI-cell counts, to avoid possible artefact due to the aggregates, the samples were sonicated (3 min), vortexed (1 min), diluted with milliQ-water, then, sonicated (2 min), vortexed (1 min) and finally filtered on 0.2-$\mu$m-pore-size polycarbonate filters. The data have been, firstly, treated separately for atmospheric-pressure (0.1 MPa) and high-pressure (22 MPa) conditions. Since no significant difference has been observed between the two sets of data, a common relation has been defined as following:
+\begin{center}
+Number of DAPI-stained cells mL$^{-1}$ $= 6.7 \times 10^8 \times$ OD$_{600nm} - 2.3 \times 10^7 (1)$\\
+$(R^2 = 0.79, N = 14)$
+\end{center}
+Traditionally, a linear regression is used to determine the growth rate of a strain during the logarithmic phase. The logistic (or Verhulst) model \citep{verhulst1838} was used in this study to determine both the growth rate ($r$) and the maximum population density ($K$). This model gives a continuous function of optical density, fitting discrete experimental data measured during the bacterial growth. Its hypotheses take into account limited resources in the medium and are defined as:\\
+The birth rate:
+\begin{eqnarray}
+n (x)=\alpha - \beta x
+\end{eqnarray}
+The mortality rate:
+\begin{eqnarray}
+m (x)=\gamma - \delta x
+\end{eqnarray}
+$n(x)$ and $m(x)$ are linear functions with $\alpha$, $\beta$, $\gamma$, $\delta$ four real numbers and $x$ is the population density. The birth and mortality rates are supposed to be constant during time:
+\begin{eqnarray}
+\frac{dx}{dt} = nx - mx
+\end{eqnarray}
+Meaning that the logistic model is written as:
+\begin{eqnarray}
+\frac{dx}{dt} = rx 1- \frac{x}{K}
+\end{eqnarray}
+Where:
+\begin{eqnarray}
+K=\frac{\alpha - \gamma}{\beta - \delta}
+\end{eqnarray}
+
+$K$, being the maximum population density (expressed in optical density, OD$_{600nm}$) that \textit{P. phosphoreum} ANT-2200 can reach according to the growth conditions (temperature, pressure...) and $r$, being the growth rate, defined as:
+\begin{eqnarray}
+r = \alpha - \gamma
+\end{eqnarray}
+Biologically, the intrinsic growth rate ($r$, expressed in $h^{-1}$) is supposed to be positive (meaning that $\alpha > \gamma$).\\
+
+A cross coefficient ($C_{r,K}$) has been calculated for both temperature and pressure effects on growth. If $R$ and $K$ are two  matrices with $n$ the number of temperature and $m$ the number of pressure conditions tested, the $C_{r,K}$ is defined as:
+\begin{eqnarray}
+C_{r,K}=\left( \frac{R}{max(R)} \right) \left( \frac{K}{max(K)}\right)
+\end{eqnarray}
+With  $ 0 < C_{r,K} < 1$\\
+
+The values for growth rate ($r$, h$^{-1}$), maximum population density ($K$, OD$_{600nm}$) and cross coefficient ($C_{r,K}$) were used to construct extrapolated-contour plots for the pressure-temperature dependency using R software \citep{Rsoftware}.
+
+\subsubsection*{Scanning electron and transmission electron microscopes}
+
+Cultures of \textit{P. phosphoreum} ANT-2200 were performed at 0.1 and 22 MPa at 13\degres C. Cells were harvested at the end of the logarithmic phase and prepared for electron microscopy in order to observe cellular morphology and structure according to the pressure conditions.\\
+
+Scanning Electron Microscopy (SEM) was performed according to two different procedures. On the one hand, cells were fixed with 0.2 \% glutaraldehyde, filtered on 0.2-$\mu m$-pore-size nucleopore membranes, washed with filtered and sterilized seawater with 2 \% osmic acid, and then with Milli-Q water. Washed cells were dehydrated and observed using SEM (FEI Quanta 250 FEG, Centre Technologique des Microstructures, University Claude-Bernard, Lyon 1). On the other hand, cells were rapidly frozen in liquid nitrogen and lyophilized for 48 h using a CHRIST beta 2-4 LT+LD lyophilizator, operated at a temperature of -50\degres C and a pressure of 4 Pa. After complete dehydration, samples were attached onto stubs with double-sided adhesive (carbon type) and sputter coated, in a Baltec MED020 Sputter Coater, with a thin film of platinum to improve electrical conductivity of the sample surface. Samples were subsequently observed using SEM (FEI Quanta 250 FEG, Centre Technologique des Microstructures, University Claude-Bernard, Lyon 1).\\
+
+Transmission Electron Microscopy (TEM) was carried out using cells fixed with 2\% glutaraldehyde, buffered with PBS and embedded in 2\% agar. Cells were post-fixed in 1\% osmium tetroxide, dehydrated in a graded series of ethanol and embedded in Epon. Sections of 70 nm were realized using an ultramicrotome (Leica ultracut S), contrasted with uranyl acetate and lead citrate, and observed under a Philips CM 120 Transmission Electron Microscope at 80 kV.\\
+\newpage
+
+\subsubsection*{Cellular fatty-acid composition of \textit{P. phosphoreum} ANT-2200 grown at 0.1 and 22 MPa (13\degres C)}
+Cultures of \textit{P. phosphoreum} ANT-2200 were grown in 300-mL completely-filled polyethylene bottles (188 mL of culture + 62 mL of oxygenated Fluorinert$^{TM}$ FC-72), at 13\degres C and at 0.1 or 22 MPa (into high-pressure bottles). The bottle stoppers were equipped with a septum through which the pressure was applied. Cells in the late logarithmic stage of growth were harvested by centrifugation (20 min, 5,500 rpm at 0\degres C). Bacterial pellets were immediately frozen at -20\degres C and lyophilized. Lipids were extracted using the modified method of \cite{bligh1959} with dichloromethane/methanol/water (DCM/MeOH/H2O, 1\string:2\string:0.8, v/v/v) under sonication. Following the addition of DCM and water to allow phase separation (final DCM/MeOH/H2O ratio of 1/1/0.9), the lower DCM layer was collected and the upper aqueous phase was further extracted with DCM ($\times$2). The combined lipid extracts were concentrated, dried over anhydrous sulfate and evaporated to dryness (N$_2$ flux) before being trans-esterified (50\degres C, 2h) with 2\% sulfuric acid in MeOH in the presence of toluene \citep{christie1989}. 
+Individual fatty acids were identified and quantified by gas-chromatography-mass spectrometry (GC-MS), using an Agilent 6890N gas chromatograph interfaced to an Agilent 5975 mass spectrometer (electronic impact at 70 eV). 
+The GC was equipped with a splitless injector and a HP5-MS capillary column (30 m $\times$ 0.25 mm $\times$ 0.25 $\mu$ m). Helium was used as the carrier gas (constant flow of 1 mL min$^{-1}$) and the oven temperature was programmed from 70 to 130\degres C at 20\degres C min$^{-1}$, and then at 4\degres C min$^{-1}$ from 130 to 300\degres C at which it was hold for 20 min.\\
+
+\subsubsection*{Bioluminescence of \textit{P. phosphoreum} ANT-2200 at 0.1 and 22 MPa (13\degres C)}
+Bioluminescence (photons sec$^{-1}$) was monitored with a high-pressure bioluminescence system shown in Figure  \ref{1_3} A. Luminous bacteria were cultivated within a culture chamber placed inside a high-pressure tank (Fig. \ref{1_3} B). The hydrostatic pressure is transmitted (via the HP-chamber valve) from the high-pressure tank to the culture chamber via a floating piston (Fig. \ref{1_3} B). Sub-sampling is done by opening the culture-chamber valve, while the pressure is monitored, using a piloted pressure generator \citep{tamburini2009} connected to the HP-chamber valve. The culture chamber is made in ertalyte (chemically and biologically inert material, white for light reflection) and sustains a plexiglass cone which transmits photons emitted by luminous bacteria by the way of an optical fiber (Fig. \ref{1_3} B). Photon counting was obtained by integrating signals during 10 seconds using a photomultiplier (H7155, Hammamatsu) linked to its counting unit (C8855, Hammamatsu). Temperature was regulated using an external housing of tubing around the high-pressure bioluminescence tank. Temperature was controlled with a thermo chiller and monitored using a K-type thermocouple directly fitted within the high-pressure tank. More details of the high-pressure bioluminescence tank can be found in \citep{alali2010}. Experiments were performed three times for 0.1 and 22 MPa.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.6]{fig0.jpg}
+\caption[High-pressure bioluminescence system.]{High-pressure bioluminescence system. (A) Photography of the high-pressure bioluminescence system and (B) schematic section diagram of the high-pressure bioluminescence tank. PMT: photomultiplier tube; OF: optical fiber; CU: photomultiplier counting unit; T: high-pressure temperature sensor; Tc: Tubing around tank for temperature control connected to a thermo chiller (not shown); Tl: Data logger for temperature sensor; Da: PC for data acquisition of bioluminescence and temperature}
+\label{1_3}
+\end{figure}
+
+\subsection*{Results and discussion}
+
+\subsubsection*{Growth temperature and pressure optima of \textit{P. phosphoreum} ANT-2200}
+
+Using the logistic model, growth-rate ($r$ expressed as $h^{-1}$) and maximum-population-density ($K$ expressed as OD$_{600nm}$) parameters were defined for each temperature (4, 13, 20, 30, 37\degres C) and pressure (0.1, 10, 22, 30, 40 MPa) conditions (Fig. \ref{S1_3}). Figure \ref{2_3} presents the model curves fitting with empirical data obtained at 13\degres C and 30\degres C, for all tested pressures. The model parameters have been estimated qualitatively using the confidence interval of the logistic growth curves.
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.6]{fig1.jpg}
+\caption[Example of logistic model fitting empirical growth data of \textit{P. phosphoreum} ANT-2200.]{Example of logistic model fitting empirical growth data of \textit{P. phosphoreum} ANT-2200. Experiments were done at pressures of 0.1, 10, 22, 30 and 40 MPa and at temperatures of 13\degres C and 30\degres C. The logistic model (line) improves the r and K parameter estimation on empirical growth data (dots). Dashed lines are levels of confidence for the 0.05 and 0.95 quantile curves and the 0.25 and 0.75 quantile curves. Mean $\pm$ standard deviation for growth rate (r, $h^{-1}$) and maximum population density (K, OD$_{600 nm}$) parameters are indicated. The dotted frame is the growth curve under optimum pressure and temperature conditions using both r and K parameters. The solid line frame is the growth curve under \textit{in situ} conditions, at 22 MPa and 13\degres C. N is the number of replicates done for the same pressure and temperature conditions.}
+\label{2_3}
+\end{figure} 
+
+
+\begin{sidewaysfigure}
+%\begin{figure}[p]
+%\begin{turn}{180}
+\linespread{1} 
+\centering
+\includegraphics[scale=1]{S1_2013.jpg}
+\caption[Representation of growth curves for temperatures of 4, 13, 20, 30 and 37\degres C and for pressure of 0.1, 10, 22, 30, and 40 MPa.]{Representation of growth curves for temperatures of 4, 13, 20, 30 and 37\degres C and for pressure of 0.1, 10, 22, 30, and 40 MPa. The logistic model (line) improves the $r$ and $K$ parameter estimation on empirical growth data (dots). Dashed lines are levels of confidence for the 0.05 and 0.95 quantile curves and the 0.25 and 0.75 quantile curves. The growth rate ($r$, h$^{-1}$) and maximum population density ($K$, OD$_{600 nm}$) parameters are indicated.}
+\label{S1_3}
+%\end{turn}
+\end{sidewaysfigure} 
+%\end{figure}
+
+The $r$ and $K$ parameters were used to construct the extrapolated-contour diagram of their temperature-pressure dependence (Fig. \ref{3_3} A and Fig. \ref{3_3} B, respectively). \textit{P. phosphoreum} ANT-2200 was able to grow at hydrostatic pressures ranging from 0.1 to 40 MPa and at temperatures ranging from 4 to 37\degres C.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.67]{fig2.jpg}
+\caption[Extrapolated-contour diagram of the temperature-pressure dependence of \textit{P. phosphoreum} ANT-2200.]{Extrapolated-contour diagram of the temperature-pressure dependence of \textit{P. phosphoreum} ANT-2200. The diagrams are plotted for (A) the growth rate ($r$, h$^{-1}$) and (B) the maximum population density ($K$, OD$_{600 nm}$). The gray circles indicate parameter values used to extrapolate the contours. Size is proportional to their value. The black circle corresponds to the \textit{in situ} conditions for the strain. Isolines define zones with same level of parameter values.}
+\label{3_3}
+\end{figure} 
+
+The strain grew very slowly at 4\degres C, with a minimum $r$ value obtained at 0.1 MPa (0.058 $\pm$ 0.014 $h^{-1}$) and a low K of $0.167 \pm 0.032$ (Fig. \ref{3_3} A). The higher $r$ values were observed at 30\degres C / 0.1 MPa and at 37\degres C / 40 MPa (0.624 $\pm$ 0.035 $h^{-1}$ and 0.596 $\pm$ 0.038 $h^{-1}$ respectively, Fig. \ref{3_3} A). While growth rates appeared to depend on temperature, pressure did not clearly affect it, at least in the tested range (Fig. \ref{3_3} A). Furthermore, the stationary phase was very short with fast and strong cell lyses at 37\degres C for all pressures (Supporting Information, Fig. \ref{S1_3}). In opposition to what is generally observed \citep{yayanos1995,eloe2011}, it was not possible to define the pressure affinity of strain ANT-2200 using the growth rate only. Therefore, we also used the same approach to overlook the effect of temperature and pressure conditions on maximum population density reached by strain ANT-2200. Interestingly, both influenced $K$ and for all tested conditions, the highest value ($0.512 \pm 0.011$ OD$_{600nm}$) was observed at 30\degres C and 10 MPa (Fig. \ref{3_3} B). While the growth rate is commonly the main growth parameter used in microbiology, our experiments show that the maximum population density has a strong influence on the definition of the optimal conditions for growth. So, we propose to cross the $r$ and $K$ parameters (using the $C_{r-K}$ coefficient) in order to define these optima (in our case, temperature and pressure).\\
+ 
+ \begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.63]{fig3.jpg}
+\caption[Cross diagram of the temperature-pressure dependence of \textit{P. phosphoreum} ANT-2200.]{Cross diagram of the temperature-pressure dependence of \textit{P. phosphoreum} ANT-2200. (A) Extrapolated-contour diagram of the temperature-pressure dependence for both the growth rate ($r$, $h^{-1}$) and the maximum population density ($K$, OD$_{600 nm}$) for \textit{P. phosphoreum} ANT-2200. The cross coefficient $C_{r-K}$ is defined as: $0 < C_{r-K} < 1$. (B) Standard deviation associated to the $C_{r-K}$ coefficient. The gray circles indicate parameter values used to extrapolate the contours. Size is proportional to their values. The black circle corresponds to the \textit{in situ} conditions for the strain. Isolines define zones with same level of values.}
+\label{4_3}
+\end{figure}
+
+An extrapolated-contour diagram was drawn for the cross coefficient $C_{r-K}$ (Fig. \ref{4_3} A). The standard deviation, associated to the $C_{r-K}$ coefficient, was calculated using the confidence-interval estimation on parameters from the logistic model and illustrated in Figure \ref{4_3} B. The standard-deviation values were one order below the cross-coefficient values, meaning that the cross-coefficient interpretation was robust. The highest $C_{r-K}$ coefficient value (0.78) was found at 30\degres C and 10 MPa (Fig. \ref{4_3} A). These optima allowed characterizing strain ANT-2200 as mesophile and moderately piezophile \citep{fang2010}. As previously observed \citep{yayanos1995}, the optimal pressure for piezomesophiles is often found lower than their habitat pressure, while their optimal temperature is higher than their habitat temperature. Different hypotheses can be evoked to explain the temperature shift \citep{yayanos1986} (1) inheritance from ancestors who lived in a warmer environment or (2) life in warmer temperatures in the gut of deep-sea animals. Even if we identified optimal conditions for growth at 30\degres C and 10 MPa, we decided to perform further experiments at in situ conditions (13\degres C) and to compare atmospheric pressure (0.1 MPa) to high pressure (22 MPa). This allowed to checking the piezophilic character of strain ANT-2200 and studying its morphology and its fatty-acid composition, known to be affected by hydrostatic pressure \citep{lauro2008,bartlett1992,bartlett2002}. The pressure-dependent (0.1 versus 22 MPa, 13\degres C ) bioluminescence activity of \textit{P. phosphoreum} ANT-2200 was also characterized.\\
+
+\subsubsection*{Morphology of \textit{P. phosphoreum} ANT-2200} 
+\textit{P. phosphoreum} ANT-2200 was observed by SEM and TEM after cultivation at 0.1 and 22 MPa (Fig. \ref{5_3}). \textit{P. phosphoreum} ANT-2200 is a rod-shaped bacterium. The size of the cells is in average equal to 2.4 $\pm$ 1.4 $\times$ 10$^{-1} \mu$m long and 0.8 $\pm$ 0.7 $\times$ 10$^{-1} \mu$m wide at atmospheric pressure (Fig. \ref{5_3} A1-3). Cells at 22 MPa display a smaller size (\textit{i.e}., less than 2 $\mu$m long) and contain numerous intracellular inclusions (Fig. \ref{5_3} B1-3). The exact nature of these inclusions has not yet been determined. Such inclusions may serve as energy reserve, may contribute directly to the metabolic capabilities of the cell, and/or may be involved in the cell ability to cope with changing environmental conditions \citep{shively2011,campbell2003}. In any case, this confirms an adaptation strategy of \textit{P. phosphoreum} ANT-2200 cells to high hydrostatic pressure. Besides, cells also appear to aggregate more at 22 MPa than at 0.1 MPa (Fig. \ref{5_3} A1-B1).\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.7]{fig4.jpg}
+\caption[Micro-photographs of \textit{P. phosphoreum} ANT-2200 cells by electron microscopy.]{Micro-photographs of \textit{P. phosphoreum} ANT-2200 cells by electron microscopy. Observation at 0.1 MPa (A1 on dehydrated samples, A2 on freeze-dried samples) and 22 MPa (B1 on dehydrated samples, B2 on freeze-dried samples) using SEM and at 0.1 MPa (A3) and 22 MPa (B3) using TEM. Intracellular inclusions are indicated by arrows.}
+\label{5_3}
+\end{figure}
+
+\subsubsection*{Pressure effects on the cellular fatty-acid composition of \textit{P. phosphoreum} ANT-2200}
+The effect of hydrostatic pressure on the cellular fatty-acid composition of \textit{P. phosphoreum} strain ANT-2200 was determined for cultures grown at 0.1 and 22 MPa at 13\degres C  (Fig. \ref{6_3}). The main fatty acid was C16\string:1, representing 40.8 and 43.1\% of the total cellular fatty-acid at 0.1 MPa and 22 MPa, respectively. Growth at 22 MPa also induced an increase in the relative proportions of C16\string:1, C17\string:0, C17\string:1, C18\string:1 and C18\string:2 fatty acids. The ratio of total unsaturated vs. total saturated fatty acids (UFA/SFA) was 1.9 at 0.1 MPa and 2.3 at 22 MPa. These values are similar to those found by \cite{delong1985} for the piezophilic bacterium CNPT-3 grown under similar pressures. The increase in the relative proportions of mono-unsaturated fatty acids at elevated pressure is in good agreement with previous studies \citep{kamimura1993,yano1998}, indicating that many piezophilic bacteria respond to an increase in hydrostatic pressure by modifying their membrane lipid composition. This homeoviscous adaptation allows to tailor the membrane to environmental conditions with suited physical properties \citep{bartlett2002}.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.65]{fig5.jpg}
+\caption[Relative total fatty-acid composition (\%) of \textit{P. phosphoreum} ANT-2200.]{Relative total fatty-acid composition (\%) of \textit{P. phosphoreum} ANT-2200. Strain ANT-2200 is grown at 0.1 (black bar) and 22 MPa
+(gray bar). Others\string: sum of C17\string:0, C18\string:2 and C 19\string:1 fatty acids; UFA\string: unsaturated fatty acids; SFA\string: saturated fatty acids.}
+\label{6_3}
+\end{figure}
+
+The results obtained with \textit{P. phosphoreum} ANT-2200 further argue for the piezophilic character of this bioluminescent strain. It is noteworthy that the poly-unsaturated C20\string:5 fatty acid (C20\string:5 PUFA or eicosapentaenoic acid) was not detected in this strain. \cite{delong1997} suggested that C20\string:5 PUFA could be used to define strains originating from low temperature and high pressure environments. Nevertheless, the absence of such PUFA in \textit{P. phosphoreum} ANT-2200 may be due to its origin from warmer deep-sea waters (Mediterranean Sea, average temperature about 13\degres C), and to its optimal temperature of growth (30\degres C).\\
+
+\subsubsection*{Pressure effects on bioluminescence of \textit{P. phosphoreum} ANT-2200} 
+Three successive experiments using the high-pressure bioluminescent tank were carried out in order to quantify the luminescence produced by \textit{P. phosphoreum} ANT-2200, at 0.1 MPa and 22 MPa, 13\degres C . Our results showed that the higher maximum cell density at 22 MPa than at 0.1 MPa is associated to higher luminescence intensity. Maximum luminescence intensity is reached, in average, at 17.6 h at 22 MPa and at 13.3 h at 0.1 MPa (Fig. \ref{7_3} A). The average value of the maximum luminescence for the three replicates is three times higher at 22 MPa (3.5 $\pm$ 0.1 $\times$ 10$^6$ photons sec$^{-1}$) than at 0.1 MPa (1.2 $\pm$ 0.2 $\times$ 10$^6$ photons sec$^{-1}$). When bioluminescence is maximal, the total cell number is 1.40 $\pm$ 0.01 $\times$ 10$^8$ cells mL$^{-1}$ at 0.1 MPa and 1.90 $\pm$ 0.01 $\times$ 10$^8$ cells mL$^{-1}$ at 22 MPa (Fig. \ref{7_3} B). At this time, the light emission capacity represents 8.4 $\times$ 10$^{-3}$ photons cell$^{-1}$ mL$^{-1}$ at 0.1 MPa and 19.0 $\times$ 10$^{-3}$ photons cell$^{-1}$ mL$^{-1}$ at 22 MPa. Noticeably, the ratio of photons emitted per cell and volume unit is higher at 22 MPa than at 0.1 MPa, clearly indicating the pressure dependence of bioluminescence. Since strain ANT-2200 is characterized as piezophile, its light emission appeared to be an adaptive trait more than a stress response to pressure as suggested by \cite{czyz2000}.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.9]{fig7.jpg}
+\caption[Bioluminescence and growth of \textit{P. phosphoreum} ANT-2200.]{Bioluminescence and growth of \textit{P. phosphoreum} ANT-2200. (A) Bioluminescence (photons sec$^{-1}$) of \textit{P. phosphoreum} ANT-2200 at 0.1 MPa (blue lines) and 22 MPa (red lines). (B) Fitted logistic growth curves for 0.1 MPa experiments (blue lines) and 22 MPa experiments (red lines). The dashed lines represent levels of confidence for the 0.05, 0.95 and 0.25, 0.75 quantile curves. Cell number is estimated using equation (1). On (A) and (B) blue and red dotted lines represent the mean time of the bioluminescence peak for both pressure conditions.}
+\label{7_3}
+\end{figure}
+
+Actually, during the growth, the respiration and the bioluminescence emission are two processes competing for the consumption of oxygen \citep{nealson1970,nealson1977,bourgois2001,grogan1984}. To explain the differences in light emission between high pressure and atmospheric conditions, the oxygen availability has been checked. An oxygen optode (PreSens GmbH) permitted to control the remaining presence of enough oxygen at the end of the growth (oxic condition) both under atmospheric and high-pressure conditions (data not shown). The oxygen concentration seems not to explain the differences in bioluminescence emission per cell described in these experiments. A second explanation to these results is based on the ecological aim of the bioluminescence emission. Metabolic processes, such as the increase of bioluminescent-bacterium biomass, will increase the luminescence by an autoinduction phenomenon. Many bacteria use this cell-density-dependent signaling system, also called quorum sensing, to coordinate the expression of the genes involved in biofilm formation and luminescence production \citep{hmelo2011}. In our study, the aggregates formed at 22 MPa (Fig. \ref{5_3} B1) keep the cells close together, miming a higher cell density, and this could possibly induce a quorum-sensing response leading to higher bioluminescence intensity. This is in agreement with previous hypotheses from \cite{pooley2011}.\\
+
+Three different ecological niches with high cell density, enhancing quorum sensing and indirectly bioluminescence, have been described in the literature so far. Firstly, light organs of marine squids or fish contain up to 10$^{11}$ cells mL$^{-1}$ of luminescent bacteria. This symbiosis provides an advantage for the host (prey or partner attraction...) and an ideal growth environment for bacteria \citep{Haddock2010,widder2010}. Secondly, marine snows are millimetre- to centimetre-size aggregates of macroscopic flocculent particles consisting of detritus, inorganic particles and phytoplankton on which micro-organisms grow \citep{azam1998,azam2001,alldredge1987}. Bacteria can develop swimming behavior to colonize this sinking organic material, therefore reaching a cell density 100 to 10,000 times higher than in the water column (up to $10^8$ to $10^9$ cells mL$^{-1}$) \citep{schweitzer2001,ploug2000}. At this density, they are able to emit light in order to attract preys. Then, they might be ingested by macro-organisms to live in a better-growing environment \citep{ruby1979,andrews1984}. Thirdly, luminous bacteria are known to be present in the gastro-intestinal tracts of marine organisms. Their expelled faecal pellets are enriched in micro-organisms, including bioluminescent bacteria, up to 10$^5$ to 10$^6$ times more than the surrounding waters \citep{ruby1979,andrews1984,zarubin2012}. Ingestion rate and cycling of pellet constituents are affected by bioluminescence phenomenon \citep{zarubin2012}, suggesting that bioluminescence bacteria might play an important role in the carbon cycle in the deep ocean.\\
+
+\section*{Conclusion}
+The strain \textit{P. phosphoreum} ANT-2200 was isolated from a deep-water sample (2,200 m, 13\degres C, 22 MPa) close to the ANTARES site in the Mediterranean Sea. It has been shown that, using only growth rate, it was not possible to characterize the strain growth optima. However, using both growth rate and maximum population density of strain ANT-2200, optimal temperature and pressure have been estimated at 30\degres C and 10 MPa. As observed in other deep-sea strains, the ratio of total unsaturated vs. total saturated fatty acids is higher at elevated pressure. All these points converge to characterize this strain as mesophile and moderately piezophile. The strain ANT-2200 produces higher luminescence intensity at high pressure (22 MPa) than at atmospheric pressure (0.1 MPa). To our knowledge, this is the first time that such phenomenon is described. Genetic determinism and corresponding ecological benefit of this pressure-controlled bioluminescence still have to be determined.\\
+
+\textbf{Acknowledgements}\\
+Authors thank S. Escoffier, and the ANTARES collaboration. Authors are also grateful to Mrs A. Rivoire and C. Boul\'{e} (Centre Technologique des Microstructures, Universit\'{e} Lyon 1) for electron microscopy. Comments from two anonymous reviewers allowed to significantly improving a previous version of the article.\\
+
+\textbf{Fundings}\\
+This work was funded by the ANR-POTES program (ANR-05-BLAN-0161-01) supported by the Agence Nationale de la Recherche, by the AAMIS program (Aix-Marseille Universit\'{e}) and by EC2CO BIOLUX program (CNRS). SM was granted a MERNT fellowship (Ministry of Education, Research and Technology, France). BAA was supported by a fellowship funded by the Syria Ministry of Higher Education.\\
+
+\newpage
+\section[Effects of hydrostatic pressure and growth medium on growth, luminescence and oxygen consumption]{Effects of hydrostatic pressure and growth medium on bacterial growth, luminescence and oxygen consumption
+\sectionmark{Controlled conditions}}
+\sectionmark{Controlled conditions}
+\label{part3}
+\subsection{Growth medium}
+\vspace{10mm}
+Based on these first experiments and results, growth medium has been modified to get closer to \textit{in situ} environmental water composition. The initial medium compositions (see SWC mediums composition in Table \ref{Zob}) were based on literature contents \citep{hastings1977,karl1980,pooley2004}. These mediums were optimized for fast bacterial growth (about 24 h for \textit{Photobacterium phosphoreum} ANT-2200) and intense bioluminescence activity with high yeast extract, bio-polypeptone and glycerol concentrations.\\
+
+\begin{table}
+\center
+\caption{Composition of the rich Sea Water Complete medium (SWC) and impoverished SWC medium. SWC is described as rich due to its high carbon content (yeast extract, bio-polypeptone and glycerol concentrations). pH is set at 7.5. \\}
+\begin{tabular}{lll}
+
+\textbf{chemical component} & \textbf{SWC medium}& \textbf{SWC medium}\\
+\textbf{} & \textbf{rich}& \textbf{impoverished}\\
+
+\hline
+Old seawater & 750 mL L$^{-1}$&750 mL L$^{-1}$\\
+Distilled water & 250 mL L$^{-1}$&250 mL L$^{-1}$\\
+Bio-polypeptone & 5 g L$^{-1}$&5 mg L$^{-1}$\\
+Yeast extract & 3 g L$^{-1}$&3 mg L$^{-1}$\\
+Glycerol & 3 mL L$^{-1}$&3 mL L$^{-1}$\\
+\end{tabular}
+ \label{Zob} 
+\end{table}    
+
+The growth medium has been modified with reduced yeast extract, no bio-polypeptone and lower glycerol concentration (see ONR7a composition in Table \ref{ONR7a}). These changes lead to fewer carbon sources but easier to detect and measure during the growth. Both NH$_4$Cl and Na$_2$HPO$_4$ 2H$_2$O concentrations have been increased to avoid nutrients limitation. The ONR7a growth medium involves slower bacterial growth (about 70 h in ONR7a compared to 24 h in SWC medium to reach the stationary phase). Cultures performed under similar experimental conditions show higher $K$ and lower $r$ parameters for ONR7a than SWC medium (data not shown). These changes in $K$ and $r$ parameters involving a higher carrying capacity \footnote{\textbf{Carrying capacity} is the maximum population size that the environment or medium can sustain based on food or habitat available in the environment} with a lower growth rate.\\
+% in order to determine the ability of \textit{Photobacterium phosphoreum} ANT-2200 to grow under controlled conditions and automated sampling. \\ 
+
+\begin{table}
+\center
+\caption{Composition of the ONR7a medium with low carbon concentration. Before mixing, solutions 1 and 2 are autoclaved separately to avoid precipitation and solution 3 is filtered on 0.2 $\mu$m. pH is set at 7.5\\}
+\begin{tabular}{ll}
+
+\textbf{Chemical component} & \textbf{ONR7a medium}\\
+\hline
+Solution 1& (in 700 mL)\\
+\hline
+NaCl&22.79 g L$^{-1}$\\
+Na$_2$SO$_4$&3.98 g L$^{-1}$\\
+KCl&0.72 g L$^{-1}$\\
+NH$_4$Cl&0.8 g L$^{-1}$\\
+Na$_2$HPO$_4$ 2H$_2$O&0.2 g L$^{-1}$\\
+NaBr&83 mg L$^{-1}$\\
+NaF&2.6 mg L$^{-1}$\\
+NaHCO$_3$&31 mg L$^{-1}$\\
+H$_3$BO$_3$&27 mg L$^{-1}$\\
+Glycerol& 2 mL L$^{-1}$\\
+Yeast extract&50 mg L$^{-1}$\\
+\hline
+Solution 2& (in 300 mL)\\
+\hline
+MgCl$_2$ 6H$_2$O&11.18 g L$^{-1}$\\
+CaCl$_2$ 2H$_2$O&1.46 g L$^{-1}$\\
+SrCl$_2$ 2H$_2$O&24 mg L$^{-1}$\\
+\hline
+Solution 3& (prepared in 10 mL, add 1 mL) \\
+\hline
+FeSO$_4$ 7H$_2$O& 0.025 g L$^{-1}$\\
+\end{tabular}
+ \label{ONR7a} 
+\end{table} 
+
+
+%\section[Effects of hydrostatic pressure and growth medium on growth, luminescence and oxygen consumption]{Effects of hydrostatic pressure and growth medium on growth, luminescence and oxygen consumption
+%\sectionmark{Oxygen consumption}}
+%\sectionmark{Oxygen consumption}
+\subsection{High-pressure and oxygen consumption system}
+
+The final aim of this experimental Chapter is to cultivate a bioluminescent bacterial strain potentially active at the ANTARES site as close as possible to environmental conditions. In order to sample oxygen during growth and under high hydrostatic pressure, new instrumentation dedicated to the measure of the bacterial oxygen consumption has been developed in the laboratory (Figure \ref{o2}) and is under validation (Figure \ref{oxytest}). This led to the improvement of new technology and adapted protocols. In this experimental part, we present first results of the measure of bacterial oxygen consumption during growth. These experiments take into account hydrostatic pressure (22 and 0.1 MPa), temperature (13\degres C) and carbon availability (ONR7a medium) to describe oxygen consumption and bioluminescence activity of \textit{Photobacterium phosphoreum} ANT-2200.\\
+
+ \begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.55]{HP_schema.pdf}
+\caption[A) and B) Representation of the end cap for High Pressure Bottles (HPBs) with top end cap improved for oxygen and temperature sensors. A) Photograph of the external part, from above B) Photograph of the external part, from below. C) Photograph of the internal part. Schematic representation of the end cap for High Pressure Bottles (HPBs) with oxygen and temperature fibers and connections.]{A) and B) Representation of the end cap for High Pressure Bottles (HPBs) with top end cap dedicated to oxygen consumption measurements. The end cap is made with titanium mater and both temperature and oxygen probes can be connected for direct measurements. Probes are connected with oxygen and temperature fiber to a computer, for data acquisition. A) Photograph of the external part, from above B) Photograph of the external part, from below. C) Photograph of the internal part. Schematic representation of the end cap for High Pressure Bottles (HPBs) with oxygen and temperature fibers and connections.}
+\label{o2}
+\end{figure} 
+
+High-Pressure Bottles (HPBs), described in \cite{bianchi1999} and \cite{tamburini2003}, are composed by a APX4 stainless steel cylinder with a PEEK coating for biological compatibility closed by two end caps. One end-cap in 316 L stainless steel is covered with a  sheet of PEEK. The second end-cap has been modified in order to support the oxygen sensor as described below and in Figure \ref{o2}. A PEEK floating piston permit to transmit the pressure inside the HPB and to perform sub-sampling if necessary. The modified end cap has been built in Titanium (grad 4, biologically and chemically compatible) and modified as following: four pecking, two for fluid pathway, one for Pt100 temperature sensor, and one stopped by sapphire window to measure dissolved oxygen concentration. The sapphire window is 2 mm thickness and 4 mm diameter  and permit to support an optical fiber (OXY4 PreSens$^{\mbox{\scriptsize{\textregistered}}}$). On the end cap three Viton$^{\mbox{\scriptsize{\textregistered}}}$ O'ring allow to insure etancheity and to prevent organic carbon contamination.\\
+
+The measurement  of dissolved oxygen is based on oxygen luminescence quenching of a platinum porphyrine complex caused by the collision between the excited luminophore and the quencher (oxygen) resulting in radiationless deactivation, called dynamic quenching. The decrease in fluorescence intensity and/or change in fluorescence decay lifetime can be used as a measure of oxygen concentration. The luminophore was contained in polymer support coated on sapphire and was sterilized by autoclave before use, in order to avoid contamination during experiments.\\
+
+HPBs are filled with milli-Q water before sterilization. Oxygen and temperature sensors are then screwed to the end cap and a first high pressure input up to 40 MPa is transmitted to the HPBs. This necessary pre-conditioning involves a peak in the oxygen measurement due to high pressure input (Figure \ref{oxytest}). After this pre-conditioning step, similar high pressure level will not modify oxygen measurement above the noise level. Culture medium is oxygen saturated by intense stirring before bacterial inoculation and saturated Fluorinert is used as oxygen supplier in HPBs. Inoculated culture medium and Fluorinert (25\% of total volume) are transferred to the HPB under high pressure.\\ 
+
+ \begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.5]{oxy_test.pdf}
+\caption[Test for oxygen measurement before inoculation and conditioning for high pressure experiment.]{Test for oxygen measurement before inoculation and conditioning for high pressure experiment. Two channels (blue and black dots) are connected to the HPB for noise level comparison. Hydrostatic pressure involved to the system is plotted over time (red line). The first high pressure transmission, at 40 MPa involves a burst in oxygen measure. Then after this first conditioning, fairly low modifications of oxygen measure appear with similar high pressure transmission. Thanks to this test, the HPBs are pre-conditioned with higher pressure transmission (40 MPa) before experiments. Data and representation from M. Garel.}
+\label{oxytest}
+\end{figure} 
+
+\subsection{Data acquisition into High Pressure Bottles}
+
+Following experiments led to the measure of growth, bioluminescence activity and oxygen consumption with temperature and pressure-controlled conditions. In this part, we aimed at understand bioluminescence-bacterial answer as close as possible to the \textit{in situ} conditions. Experiments have been performed under atmospheric conditions (0.1 MPa) (Figure \ref{oxylabo} A 1-3) and similarly under \textit{in situ} pressure conditions (22 MPa) (Figure \ref{oxylabo} B 1-3).\\
+
+ \begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.6]{oxy_labo.pdf}
+\caption[\textit{Photobacterium phosphoreum} ANT-2200 is cultivated in ONR7a growth medium.]{\textit{Photobacterium phosphoreum} ANT-2200 is cultivated in ONR7a growth medium and experiments are performed at 13\degres C and A) Atmospheric pressure (0.1 MPa) B) High pressure (22 MPa). 1) Bacterial growth (DO$_{600nm}$) 2) Oxygen consumption ($\mu$mol L$^{-1}$) 3) Bioluminescence emission. Dashed lines are levels of confidence for the 0.05 and 0.95 quantile curves and 0.25 and 0.75 quantile curves. A logistic model is fitted for both growth and oxygen consumption dataset and the model defined the two characteristic parameters $r$ (h$^{-1}$) and $K$ (OD$_{600nm}$) for bacterial growth and $r_{ox}$ (h$^{-1}$) and $K_{ox}$ ($\mu$ mol L$_{-1}$) for oxygen consumption.}
+\label{oxylabo}
+\end{figure} 
+
+\textbf{Growth measurements}\\
+
+Growth measurements (OD$_{600nm}$) are triplicates for each pressure condition (0.1 vs 22 MPa). A logistic model (see \citealp{martini2013} and \citealp{verhulst1838}) has been applied to this dataset and is plotted (red and blue lines, Figure \ref{oxylabo} A-1 and B-1) with confidence intervals (dashed lines Figure \ref{oxylabo} A-1 and B-1). Higher $r$ and lower $K$ values are observed under atmospheric conditions than under high pressure (0.079/0.43 and 0.066/0.53 respectively). Furthermore, $r$ and $K$ parameters have been measured with higher values in ONR7a than SWC growth medium. However, the observation of higher $r$ and $K$ parameters under atmospheric pressure is similar to the variations observed for SWC medium at 13\degres C and between similar pressure conditions (see Figure \ref{S1_3}). These observations confirm the effects of high pressure on bacterial physiology independently of the culture conditions.\\
+\newpage
+\textbf{Oxygen consumption}\\
+
+Using the newly-developed setup to record O$_2$ concentration within HPBs, we measured the oxygen consumption for \textit{Photobacterium phosphoreum} ANT-2200 (Figure \ref{oxylabo} A-2 and B-2). For bioluminescent bacteria, oxygen consumption is dedicated to both bacterial respiration and bioluminescence reaction. The data have been represented using a model as follow:\\
+\begin{eqnarray}
+x_t = \frac{K_{ox}}{1 + exp((xmid - t) /scal)}
+\end{eqnarray} 
+with $x_t$ the oxygen concentration, $xmid$ the value at the inflection time $t$, $scal$ a negative scale parameter, $K_{ox}$ the asymptotic parameter represented as the initial oxygen concentration, and $t$ the time. The oxygen-consumption rate is defined as $r_{ox} = 1/scal$.\\ 
+
+Oxygen consumption is closely related to the biomass during bacterial growth, this last variable following the logistic model hypotheses (see \cite{martini2013} and \cite{verhulst1838} for details). The oxygen-consumption model performed is close to the logistic one with a negative coefficient for oxygen consumption. Similar $r$ and $r_{ox}$ values were expected between bacterial growth and oxygen consumption (increase in bacterial growth will linearly increases the oxygen consumption). However, higher $r_{ox}$ than $r$values have been measured for both pressure conditions meaning that oxygen consumption is faster than bacterial growth. These differences can possibly be explained by oxygen consumption dedicated to the bioluminescence reaction.\\
+
+For both pressure conditions, a similar $r_{ox}$ negative coefficient is computed (-0.100 and -0.109 for atmospheric and high pressure conditions respectively) meaning that similar oxygen consumption occurs. Then, for similar oxygen consumption between both pressure conditions, there is a higher bioluminescence activity and higher biomass under high pressure condition. This result possibly led to a better oxygen efficiency under high pressure than atmospheric one. Such results would be in accordance with expected ones for this moderately piezophile bacterial strain. However, due to experimental constraints, the initial oxygen values are not similar between those two experiments (416.1 and 581.7 $\mu$mol O$_2$ L$^{-1}$ for atmospheric and high pressure conditions respectively). Such differences in initial-oxygen concentrations could possibly lead to misinterpretation and need to be fixed in further experiments.\\
+
+\textbf{Bioluminescence activity}\\
+
+Bioluminescence activity has been measured for both pressure conditions (Figure \ref{oxylabo} A-3 and B-3). The maximum bioluminescence intensity is lower at atmospheric than at high pressure conditions (1.0 $\times$ 10$^6$ kHz and 1.9 $\times$ 10$^6$ kHz respectively). Under atmospheric pressure (0.1 MPa), the bioluminescence peak is long, occurring between 7 and 18 h whereas under high pressure (22 MPa), the peak is very straight and occurs few hours later, between 22 and 25 h. The photon emission per cell has been estimated for both pressure conditions with 2.0 $\times$ 10$^{-2}$ and 2.1 $\times$ 10$^{-2}$ photons cell$^{-1}$ for 0.1 and 22 MPa respectively. From these results, only weak differences are observed between both pressure conditions. However, we still observe higher photon emission per cell for high-pressure conditions (22 MPa) compared to atmospheric ones (0.1 MPa).\\
+
+\section{Conclusions}
+
+From these successive sets of experiments under various pressure conditions (0.1 and 22 MPa) and growth medium composition with different carbon content (SWC and ONR7a growth mediums), several results have been highlighted.\\
+
+\textbf {Pressure effects}\\
+Firstly, \textit{Photobacterium phosphoreum} ANT-2200 strain has been defined as moderately piezophile. This strain isolated from the ANTARES station seems to be adapted to this deep environment. Moreover, higher pressure affects the bioluminescence emission by increasing the number of photons per cell (see Table \ref{summary}). The effects of high pressure on bioluminescence activity have been clearly demonstrated for SWC growth medium \citep{martini2013}, however, this is less obvious for ONR7a medium with low variations between both pressure conditions. These photons emission per cell are very low compared to the data from the literature. \cite{makemson1986} estimates about 1.0 $\times$ 10$^3$ and 3.0 $\times$ 10$^3$ photons cell$^{-1}$ s$^{-1}$ for \textit{Vibrio harveyi} and \textit{Vibrio fischeri} respectively. However, in these experiments, the maximal values for OD$_{600nm}$ are measured between 0.5 and 4. Such units refer to about 10$^7$ to 10$^8$ total cells in the culture medium. These values are fairly low for quorum sensing threshold known to activate the bioluminescence reaction at about 10$^8$ to 10$^9$ bacterial cells. The difference in bacterial strain, in growth medium and the maximal cell concentration can explain these very low values.\\
+
+\begin{table}
+\center
+\caption{Summary of results measured in High Pressure Bottles. SWC: Sea Water Complete medium.}
+\label{summary}
+\begin{tabular}{lll}
+\textbf{Growth medium}& \textbf{P condition}&\textbf{Photons cell$^{-1}$ s$^{-1}$}\\
+\hline
+SWC&0.1 MPa&8.4 $\times$ 10$^{-3}$\\
+SWC&22 MPa&1.9 $\times$ 10$^{-2}$\\
+%bioreactor&ONR7a&0.1 MPa&9.6 $\times$ 10$^{-3}$\\
+ONR7a&0.1 MPa&2.0 $\times$ 10$^{-2}$\\
+ONR7a&22 MPa&2.1 $\times$ 10$^{-2}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf {Carbon availability}\\
+
+Then, carbon availability for bacterial growth has been investigated between a carbon-rich medium (Sea Water Complete) and a lower carbon-content medium (ONR7a). For the two pressure conditions (0.1 and 22 MPa), the photons per cell per second are higher for lower carbon-content than rich carbon-content mediums. The rich carbon-content medium (SWC medium) is possibly well adapted for faster bacterial growth but probably limited in mineral-content available for growth (NH$_4$Cl and NaHPO$_4$2H$_2$O). This probably happens before the carbon-limitation. The low carbon-content medium (ONR7a) is limited in carbon under constant oxygen saturation. However, in HPBs, without constant input of oxygen, the bacterial growth is limited by oxygen availability (Figure \ref{oxylabo} A-2 and B-2).\\
+
+Further investigations on physiological processes have to be pursued using the low carbon content growth medium (ONR7a). Indeed, physiology is altered for \textit{Photobacterium phosphoreum} ANT-2200 strain as observed in \cite{martini2013}, meaning that oxygen efficiency for respiration or bioluminescence reaction can be altered within high pressure. Therefore, the difference in dissolved O$_2$ saturation at the beginning of the experiment between both conditions ($K$ values, 416.1 and 581.7 for 0.1 and 22 MPa respectively) has to be fixed. Then, the part of oxygen dedicated to the respiration and the one involved into the bioluminescence reaction have to be estimated. Several methods can be used and these estimations in the literature have been achieved using inhibitors for the bioluminescence reaction such as CCCP or cyanide (see \ref{inhib}) components. Similar experiments can be performed with \textit{Photobacterium phosphoreum} ANT-2200 to define this percentage.\\
+
+\textbf{Illustrated conclusion}\\
+
+To conclude, catabolic and anabolic pathways in aquatic bacteria have been summarized (Figure \ref{delgiorgio} from \cite{del1998}) and this schematic representation has been implemented with bioluminescence activity. From this schematic representation (Figure \ref{delgiorgio}) bioluminescence (process in orange) appears as a positive feedback on the biomass/storage and product compartments and a negative action on the oxygen consumption for cell.\\ 
+
+Firstly, the part of oxygen dedicated to the substrate oxidation is modified due to the oxygen taking for bioluminescence reaction ('m' and 'n' rates in Figure \ref{delgiorgio}). Moreover, the bioluminescence reaction involving ATP (rate 'o' on Figure \ref{delgiorgio}) influences the ATP uptake rate for catabolic and anabolic pathway (rates 'a', 'b', 'c', 'd' on Figure \ref{delgiorgio}). Consequently, bioluminescence reaction is costly for the bacterial cell and the benefice back is the major issue to investigate. To explain such benefice, in the ocean, \cite{baltar2013} indicate that oxidative stress caused by H$_2$O$_2$ affects prokaryotic growth and hydrolysis of specific components of the organic matter pool. Thus, the authors suggest that oxidative stress may have important consequences on marine carbon and energy fluxes. Bioluminescence could be, in these cases, an ecological advantage by the detoxification of molecular oxygen due to its reduction during the chemical reaction \citep{timmins2001}.\\
+
+\begin{figure}[!h]
+\linespread{1} 
+\centering
+\includegraphics[scale=0.6]{delg.pdf}
+\caption[Bacterial metabolic and anabolic pathways within and without the cell.]{Bacterial metabolic and anabolic pathways within and without the cell. "+" are positive action of light emission on substrate availability and biotic interactions, "-" negative action on oxygen consumption for the cell. Products are cell expenditure for maintenance.\\
+a: rate to which oxidation of organic compounds contributes to the energy pools as ATP.\\
+b: rate to which energy is required for active transport of substrates into the cell.\\
+c: rate to which ATP is utilized for anabolic reaction. \\
+d: rate to which ATP is utilized for maintenance expenditure.\\
+$\mu$: growth rate\\
+$\mu_e$: endogenous metabolism by biomass decomposition in absence of substrate\\ 
+e: rate to which ATP is supplied in the absence of exogenous substrates by degradation of biomass.\\
+m: rate to which oxygen is attributed to the bioluminescence reaction.\\
+n: rate to which oxygen is attributed to the substrate oxidation.\\
+o: rate to which ATP is consumed during the bioluminescence reaction.\\
+Adapted from \cite{del1998}}
+\label{delgiorgio}
+\end{figure} 
+
+Then, indirectly, the light emission influences the cellular mechanisms by its ecological role. Indeed, on the one hand, bacterial bioluminescence will act positively on substrate availability and oxygen by improving environmental factors (better growth condition for example in symbiotic association). As demonstrated by \cite{zarubin2012}, bioluminescent bacteria are more attractive for other organisms and would be more easily consumed on fecal pellets, this leading to the symbiosis between such organisms involving a better growing environment considering the carbon, temperature or oxygen conditions. On the other hand without bioluminescence reaction there is no impact on carbon availability and consequently, possibly no positive contribution to the biomass/storage and product compartments.\\
+
+Further work can be investigated, based on these results. On the one hand, using the high pressure equipment, it is possible to adapt experimental protocol to test the pressure effect on bioluminescent bacteria attached to particles sinking from the surface waters to the deep sea. On the other hand, we only investigated bacteria as possible organisms involved in the bioluminescence activity recorded during intense events at the ANTARES station. It could be of interest to test the hypothesis that newly formed water masses bring other bioluminescent organisms from the surface to the deep. Such organisms also undergo pressure effects that probably affect their physiology and bioluminescence.\\
